@@ -1,0 +1,278 @@
+[gd_scene load_steps=32 format=3 uid="uid://b6sk76cxfjmdl"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_88kya"]
+[ext_resource type="Texture2D" uid="uid://f0od1xya6n2a" path="res://Assets/baccc.png" id="2_3le15"]
+[ext_resource type="FontFile" uid="uid://6voj8etdsa02" path="res://Assets/Font/Silver.ttf" id="2_ltswu"]
+[ext_resource type="Script" path="res://pointlightmenuscrpit.gd" id="4_r4cnv"]
+[ext_resource type="Texture2D" uid="uid://idsnmyr8imew" path="res://Assets/Player/CatsBlack16x16Tile.png" id="5_1oljj"]
+[ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/light2.png" id="5_xt8ky"]
+
+[sub_resource type="Environment" id="Environment_uu7xi"]
+background_mode = 3
+glow_enabled = true
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2oitm"]
+radius = 4.0
+height = 8.0
+
+[sub_resource type="Animation" id="Animation_7jbcx"]
+resource_name = "IdleBlack"
+length = 0.666671
+loop_mode = 1
+step = 0.0416667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_ta5is"]
+resource_name = "runBlack"
+length = 0.666671
+loop_mode = 1
+step = 0.0416667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 14, 15]
+}
+
+[sub_resource type="Animation" id="Animation_1pfr6"]
+resource_name = "walkBlack"
+length = 0.666671
+loop_mode = 1
+step = 0.0416667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c22rr"]
+_data = {
+"IdleBlack": SubResource("Animation_7jbcx"),
+"runBlack": SubResource("Animation_ta5is"),
+"walkBlack": SubResource("Animation_1pfr6")
+}
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_35gks"]
+polygon = PackedVector2Array(851, 417, 859, 417, 859, 384, 884, 384, 884, 376, 892, 376, 892, 351, 884, 351, 884, 344, 851, 344, 851, 415)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gl5x8"]
+polygon = PackedVector2Array(900, 344, 916, 344, 916, 408, 924, 408, 924, 417, 908, 417, 908, 353, 900, 353)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bcsgc"]
+polygon = PackedVector2Array(941, 368, 966, 368, 966, 376, 974, 376, 974, 417, 941, 417, 941, 409, 933, 409, 933, 393, 941, 393, 941, 384, 966, 384, 966, 376, 941, 376)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_tswnt"]
+polygon = PackedVector2Array(982, 401, 982, 368, 990, 368, 990, 400, 1015, 400, 1015, 368, 1023, 368, 1023, 425, 1015, 425, 1015, 433, 990, 433, 990, 425, 982, 425, 982, 417, 990, 417, 990, 425, 1015, 425, 1015, 408, 990, 408, 990, 401)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3yjn3"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rgft8"]
+polygon = PackedVector2Array(884, 570, 900, 570, 900, 576, 905, 576, 905, 613, 900, 613, 900, 624, 911, 624, 911, 629, 900, 629, 900, 624, 895, 624, 895, 618, 884, 618, 884, 613, 879, 613, 879, 576, 884, 576)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_3xv0l"]
+polygon = PackedVector2Array(916, 586, 921, 586, 921, 613, 932, 613, 932, 607, 937, 607, 937, 586, 942, 586, 942, 618, 937, 618, 937, 613, 932, 613, 932, 618, 921, 618, 921, 613, 916, 613)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bkhon"]
+polygon = PackedVector2Array(948, 586, 948, 591, 953, 591, 953, 613, 948, 613, 948, 618, 964, 618, 964, 613, 958, 613, 958, 586)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_obsmw"]
+polygon = PackedVector2Array(953, 570, 958, 570, 958, 575, 953, 575)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_568vf"]
+polygon = PackedVector2Array(974, 570, 979, 570, 979, 586, 990, 586, 990, 591, 979, 591, 979, 613, 990, 613, 990, 607, 995, 607, 995, 613, 990, 613, 990, 618, 979, 618, 979, 613, 974, 613, 974, 591, 969, 591, 969, 586, 974, 586)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ct575"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_2b2hp"]
+polygon = PackedVector2Array(829, 535, 812, 535, 812, 541, 806, 541, 806, 559, 812, 559, 812, 565, 829, 565, 829, 582, 812, 582, 812, 576, 806, 576, 806, 582, 812, 582, 812, 588, 829, 588, 829, 582, 835, 582, 835, 565, 829, 565, 829, 559, 812, 559, 812, 541, 829, 541, 829, 547, 835, 547, 835, 541, 829, 541)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_emxoe"]
+polygon = PackedVector2Array(847, 553, 864, 553, 864, 559, 870, 559, 870, 571, 847, 571, 847, 582, 864, 582, 864, 576, 870, 576, 870, 582, 864, 582, 864, 588, 847, 588, 847, 582, 841, 582, 841, 559, 847, 559, 847, 565, 864, 565, 864, 559, 847, 559)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_l8ban"]
+polygon = PackedVector2Array(882, 535, 888, 535, 888, 553, 899, 553, 899, 559, 887, 559, 887, 582, 899, 582, 899, 576, 905, 576, 905, 582, 899, 582, 899, 588, 887, 588, 887, 582, 882, 582, 882, 559, 876, 559, 876, 553, 882, 553)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pvo7h"]
+polygon = PackedVector2Array(952, 535, 958, 535, 958, 541, 952, 541)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_tjsbf"]
+polygon = PackedVector2Array(946, 553, 958, 553, 958, 582, 963, 582, 963, 588, 946, 588, 946, 582, 952, 582, 952, 559, 946, 559)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dc2hh"]
+polygon = PackedVector2Array(969, 553, 975, 553, 975, 559, 981, 559, 981, 553, 992, 553, 992, 559, 998, 559, 998, 588, 992, 588, 992, 559, 981, 559, 981, 565, 975, 565, 975, 588, 969, 588)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4ongd"]
+polygon = PackedVector2Array(1033, 553, 1033, 594, 1027, 594, 1027, 600, 1010, 600, 1010, 594, 1004, 594, 1004, 588, 1010, 588, 1010, 594, 1027, 594, 1027, 583, 1010, 583, 1010, 577, 1027, 577, 1027, 559, 1010, 559, 1010, 577, 1004, 577, 1004, 559, 1010, 559, 1010, 553)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_q8bt7"]
+polygon = PackedVector2Array(1068, 559, 1062, 559, 1062, 553, 1045, 553, 1045, 559, 1062, 559, 1062, 565, 1045, 565, 1045, 559, 1039, 559, 1039, 565, 1045, 565, 1045, 570, 1062, 570, 1062, 582, 1045, 582, 1045, 576, 1039, 576, 1039, 582, 1045, 582, 1045, 588, 1062, 588, 1062, 582, 1068, 582, 1068, 570, 1062, 570, 1062, 565, 1068, 565)
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_88kya")
+
+[node name="Baccc" type="Sprite2D" parent="."]
+position = Vector2(957, 525)
+scale = Vector2(0.565741, 0.565741)
+texture = ExtResource("2_3le15")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.145098, 0.109804, 0.211765, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_uu7xi")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(960, 500)
+script = ExtResource("4_r4cnv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, -30)
+scale = Vector2(10, 7)
+shape = SubResource("CapsuleShape2D_2oitm")
+debug_color = Color(1, 1, 1, 0.419608)
+
+[node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D"]
+color = Color(0.627451, 0.254902, 0.952941, 1)
+shadow_enabled = true
+texture = ExtResource("5_xt8ky")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(0, -80)
+scale = Vector2(10, 10)
+texture = ExtResource("5_1oljj")
+hframes = 4
+vframes = 33
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D/Sprite2D2"]
+libraries = {
+"": SubResource("AnimationLibrary_c22rr")
+}
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_35gks")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_gl5x8")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_bcsgc")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_tswnt")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(5, 5, 5, 1)
+self_modulate = Color(100, 100, 100, 1)
+offset_left = 707.0
+offset_top = 315.0
+offset_right = 1175.0
+offset_bottom = 495.0
+theme_override_fonts/font = ExtResource("2_ltswu")
+theme_override_font_sizes/font_size = 155
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3yjn3")
+text = "Play"
+flat = true
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="."]
+position = Vector2(-4, 157)
+occluder = SubResource("OccluderPolygon2D_rgft8")
+
+[node name="LightOccluder2D6" type="LightOccluder2D" parent="."]
+position = Vector2(-4, 157)
+occluder = SubResource("OccluderPolygon2D_3xv0l")
+
+[node name="LightOccluder2D7" type="LightOccluder2D" parent="."]
+position = Vector2(-4, 157)
+occluder = SubResource("OccluderPolygon2D_bkhon")
+
+[node name="LightOccluder2D8" type="LightOccluder2D" parent="."]
+position = Vector2(-4, 157)
+occluder = SubResource("OccluderPolygon2D_obsmw")
+
+[node name="LightOccluder2D9" type="LightOccluder2D" parent="."]
+position = Vector2(-4, 157)
+occluder = SubResource("OccluderPolygon2D_568vf")
+
+[node name="Button2" type="Button" parent="."]
+modulate = Color(5, 5, 5, 1)
+self_modulate = Color(100, 100, 100, 1)
+offset_left = 702.0
+offset_top = 707.0
+offset_right = 1170.0
+offset_bottom = 827.0
+theme_override_fonts/font = ExtResource("2_ltswu")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ct575")
+text = "Quit"
+flat = true
+
+[node name="LightOccluder2D10" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_2b2hp")
+
+[node name="LightOccluder2D11" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_emxoe")
+
+[node name="LightOccluder2D12" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_l8ban")
+
+[node name="LightOccluder2D13" type="LightOccluder2D" parent="."]
+position = Vector2(35, 0)
+occluder = SubResource("OccluderPolygon2D_l8ban")
+
+[node name="LightOccluder2D14" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_pvo7h")
+
+[node name="LightOccluder2D15" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_tjsbf")
+
+[node name="LightOccluder2D16" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_dc2hh")
+
+[node name="LightOccluder2D17" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_4ongd")
+
+[node name="LightOccluder2D18" type="LightOccluder2D" parent="."]
+position = Vector2(0, -2)
+occluder = SubResource("OccluderPolygon2D_q8bt7")
+
+[node name="Button3" type="Button" parent="."]
+modulate = Color(5, 5, 5, 1)
+self_modulate = Color(100, 100, 100, 1)
+offset_left = 706.0
+offset_top = 512.0
+offset_right = 1174.0
+offset_bottom = 643.0
+theme_override_fonts/font = ExtResource("2_ltswu")
+theme_override_font_sizes/font_size = 110
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ct575")
+text = "Settings"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://co5agsr3o8kwd"]
+
+[ext_resource type="Texture2D" uid="uid://cq5ejgpelcl5h" path="res://Assets/map/lantern.png" id="1_68nte"]
+[ext_resource type="Texture2D" uid="uid://bwc1ldv2hhqkh" path="res://Assets/light.png" id="2_hho47"]
+
+[node name="Lantern" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_68nte")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.678431, 0.396078, 0.227451, 1)
+energy = 0.5
+texture = ExtResource("2_hho47")
+texture_scale = 0.2

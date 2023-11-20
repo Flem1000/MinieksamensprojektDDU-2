@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://1n4cd2kgnu0v"]
+
+[ext_resource type="Texture2D" uid="uid://f0od1xya6n2a" path="res://Assets/baccc.png" id="1_7qxm5"]
+
+[node name="Settings menu" type="Node2D"]
+
+[node name="Baccc" type="Sprite2D" parent="."]
+position = Vector2(957, 525)
+scale = Vector2(0.565741, 0.565741)
+texture = ExtResource("1_7qxm5")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.145098, 0.109804, 0.211765, 1)
