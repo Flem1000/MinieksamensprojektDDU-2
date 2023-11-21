@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://4do8ovndwhua"]
+
+[ext_resource type="Texture2D" uid="uid://cogutouy3g0vt" path="res://Assets/UI/Parchment.png" id="1_wmrna"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+top_level = true
+texture_filter = 1
+position = Vector2(927, 517)
+scale = Vector2(14.8467, 14.8467)
+texture = ExtResource("1_wmrna")

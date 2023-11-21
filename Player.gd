@@ -4,6 +4,8 @@ const move_speed = 75.0
 const dash_speed = 1000
 const dash_duration = 0.2
 
+var interacting = false
+
 @onready var anim = $Sprite2D2/AnimationPlayer
 @onready var sprite = $Sprite2D2
 @onready var dash = $dash
