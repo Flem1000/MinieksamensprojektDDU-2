@@ -5,8 +5,10 @@
 [node name="Answer" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 3.0
+offset_top = 9.0
+offset_right = 43.0
+offset_bottom = 49.0
 script = ExtResource("1_tbehr")
 
 [node name="LineEdit" type="LineEdit" parent="."]
