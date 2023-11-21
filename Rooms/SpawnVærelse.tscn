@@ -809,7 +809,7 @@ texture_scale = 0.05
 occluder = SubResource("OccluderPolygon2D_d64wm")
 
 [node name="Door" parent="." instance=ExtResource("6_sjg5u")]
-position = Vector2(72, 1000)
+position = Vector2(72, 183)
 destination = "res://Rooms/stuen.tscn"
 
 [connection signal="timeout" from="doortimer" to="." method="_on_doortimer_timeout"]
