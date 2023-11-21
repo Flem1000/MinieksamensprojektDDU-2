@@ -1,5 +1,5 @@
 extends Node2D
-
+@export var destination: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,13 +11,7 @@ func _process(delta):
 	pass
 
 
-func _on_button_pressed():
-	get_tree().change_scene_to_file("res://Rooms/SpawnVærelse.tscn")
-
-
-func _on_button_2_pressed():
-	get_tree().quit()
-
-
-func _on_button_3_pressed():
-	get_tree().change_scene_to_file("res://settings_menu.tscn")
+func _on_area_2d_2_body_entered(body):
+	if body.name == "Player":
+		get_tree().change_scene_to_file(destination)
+		
