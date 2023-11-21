@@ -19,6 +19,7 @@ func _on_interactable_area_body_entered(body):
 		print("entered")
 		if Input.is_action_just_pressed("Interact"):
 			_on_interact_pressed()
+			body.interacting = true
 
 
 func _on_interactable_area_body_exited(body):
