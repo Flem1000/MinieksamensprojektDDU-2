@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckt1dv8msowg3"]
+
+[ext_resource type="Script" path="res://Control.gd" id="1_tbehr"]
+
+[node name="Answer" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_tbehr")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = -60.0
+offset_top = -51.0
+offset_right = 56.0
+offset_bottom = -20.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.025
+offset_left = -59.0
+offset_top = 1.0
+offset_right = 53.0
+offset_bottom = 36.0
+
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
