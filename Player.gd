@@ -16,7 +16,6 @@ func _process(delta):
 
 
 func _physics_process(delta):
-	
 	var direction_x = Input.get_axis("Left", "Right")
 	if direction_x:
 		velocity.x = direction_x * move_speed
@@ -42,6 +41,6 @@ func _physics_process(delta):
 	
 
 	move_and_slide()
-	
+
 	
 	
