@@ -6,7 +6,7 @@
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+[node name="PaperSprite" type="Sprite2D" parent="CanvasLayer"]
 top_level = true
 texture_filter = 1
 position = Vector2(927, 517)
