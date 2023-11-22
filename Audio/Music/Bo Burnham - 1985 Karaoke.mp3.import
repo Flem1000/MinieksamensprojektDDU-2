@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://xq7a2n76fguw"
+path="res://.godot/imported/Bo Burnham - 1985 Karaoke.mp3-8a7a14b9fe9e3e71d2bd808b77066b0a.mp3str"
+
+[deps]
+
+source_file="res://Audio/Music/Bo Burnham - 1985 Karaoke.mp3"
+dest_files=["res://.godot/imported/Bo Burnham - 1985 Karaoke.mp3-8a7a14b9fe9e3e71d2bd808b77066b0a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.1", "Forward Plus")
 boot_splash/image="res://Assets/mafcat.png"
 config/icon="res://Assets/mafcatLogo.png"
 
+[autoload]
+
+Sound="*res://sound.tscn"
+
 [display]
 
 window/size/viewport_width=1920
