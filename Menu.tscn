@@ -1,6 +1,7 @@
-[gd_scene load_steps=32 format=3 uid="uid://b6sk76cxfjmdl"]
+[gd_scene load_steps=33 format=3 uid="uid://b6sk76cxfjmdl"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_88kya"]
+[ext_resource type="Script" path="res://Load.gd" id="1_g3j8w"]
 [ext_resource type="Texture2D" uid="uid://f0od1xya6n2a" path="res://Assets/baccc.png" id="2_3le15"]
 [ext_resource type="FontFile" uid="uid://6voj8etdsa02" path="res://Assets/Font/Silver.ttf" id="2_ltswu"]
 [ext_resource type="Script" path="res://pointlightmenuscrpit.gd" id="4_r4cnv"]
@@ -131,36 +132,39 @@ polygon = PackedVector2Array(1033, 553, 1033, 594, 1027, 594, 1027, 600, 1010, 6
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_q8bt7"]
 polygon = PackedVector2Array(1068, 559, 1062, 559, 1062, 553, 1045, 553, 1045, 559, 1062, 559, 1062, 565, 1045, 565, 1045, 559, 1039, 559, 1039, 565, 1045, 565, 1045, 570, 1062, 570, 1062, 582, 1045, 582, 1045, 576, 1039, 576, 1039, 582, 1045, 582, 1045, 588, 1062, 588, 1062, 582, 1068, 582, 1068, 570, 1062, 570, 1062, 565, 1068, 565)
 
-[node name="Menu" type="Node2D"]
+[node name="Load" type="Node2D"]
+script = ExtResource("1_g3j8w")
+
+[node name="Menu" type="Node2D" parent="."]
 script = ExtResource("1_88kya")
 
-[node name="Baccc" type="Sprite2D" parent="."]
+[node name="Baccc" type="Sprite2D" parent="Menu"]
 position = Vector2(957, 525)
 scale = Vector2(0.565741, 0.565741)
 texture = ExtResource("2_3le15")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
+[node name="CanvasModulate" type="CanvasModulate" parent="Menu"]
 color = Color(0.145098, 0.109804, 0.211765, 1)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Menu"]
 environment = SubResource("Environment_uu7xi")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Menu"]
 position = Vector2(960, 500)
 script = ExtResource("4_r4cnv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Menu/CharacterBody2D"]
 position = Vector2(0, -30)
 scale = Vector2(10, 7)
 shape = SubResource("CapsuleShape2D_2oitm")
 debug_color = Color(1, 1, 1, 0.419608)
 
-[node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D"]
+[node name="PointLight2D" type="PointLight2D" parent="Menu/CharacterBody2D"]
 color = Color(0.627451, 0.254902, 0.952941, 1)
 shadow_enabled = true
 texture = ExtResource("5_xt8ky")
 
-[node name="Sprite2D2" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D2" type="Sprite2D" parent="Menu/CharacterBody2D"]
 texture_filter = 1
 position = Vector2(0, -80)
 scale = Vector2(10, 10)
@@ -168,24 +172,24 @@ texture = ExtResource("5_1oljj")
 hframes = 4
 vframes = 33
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D/Sprite2D2"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Menu/CharacterBody2D/Sprite2D2"]
 libraries = {
 "": SubResource("AnimationLibrary_c22rr")
 }
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Menu"]
 occluder = SubResource("OccluderPolygon2D_35gks")
 
-[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Menu"]
 occluder = SubResource("OccluderPolygon2D_gl5x8")
 
-[node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="Menu"]
 occluder = SubResource("OccluderPolygon2D_bcsgc")
 
-[node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="Menu"]
 occluder = SubResource("OccluderPolygon2D_tswnt")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="Menu"]
 modulate = Color(5, 5, 5, 1)
 self_modulate = Color(100, 100, 100, 1)
 offset_left = 707.0
@@ -198,27 +202,27 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_3yjn3")
 text = "Play"
 flat = true
 
-[node name="LightOccluder2D5" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="Menu"]
 position = Vector2(-4, 157)
 occluder = SubResource("OccluderPolygon2D_rgft8")
 
-[node name="LightOccluder2D6" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D6" type="LightOccluder2D" parent="Menu"]
 position = Vector2(-4, 157)
 occluder = SubResource("OccluderPolygon2D_3xv0l")
 
-[node name="LightOccluder2D7" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D7" type="LightOccluder2D" parent="Menu"]
 position = Vector2(-4, 157)
 occluder = SubResource("OccluderPolygon2D_bkhon")
 
-[node name="LightOccluder2D8" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D8" type="LightOccluder2D" parent="Menu"]
 position = Vector2(-4, 157)
 occluder = SubResource("OccluderPolygon2D_obsmw")
 
-[node name="LightOccluder2D9" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D9" type="LightOccluder2D" parent="Menu"]
 position = Vector2(-4, 157)
 occluder = SubResource("OccluderPolygon2D_568vf")
 
-[node name="Button2" type="Button" parent="."]
+[node name="Button2" type="Button" parent="Menu"]
 modulate = Color(5, 5, 5, 1)
 self_modulate = Color(100, 100, 100, 1)
 offset_left = 702.0
@@ -231,36 +235,36 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_ct575")
 text = "Quit"
 flat = true
 
-[node name="LightOccluder2D10" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D10" type="LightOccluder2D" parent="Menu"]
 occluder = SubResource("OccluderPolygon2D_2b2hp")
 
-[node name="LightOccluder2D11" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D11" type="LightOccluder2D" parent="Menu"]
 occluder = SubResource("OccluderPolygon2D_emxoe")
 
-[node name="LightOccluder2D12" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D12" type="LightOccluder2D" parent="Menu"]
 occluder = SubResource("OccluderPolygon2D_l8ban")
 
-[node name="LightOccluder2D13" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D13" type="LightOccluder2D" parent="Menu"]
 position = Vector2(35, 0)
 occluder = SubResource("OccluderPolygon2D_l8ban")
 
-[node name="LightOccluder2D14" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D14" type="LightOccluder2D" parent="Menu"]
 occluder = SubResource("OccluderPolygon2D_pvo7h")
 
-[node name="LightOccluder2D15" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D15" type="LightOccluder2D" parent="Menu"]
 occluder = SubResource("OccluderPolygon2D_tjsbf")
 
-[node name="LightOccluder2D16" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D16" type="LightOccluder2D" parent="Menu"]
 occluder = SubResource("OccluderPolygon2D_dc2hh")
 
-[node name="LightOccluder2D17" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D17" type="LightOccluder2D" parent="Menu"]
 occluder = SubResource("OccluderPolygon2D_4ongd")
 
-[node name="LightOccluder2D18" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D18" type="LightOccluder2D" parent="Menu"]
 position = Vector2(0, -2)
 occluder = SubResource("OccluderPolygon2D_q8bt7")
 
-[node name="Button3" type="Button" parent="."]
+[node name="Button3" type="Button" parent="Menu"]
 modulate = Color(5, 5, 5, 1)
 self_modulate = Color(100, 100, 100, 1)
 offset_left = 706.0
@@ -273,6 +277,6 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_ct575")
 text = "Settings"
 flat = true
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Menu/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Menu/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Menu/Button3" to="." method="_on_button_3_pressed"]

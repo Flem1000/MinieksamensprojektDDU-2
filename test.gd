@@ -7,7 +7,12 @@ var scene1 = preload("res://Rooms/stuen.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_child(instance0)
-
+	await get_tree().create_timer(5).timeout
+	remove_child(instance0)
+	add_child(instance1)
+	await get_tree().create_timer(5).timeout
+	remove_child(instance1)
+	add_child(instance0)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
