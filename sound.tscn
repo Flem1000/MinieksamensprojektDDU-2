@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://soh1sgkp6v5a"]
+
+[ext_resource type="Script" path="res://Sound.gd" id="1_mg33m"]
+[ext_resource type="AudioStream" uid="uid://d2b3cwncoho6i" path="res://Audio/Music/super-mario-64-alarm-clock-110801.mp3" id="2_jcvul"]
+
+[node name="Sound" type="Node2D"]
+script = ExtResource("1_mg33m")
+
+[node name="Menu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_jcvul")
+autoplay = true
+bus = &"Music"
+
+[node name="Background1" type="AudioStreamPlayer2D" parent="."]
