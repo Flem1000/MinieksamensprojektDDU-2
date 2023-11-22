@@ -1,10 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://xpte1pg3vldl"]
+[gd_scene load_steps=12 format=3 uid="uid://xpte1pg3vldl"]
 
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_03veh"]
 [ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="2_5pchf"]
 [ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/light2.png" id="3_q63bw"]
 [ext_resource type="FontFile" uid="uid://6voj8etdsa02" path="res://Assets/Font/Silver.ttf" id="4_s7e2j"]
-[ext_resource type="PackedScene" uid="uid://bialt388a4v4o" path="res://mazebackgroundtrack.tscn" id="5_dxblc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_amll3"]
 texture = ExtResource("1_03veh")
@@ -823,5 +822,3 @@ theme_override_fonts/font = ExtResource("4_s7e2j")
 theme_override_font_sizes/font_size = 45
 text = "4
 "
-
-[node name="mazebackgroundtrack" parent="." instance=ExtResource("5_dxblc")]
