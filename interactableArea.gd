@@ -21,6 +21,7 @@ func _process(delta):
 
 func not_interacting():
 	interacting = false
+	player.interacting()
 
 func _on_interactable_area_body_entered(body):
 	if body.name == "Player":
