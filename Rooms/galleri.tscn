@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://08gy77djy2w8"]
+[gd_scene load_steps=8 format=3 uid="uid://08gy77djy2w8"]
 
-[ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_mwa0g"]
-[ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="2_t5i7d"]
-[ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="3_plhxa"]
+[ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_tw5c6"]
+[ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="2_gp1oa"]
+[ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="3_0pr3c"]
+[ext_resource type="PackedScene" uid="uid://80ee385cat12" path="res://Door.tscn" id="4_jry3w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uk8ij"]
-texture = ExtResource("1_mwa0g")
+texture = ExtResource("1_tw5c6")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -732,40 +733,40 @@ occluder = SubResource("OccluderPolygon2D_1jana")
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(40, 74)
 shadow_enabled = true
-texture = ExtResource("2_t5i7d")
+texture = ExtResource("2_gp1oa")
 texture_scale = 0.05
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
 position = Vector2(136, 74)
 shadow_enabled = true
-texture = ExtResource("2_t5i7d")
+texture = ExtResource("2_gp1oa")
 texture_scale = 0.05
 
 [node name="PointLight2D3" type="PointLight2D" parent="."]
 position = Vector2(136, 171)
 shadow_enabled = true
-texture = ExtResource("2_t5i7d")
+texture = ExtResource("2_gp1oa")
 texture_scale = 0.05
 
 [node name="PointLight2D4" type="PointLight2D" parent="."]
 position = Vector2(40, 171)
 shadow_enabled = true
-texture = ExtResource("2_t5i7d")
+texture = ExtResource("2_gp1oa")
 texture_scale = 0.05
 
 [node name="PointLight2D6" type="PointLight2D" parent="."]
 position = Vector2(40, 268)
 shadow_enabled = true
-texture = ExtResource("2_t5i7d")
+texture = ExtResource("2_gp1oa")
 texture_scale = 0.05
 
 [node name="PointLight2D5" type="PointLight2D" parent="."]
 position = Vector2(136, 267)
 shadow_enabled = true
-texture = ExtResource("2_t5i7d")
+texture = ExtResource("2_gp1oa")
 texture_scale = 0.05
 
-[node name="Player" parent="." instance=ExtResource("3_plhxa")]
+[node name="Player" parent="." instance=ExtResource("3_0pr3c")]
 position = Vector2(88, 42)
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
@@ -778,7 +779,11 @@ position = Vector2(0, -1)
 scale = Vector2(0.085, 0.085)
 energy = 1.27
 shadow_enabled = true
-texture = ExtResource("2_t5i7d")
+texture = ExtResource("2_gp1oa")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.145098, 0.109804, 0.211765, 1)
+
+[node name="Door" parent="." instance=ExtResource("4_jry3w")]
+position = Vector2(88, 25)
+destination = "res://Rooms/gang_2.tscn"

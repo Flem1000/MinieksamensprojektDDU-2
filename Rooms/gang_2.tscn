@@ -1,11 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://qtxpq44t5i7f"]
+[gd_scene load_steps=7 format=3 uid="uid://qtxpq44t5i7f"]
 
-[ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_d5g2x"]
-[ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="2_asn6n"]
-[ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="3_5xp76"]
+[ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_855eu"]
+[ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="2_8drka"]
+[ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="3_m0eh7"]
+[ext_resource type="PackedScene" uid="uid://80ee385cat12" path="res://Door.tscn" id="4_8rlg2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n7td3"]
-texture = ExtResource("1_d5g2x")
+texture = ExtResource("1_855eu")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -722,7 +723,7 @@ rotation = 3.14159
 scale = Vector2(3.545, 3.545)
 color = Color(0.156863, 0.121569, 0.309804, 1)
 
-[node name="Player" parent="." instance=ExtResource("2_asn6n")]
+[node name="Player" parent="." instance=ExtResource("2_8drka")]
 position = Vector2(378, 47)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -735,4 +736,16 @@ position = Vector2(0, -1)
 scale = Vector2(0.085, 0.085)
 energy = 1.27
 shadow_enabled = true
-texture = ExtResource("3_5xp76")
+texture = ExtResource("3_m0eh7")
+
+[node name="stueDoor" parent="." instance=ExtResource("4_8rlg2")]
+position = Vector2(392, 41)
+destination = "res://Rooms/stuen.tscn"
+
+[node name="mazeDoor" parent="." instance=ExtResource("4_8rlg2")]
+position = Vector2(296, 58)
+destination = "res://Rooms/maze_1.tscn"
+
+[node name="galleriDoor" parent="." instance=ExtResource("4_8rlg2")]
+position = Vector2(312, 152)
+destination = "res://Rooms/galleri.tscn"
