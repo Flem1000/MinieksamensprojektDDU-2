@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="2_001vk"]
 [ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/light2.png" id="3_wonch"]
 [ext_resource type="PackedScene" uid="uid://80ee385cat12" path="res://Door.tscn" id="5_100o4"]
-[ext_resource type="AudioStream" uid="uid://bsuboe4gte377" path="res://Audio/Music/quiz-game-music-loop-bpm-90-61070.mp3" id="6_u0al5"]
+[ext_resource type="PackedScene" uid="uid://dr8oky6afo352" path="res://stuebackgroundtrack.tscn" id="6_a2so8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i76h4"]
 texture = ExtResource("1_bqw1f")
@@ -864,9 +864,7 @@ destination = "res://Rooms/gangen.tscn"
 position = Vector2(-72, 249)
 destination = "res://Rooms/maze_1.tscn"
 
-[node name="stuebackgroundtrack" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_u0al5")
-autoplay = true
+[node name="stuebackgroundtrack" parent="." instance=ExtResource("6_a2so8")]
 
 [connection signal="timeout" from="doortimer" to="." method="_on_doortimer_timeout"]
 [connection signal="timeout" from="doortimer2" to="." method="_on_doortimer_2_timeout"]

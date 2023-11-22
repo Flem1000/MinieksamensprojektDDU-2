@@ -1,13 +1,13 @@
-[gd_scene load_steps=18 format=3 uid="uid://d23fkglqoaivw"]
+[gd_scene load_steps=17 format=3 uid="uid://bq2ohwoibw4cg"]
 
 [ext_resource type="Script" path="res://SpawnVærelse.gd" id="1_6vksl"]
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_iacla"]
 [ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="2_kp0m5"]
 [ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/light2.png" id="3_5huc7"]
 [ext_resource type="Texture2D" uid="uid://bwc1ldv2hhqkh" path="res://Assets/light.png" id="5_ao7yq"]
-[ext_resource type="PackedScene" uid="uid://80ee385cat12" path="res://Door.tscn" id="6_sjg5u"]
-[ext_resource type="PackedScene" uid="uid://cwr8wiae3dque" path="res://interactableArea.tscn" id="7_njabp"]
-[ext_resource type="PackedScene" uid="uid://cmdv52kaqgdvv" path="res://værelse.tscn" id="8_y1fy4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m5kvs"]
+size = Vector2(18, 14)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1q2ue"]
 texture = ExtResource("1_iacla")
@@ -715,12 +715,21 @@ polygon = PackedVector2Array(17, 30, 31, 30, 31, 19, 30, 19, 30, 18, 18, 18, 18,
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ar04k"]
 polygon = PackedVector2Array(84, 140, 84, 133, 85, 133, 85, 132, 86, 132, 86, 131, 90, 131, 90, 132, 91, 132, 91, 133, 92, 133, 92, 140, 91, 140, 91, 141, 85, 141, 85, 140)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ybpp"]
+size = Vector2(17, 18)
+
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_d64wm"]
 polygon = PackedVector2Array(82, 12, 82, 6, 86, 6, 89, 6, 92, 6, 94, 6, 94, 12, 94, 6, 82, 6)
 
 [node name="Spawnværelse" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_6vksl")
+
+[node name="door" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door"]
+position = Vector2(72, 186)
+shape = SubResource("RectangleShape2D_m5kvs")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -159.0
@@ -796,6 +805,12 @@ occluder = SubResource("OccluderPolygon2D_ar04k")
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.145098, 0.109804, 0.211765, 1)
 
+[node name="door2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door2"]
+position = Vector2(72.5, 184)
+shape = SubResource("RectangleShape2D_8ybpp")
+
 [node name="doortimer" type="Timer" parent="."]
 wait_time = 0.5
 
@@ -810,14 +825,5 @@ texture_scale = 0.05
 [node name="LightOccluder2D7" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_d64wm")
 
-[node name="Door" parent="." instance=ExtResource("6_sjg5u")]
-position = Vector2(72, 183)
-destination = "res://Rooms/stuen.tscn"
-
-[node name="Interactable area" parent="." instance=ExtResource("7_njabp")]
-position = Vector2(56, 27)
-scale = Vector2(0.8, 0.8)
-
-[node name="værelse" parent="." instance=ExtResource("8_y1fy4")]
-
+[connection signal="body_entered" from="door" to="." method="_on_door_body_entered"]
 [connection signal="timeout" from="doortimer" to="." method="_on_doortimer_timeout"]
