@@ -7,8 +7,8 @@
 [ext_resource type="Script" path="res://pointlightmenuscrpit.gd" id="4_r4cnv"]
 [ext_resource type="Texture2D" uid="uid://idsnmyr8imew" path="res://Assets/Player/CatsBlack16x16Tile.png" id="5_1oljj"]
 [ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/light2.png" id="5_xt8ky"]
-[ext_resource type="PackedScene" uid="uid://bxu3tbk6lauow" path="res://menu_background_music.tscn" id="8_odlrp"]
-[ext_resource type="PackedScene" uid="uid://cu5irj2dabt1n" path="res://ambiance.tscn" id="9_owpgm"]
+[ext_resource type="PackedScene" path="res://menu_background_music.tscn" id="8_odlrp"]
+[ext_resource type="PackedScene" path="res://ambiance.tscn" id="9_owpgm"]
 
 [sub_resource type="Environment" id="Environment_uu7xi"]
 background_mode = 3
