@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dr8oky6afo352"]
-
-[ext_resource type="AudioStream" uid="uid://bsuboe4gte377" path="res://Audio/Music/quiz-game-music-loop-bpm-90-61070.mp3" id="1_5tesy"]
-
-[node name="stuebackgroundtrack" type="AudioStreamPlayer2D"]
-stream = ExtResource("1_5tesy")
-autoplay = true
