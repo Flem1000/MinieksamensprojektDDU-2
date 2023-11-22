@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmdv52kaqgdvv"]
+
+[ext_resource type="AudioStream" uid="uid://dpy2ld27g0b7r" path="res://Audio/Music/ambient-game-67014.mp3" id="1_bjwdt"]
+
+[node name="værelse" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_bjwdt")
+autoplay = true
