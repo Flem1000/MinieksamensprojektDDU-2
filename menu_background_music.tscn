@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxu3tbk6lauow"]
-
-[ext_resource type="AudioStream" uid="uid://d2b3cwncoho6i" path="res://Audio/Music/super-mario-64-alarm-clock-110801.mp3" id="1_85hrh"]
-
-[node name="MenuBackgroundMusic" type="AudioStreamPlayer2D"]
-stream = ExtResource("1_85hrh")
-autoplay = true

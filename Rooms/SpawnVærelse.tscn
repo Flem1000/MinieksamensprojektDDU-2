@@ -1,13 +1,20 @@
-[gd_scene load_steps=18 format=3 uid="uid://d23fkglqoaivw"]
+[gd_scene load_steps=17 format=3 uid="uid://d23fkglqoaivw"]
 
-[ext_resource type="Script" path="res://SpawnVærelse.gd" id="1_6vksl"]
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_iacla"]
 [ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="2_kp0m5"]
 [ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/light2.png" id="3_5huc7"]
 [ext_resource type="Texture2D" uid="uid://bwc1ldv2hhqkh" path="res://Assets/light.png" id="5_ao7yq"]
 [ext_resource type="PackedScene" uid="uid://80ee385cat12" path="res://Door.tscn" id="6_sjg5u"]
 [ext_resource type="PackedScene" uid="uid://cwr8wiae3dque" path="res://interactableArea.tscn" id="7_njabp"]
-[ext_resource type="PackedScene" uid="uid://cmdv52kaqgdvv" path="res://værelse.tscn" id="8_y1fy4"]
+
+[sub_resource type="GDScript" id="GDScript_ke4wt"]
+script/source = "extends Node2D
+
+@onready var fadeanim = $CanvasLayer/black_box/AnimationPlayer
+
+
+# Called when the node enters the scene tree for the first time.
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1q2ue"]
 texture = ExtResource("1_iacla")
@@ -720,7 +727,7 @@ polygon = PackedVector2Array(82, 12, 82, 6, 86, 6, 89, 6, 92, 6, 94, 6, 94, 12, 
 
 [node name="Spawnværelse" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource("1_6vksl")
+script = SubResource("GDScript_ke4wt")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -159.0
@@ -817,7 +824,5 @@ destination = "res://Rooms/stuen.tscn"
 [node name="Interactable area" parent="." instance=ExtResource("7_njabp")]
 position = Vector2(56, 27)
 scale = Vector2(0.8, 0.8)
-
-[node name="værelse" parent="." instance=ExtResource("8_y1fy4")]
 
 [connection signal="timeout" from="doortimer" to="." method="_on_doortimer_timeout"]
