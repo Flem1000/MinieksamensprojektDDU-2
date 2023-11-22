@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://b6sk76cxfjmdl"]
+[gd_scene load_steps=35 format=3 uid="uid://b6sk76cxfjmdl"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_88kya"]
 [ext_resource type="Script" path="res://Load.gd" id="1_g3j8w"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" path="res://pointlightmenuscrpit.gd" id="4_r4cnv"]
 [ext_resource type="Texture2D" uid="uid://idsnmyr8imew" path="res://Assets/Player/CatsBlack16x16Tile.png" id="5_1oljj"]
 [ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/light2.png" id="5_xt8ky"]
+[ext_resource type="PackedScene" uid="uid://bxu3tbk6lauow" path="res://menu_background_music.tscn" id="8_odlrp"]
+[ext_resource type="PackedScene" uid="uid://cu5irj2dabt1n" path="res://ambiance.tscn" id="9_owpgm"]
 
 [sub_resource type="Environment" id="Environment_uu7xi"]
 background_mode = 3
@@ -276,6 +278,11 @@ theme_override_font_sizes/font_size = 110
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ct575")
 text = "Settings"
 flat = true
+
+[node name="MenuBackgroundMusic" parent="Menu" instance=ExtResource("8_odlrp")]
+
+[node name="Ambiance" parent="." instance=ExtResource("9_owpgm")]
+volume_db = -30.0
 
 [connection signal="pressed" from="Menu/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Menu/Button2" to="." method="_on_button_2_pressed"]

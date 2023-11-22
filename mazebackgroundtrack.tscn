@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bialt388a4v4o"]
+
+[ext_resource type="AudioStream" uid="uid://xq7a2n76fguw" path="res://Audio/Music/Bo Burnham - 1985 Karaoke.mp3" id="1_t7a8i"]
+
+[node name="mazebackgroundtrack" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_t7a8i")
+autoplay = true

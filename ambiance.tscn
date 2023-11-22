@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cu5irj2dabt1n"]
+
+[ext_resource type="AudioStream" uid="uid://bwa8t5wglfl0i" path="res://Audio/SFX/angelic-pad-loopwav-14643.mp3" id="1_vl4m8"]
+
+[node name="Ambiance" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_vl4m8")
+autoplay = true

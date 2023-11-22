@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://soh1sgkp6v5a"]
+[gd_scene load_steps=5 format=3 uid="uid://soh1sgkp6v5a"]
 
 [ext_resource type="Script" path="res://Sound.gd" id="1_mg33m"]
 [ext_resource type="AudioStream" uid="uid://d2b3cwncoho6i" path="res://Audio/Music/super-mario-64-alarm-clock-110801.mp3" id="2_jcvul"]
 [ext_resource type="AudioStream" uid="uid://xq7a2n76fguw" path="res://Audio/Music/Bo Burnham - 1985 Karaoke.mp3" id="3_c5i5s"]
+[ext_resource type="AudioStream" uid="uid://bwa8t5wglfl0i" path="res://Audio/SFX/angelic-pad-loopwav-14643.mp3" id="4_vfyjh"]
 
 [node name="Sound" type="Node2D"]
 script = ExtResource("1_mg33m")
@@ -14,3 +15,7 @@ bus = &"Music"
 [node name="Background1" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_c5i5s")
 bus = &"Music"
+
+[node name="ambiance" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_vfyjh")
+bus = &"Ambiance"
