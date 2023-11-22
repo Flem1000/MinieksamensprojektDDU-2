@@ -1,5 +1,6 @@
 extends Node2D
 
-@onready var menu_music = $Menu
+@onready var menu = $menu
 @onready var background_1 = $Background1
+
 

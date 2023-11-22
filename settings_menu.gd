@@ -21,6 +21,7 @@ func _on_video_pressed():
 	$Audio.hide()
 	$Back.hide()
 	$Videos.show()
+	Sound.menu.play()
 
 
 func _on_audio_pressed():
