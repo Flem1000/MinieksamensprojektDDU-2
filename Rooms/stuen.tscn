@@ -859,5 +859,9 @@ destination = "res://Rooms/SpawnVærelse.tscn"
 position = Vector2(278, 169)
 destination = "res://Rooms/gangen.tscn"
 
+[node name="Door3" parent="." instance=ExtResource("5_100o4")]
+position = Vector2(-72, 249)
+destination = "res://Rooms/maze_1.tscn"
+
 [connection signal="timeout" from="doortimer" to="." method="_on_doortimer_timeout"]
 [connection signal="timeout" from="doortimer2" to="." method="_on_doortimer_2_timeout"]
