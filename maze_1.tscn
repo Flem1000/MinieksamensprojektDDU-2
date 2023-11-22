@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_03veh"]
 [ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="2_5pchf"]
-[ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/light2.png" id="3_q63bw"]
+[ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="3_liihv"]
 [ext_resource type="FontFile" uid="uid://6voj8etdsa02" path="res://Assets/Font/Silver.ttf" id="4_s7e2j"]
 [ext_resource type="PackedScene" uid="uid://bialt388a4v4o" path="res://mazebackgroundtrack.tscn" id="5_dxblc"]
 
@@ -760,7 +760,7 @@ scale = Vector2(0.085092, 0.085)
 color = Color(0.564706, 0.631373, 1, 1)
 energy = 1.27
 shadow_enabled = true
-texture = ExtResource("3_q63bw")
+texture = ExtResource("3_liihv")
 texture_scale = 2.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]

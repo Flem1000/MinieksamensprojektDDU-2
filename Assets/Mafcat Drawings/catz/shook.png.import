@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5cic53cako0j"
-path="res://.godot/imported/light2.png-fd7a1253d12f787f41caee575d419bff.ctex"
+uid="uid://352vbwpw546m"
+path="res://.godot/imported/shook.png-4dd54d157c72e2f8004e8a3573137f53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/light2.png"
-dest_files=["res://.godot/imported/light2.png-fd7a1253d12f787f41caee575d419bff.ctex"]
+source_file="res://Assets/Mafcat Drawings/catz/shook.png"
+dest_files=["res://.godot/imported/shook.png-4dd54d157c72e2f8004e8a3573137f53.ctex"]
 
 [params]
 

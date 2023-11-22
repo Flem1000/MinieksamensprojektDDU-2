@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwc1ldv2hhqkh"
-path="res://.godot/imported/light.png-2a7c25d2528b528b4775521a146eeb11.ctex"
+uid="uid://c7s3am4tw4i3f"
+path="res://.godot/imported/hapi talkin.png-143755e18b91a2ef0cd9f2103c548bb4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/light.png"
-dest_files=["res://.godot/imported/light.png-2a7c25d2528b528b4775521a146eeb11.ctex"]
+source_file="res://Assets/Mafcat Drawings/catz/hapi talkin.png"
+dest_files=["res://.godot/imported/hapi talkin.png-143755e18b91a2ef0cd9f2103c548bb4.ctex"]
 
 [params]
 

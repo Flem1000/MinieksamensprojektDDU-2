@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wx54nlh8vyre"
-path="res://.godot/imported/mafcatLogo.png-3a808c1843770d0fb8ed2b0bffecbb3c.ctex"
+uid="uid://dwqtibxr2yom4"
+path="res://.godot/imported/thinking.png-8de94d6721627e3ea35448f643331207.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/mafcatLogo.png"
-dest_files=["res://.godot/imported/mafcatLogo.png-3a808c1843770d0fb8ed2b0bffecbb3c.ctex"]
+source_file="res://Assets/Mafcat Drawings/catz/thinking.png"
+dest_files=["res://.godot/imported/thinking.png-8de94d6721627e3ea35448f643331207.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4y3jdnbxa0td"
-path="res://.godot/imported/white square.png-c8d60c930ea1a5aa42e9fa681a9120c3.ctex"
+uid="uid://wx54nlh8vyre"
+path="res://.godot/imported/mafcatLogo.png-3438a50cf93ea0bc0a7506ceb932d9d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/white square.png"
-dest_files=["res://.godot/imported/white square.png-c8d60c930ea1a5aa42e9fa681a9120c3.ctex"]
+source_file="res://Assets/Mafcat Drawings/logo/mafcatLogo.png"
+dest_files=["res://.godot/imported/mafcatLogo.png-3438a50cf93ea0bc0a7506ceb932d9d5.ctex"]
 
 [params]
 

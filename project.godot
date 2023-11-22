@@ -13,8 +13,8 @@ config_version=5
 config/name="MafCat!"
 run/main_scene="res://Menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-boot_splash/image="res://Assets/mafcat.png"
-config/icon="res://Assets/mafcatLogo.png"
+boot_splash/image="res://Assets/Mafcat Drawings/logo/mafcat.png"
+config/icon="res://Assets/Mafcat Drawings/logo/mafcatLogo.png"
 
 [autoload]
 

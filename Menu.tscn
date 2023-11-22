@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_88kya"]
 [ext_resource type="Script" path="res://Load.gd" id="1_g3j8w"]
-[ext_resource type="Texture2D" uid="uid://f0od1xya6n2a" path="res://Assets/baccc.png" id="2_3le15"]
 [ext_resource type="FontFile" uid="uid://6voj8etdsa02" path="res://Assets/Font/Silver.ttf" id="2_ltswu"]
+[ext_resource type="Texture2D" uid="uid://f0od1xya6n2a" path="res://Assets/random sht/baccc.png" id="3_aoprc"]
 [ext_resource type="Script" path="res://pointlightmenuscrpit.gd" id="4_r4cnv"]
 [ext_resource type="Texture2D" uid="uid://idsnmyr8imew" path="res://Assets/Player/CatsBlack16x16Tile.png" id="5_1oljj"]
-[ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/light2.png" id="5_xt8ky"]
+[ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="5_m3n5b"]
 [ext_resource type="PackedScene" uid="uid://bxu3tbk6lauow" path="res://menu_background_music.tscn" id="8_odlrp"]
 [ext_resource type="PackedScene" uid="uid://cu5irj2dabt1n" path="res://ambiance.tscn" id="9_owpgm"]
 
@@ -143,7 +143,7 @@ script = ExtResource("1_88kya")
 [node name="Baccc" type="Sprite2D" parent="Menu"]
 position = Vector2(957, 525)
 scale = Vector2(0.565741, 0.565741)
-texture = ExtResource("2_3le15")
+texture = ExtResource("3_aoprc")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Menu"]
 color = Color(0.145098, 0.109804, 0.211765, 1)
@@ -164,7 +164,7 @@ debug_color = Color(1, 1, 1, 0.419608)
 [node name="PointLight2D" type="PointLight2D" parent="Menu/CharacterBody2D"]
 color = Color(0.627451, 0.254902, 0.952941, 1)
 shadow_enabled = true
-texture = ExtResource("5_xt8ky")
+texture = ExtResource("5_m3n5b")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Menu/CharacterBody2D"]
 texture_filter = 1

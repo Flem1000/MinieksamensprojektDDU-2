@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://f0od1xya6n2a"
-path="res://.godot/imported/baccc.png-eac64ccd30c47073c663bdd11732386b.ctex"
+path="res://.godot/imported/baccc.png-32068a560a8b1dde352f662d31b59276.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/baccc.png"
-dest_files=["res://.godot/imported/baccc.png-eac64ccd30c47073c663bdd11732386b.ctex"]
+source_file="res://Assets/random sht/baccc.png"
+dest_files=["res://.godot/imported/baccc.png-32068a560a8b1dde352f662d31b59276.ctex"]
 
 [params]
 
