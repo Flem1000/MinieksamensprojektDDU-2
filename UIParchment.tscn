@@ -43,31 +43,30 @@ theme_override_fonts/normal_font = ExtResource("7_bk173")
 theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+[node name="PagePrev" type="TextureButton" parent="CanvasLayer"]
+texture_filter = 1
 offset_left = 585.0
 offset_top = 759.0
-offset_right = 921.0
+offset_right = 633.0
 offset_bottom = 799.0
 scale = Vector2(2, 2)
-theme_override_constants/separation = 239
-alignment = 1
-
-[node name="PagePrev" type="TextureButton" parent="CanvasLayer/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("6_n06pl")
 texture_hover = ExtResource("7_dpi1w")
 stretch_mode = 6
 
-[node name="PageNext" type="TextureButton" parent="CanvasLayer/HBoxContainer"]
+[node name="PageNext" type="TextureButton" parent="CanvasLayer"]
 texture_filter = 1
-layout_mode = 2
+offset_left = 1159.0
+offset_top = 759.0
+offset_right = 1208.0
+offset_bottom = 799.0
+scale = Vector2(2, 2)
 size_flags_horizontal = 3
 texture_normal = ExtResource("4_cd8l4")
 texture_hover = ExtResource("5_rolxr")
 stretch_mode = 6
 
 [connection signal="pressed" from="CanvasLayer/CloseButton" to="." method="_on_close_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/PagePrev" to="." method="_on_page_prev_pressed"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/PageNext" to="." method="_on_page_next_pressed"]
+[connection signal="pressed" from="CanvasLayer/PagePrev" to="." method="_on_page_prev_pressed"]
+[connection signal="pressed" from="CanvasLayer/PageNext" to="." method="_on_page_next_pressed"]
