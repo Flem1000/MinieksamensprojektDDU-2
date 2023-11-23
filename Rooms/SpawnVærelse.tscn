@@ -822,7 +822,7 @@ scale = Vector2(0.8, 0.8)
 [node name="Parchment" parent="Interactable area" instance=ExtResource("8_hqdf4")]
 position = Vector2(-1.05231, -2.13735)
 scale = Vector2(1.25, 1.25)
-text = "tqaff"
+text = "Ost [img]senggang png.png[/img] Cheddar"
 
 [node name="værelse" parent="." instance=ExtResource("8_y1fy4")]
 
