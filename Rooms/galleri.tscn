@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://08gy77djy2w8"]
+[gd_scene load_steps=10 format=3 uid="uid://08gy77djy2w8"]
 
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_tw5c6"]
 [ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="2_gp1oa"]
 [ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="3_0pr3c"]
 [ext_resource type="PackedScene" uid="uid://80ee385cat12" path="res://Door.tscn" id="4_jry3w"]
+[ext_resource type="PackedScene" uid="uid://cwr8wiae3dque" path="res://interactableArea.tscn" id="5_ycqt8"]
+[ext_resource type="PackedScene" uid="uid://4do8ovndwhua" path="res://UIParchment.tscn" id="6_5q64s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uk8ij"]
 texture = ExtResource("1_tw5c6")
@@ -787,3 +789,9 @@ color = Color(0.145098, 0.109804, 0.211765, 1)
 [node name="Door" parent="." instance=ExtResource("4_jry3w")]
 position = Vector2(88, 25)
 destination = "res://Rooms/gang_2.tscn"
+
+[node name="Interactable area" parent="." instance=ExtResource("5_ycqt8")]
+position = Vector2(104, 41)
+scale = Vector2(0.6, 0.6)
+
+[node name="Parchment" parent="Interactable area" instance=ExtResource("6_5q64s")]
