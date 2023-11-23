@@ -19,7 +19,9 @@ func _process(delta):
 			_on_interact_pressed()
 			player.interacting()
 			interacting = true
-			
+	elif playerInside == true and Input.is_action_just_pressed("Interact") and interacting == true:
+		not_interacting()
+		get_child(1).get_child(0).hide()
 
 func not_interacting():
 	interacting = false
