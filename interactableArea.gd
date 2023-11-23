@@ -40,7 +40,6 @@ func _on_interactable_area_body_exited(body):
 		playerInside = false
 	
 func _on_interact_pressed():
-	var instance = paper.instantiate()
-	instance.text = text
-	add_child(instance)
+	get_child(1).get_child(0).show()
+	
 	
