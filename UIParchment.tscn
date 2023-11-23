@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://4do8ovndwhua"]
+[gd_scene load_steps=10 format=3 uid="uid://4do8ovndwhua"]
 
 [ext_resource type="Script" path="res://UIParchment.gd" id="1_fo7vj"]
 [ext_resource type="Texture2D" uid="uid://cogutouy3g0vt" path="res://Assets/UI/Parchment.png" id="1_wmrna"]
@@ -6,9 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://b0bo5t4p15fub" path="res://Assets/UI/ParchmentCloseButton1.png" id="3_go8sc"]
 [ext_resource type="Texture2D" uid="uid://bbd4hil1kn4vo" path="res://Assets/UI/ParchmentRArrow0.png" id="4_cd8l4"]
 [ext_resource type="Texture2D" uid="uid://bdh50gsuubjye" path="res://Assets/UI/ParchmentRArrow1.png" id="5_rolxr"]
+[ext_resource type="Texture2D" uid="uid://gnpf6sfcp3uv" path="res://Assets/UI/ParchmentLArrow0.png" id="6_n06pl"]
 [ext_resource type="FontFile" uid="uid://8giqdnn8lns0" path="res://Assets/Font/Cambria-Font-For-Windows.ttf" id="7_bk173"]
+[ext_resource type="Texture2D" uid="uid://dv7p03hvlwsg8" path="res://Assets/UI/ParchmentLArrow1.png" id="7_dpi1w"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Parchment" type="Node2D"]
 script = ExtResource("1_fo7vj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -31,17 +33,7 @@ texture_normal = ExtResource("2_aj2s1")
 texture_hover = ExtResource("3_go8sc")
 stretch_mode = 0
 
-[node name="PageNext" type="TextureButton" parent="CanvasLayer"]
-texture_filter = 1
-offset_left = 1188.0
-offset_top = 777.0
-offset_right = 1241.0
-offset_bottom = 830.0
-texture_normal = ExtResource("4_cd8l4")
-texture_hover = ExtResource("5_rolxr")
-stretch_mode = 0
-
-[node name="Label" type="RichTextLabel" parent="CanvasLayer"]
+[node name="Page1" type="RichTextLabel" parent="CanvasLayer"]
 offset_left = 619.0
 offset_top = 170.0
 offset_right = 1206.0
@@ -51,4 +43,31 @@ theme_override_fonts/normal_font = ExtResource("7_bk173")
 theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
 
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_left = 585.0
+offset_top = 759.0
+offset_right = 921.0
+offset_bottom = 799.0
+scale = Vector2(2, 2)
+theme_override_constants/separation = 239
+alignment = 1
+
+[node name="PagePrev" type="TextureButton" parent="CanvasLayer/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("6_n06pl")
+texture_hover = ExtResource("7_dpi1w")
+stretch_mode = 6
+
+[node name="PageNext" type="TextureButton" parent="CanvasLayer/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("4_cd8l4")
+texture_hover = ExtResource("5_rolxr")
+stretch_mode = 6
+
 [connection signal="pressed" from="CanvasLayer/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/PagePrev" to="." method="_on_page_prev_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/PageNext" to="." method="_on_page_next_pressed"]
