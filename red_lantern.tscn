@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b3qd7pqp53dp1"]
 
 [ext_resource type="Texture2D" uid="uid://66n4wj0j7m2p" path="res://Assets/map/lanter red.png" id="1_mil28"]
-[ext_resource type="Texture2D" uid="uid://bwc1ldv2hhqkh" path="res://Assets/light.png" id="2_ti2li"]
+[ext_resource type="Texture2D" uid="uid://bwc1ldv2hhqkh" path="res://Assets/random sht/light.png" id="2_ti2li"]
 
 [node name="redLantern" type="Node2D"]
 y_sort_enabled = true

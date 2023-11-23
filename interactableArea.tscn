@@ -1,16 +1,54 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwr8wiae3dque"]
+[gd_scene load_steps=10 format=3 uid="uid://cwr8wiae3dque"]
 
 [ext_resource type="Script" path="res://interactableArea.gd" id="1_st18b"]
+[ext_resource type="Texture2D" uid="uid://cd3ovubl5cx8" path="res://Assets/UI/Sparkles1.png" id="2_1hl3g"]
+[ext_resource type="Texture2D" uid="uid://dsuwcvof4nv04" path="res://Assets/UI/Sparkles2.png" id="3_rtsap"]
+[ext_resource type="Texture2D" uid="uid://oubp0w6q8q65" path="res://Assets/UI/Sparkles3.png" id="4_f5wmq"]
+[ext_resource type="Texture2D" uid="uid://bgs2vm4bits55" path="res://Assets/UI/Sparkles4.png" id="5_gufkl"]
+[ext_resource type="Texture2D" uid="uid://wmptkyyksidv" path="res://Assets/UI/Sparkles5.png" id="6_iijqj"]
+[ext_resource type="Script" path="res://Sparkles.gd" id="7_oujou"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8sm0i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1s72i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1hl3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rtsap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f5wmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gufkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_iijqj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Interactable area" type="Node2D"]
 script = ExtResource("1_st18b")
 
 [node name="interactableArea" type="Area2D" parent="."]
+top_level = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interactableArea"]
 shape = SubResource("RectangleShape2D_8sm0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="interactableArea"]
+top_level = true
+texture_filter = 1
+scale = Vector2(1.25, 1.25)
+sprite_frames = SubResource("SpriteFrames_1s72i")
+frame_progress = 0.746043
+script = ExtResource("7_oujou")
 
 [connection signal="body_entered" from="interactableArea" to="." method="_on_interactable_area_body_entered"]
 [connection signal="body_exited" from="interactableArea" to="." method="_on_interactable_area_body_exited"]
