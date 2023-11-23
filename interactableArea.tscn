@@ -37,17 +37,16 @@ animations = [{
 script = ExtResource("1_st18b")
 
 [node name="interactableArea" type="Area2D" parent="."]
-top_level = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interactableArea"]
 shape = SubResource("RectangleShape2D_8sm0i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="interactableArea"]
-top_level = true
 texture_filter = 1
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_1s72i")
-frame_progress = 0.746043
+frame_progress = 0.764518
+offset = Vector2(0, -2)
 script = ExtResource("7_oujou")
 
 [connection signal="body_entered" from="interactableArea" to="." method="_on_interactable_area_body_entered"]

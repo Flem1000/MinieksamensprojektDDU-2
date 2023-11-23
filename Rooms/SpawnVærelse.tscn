@@ -815,19 +815,13 @@ occluder = SubResource("OccluderPolygon2D_d64wm")
 position = Vector2(72, 183)
 destination = "res://Rooms/stuen.tscn"
 
+[node name="værelse" parent="." instance=ExtResource("8_y1fy4")]
+
 [node name="Interactable area" parent="." instance=ExtResource("7_njabp")]
-position = Vector2(56, 27)
+position = Vector2(56, 26)
 scale = Vector2(0.8, 0.8)
 
 [node name="Parchment" parent="Interactable area" instance=ExtResource("8_hqdf4")]
-position = Vector2(-1.05231, -2.13735)
-scale = Vector2(1.25, 1.25)
-text = "Cheddar | Mozzarella|Hmm"
-
-[node name="værelse" parent="." instance=ExtResource("8_y1fy4")]
-
-[node name="Interactable area2" parent="." instance=ExtResource("7_njabp")]
-position = Vector2(40, 72)
-scale = Vector2(0.8, 0.8)
+text = "Hmmmm | Page 2 | Page 3"
 
 [connection signal="timeout" from="doortimer" to="." method="_on_doortimer_timeout"]
