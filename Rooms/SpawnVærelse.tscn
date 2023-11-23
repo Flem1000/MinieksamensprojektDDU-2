@@ -817,7 +817,12 @@ destination = "res://Rooms/stuen.tscn"
 [node name="Interactable area" parent="." instance=ExtResource("7_njabp")]
 position = Vector2(56, 27)
 scale = Vector2(0.8, 0.8)
+text = "Test"
 
 [node name="værelse" parent="." instance=ExtResource("8_y1fy4")]
+
+[node name="Interactable area2" parent="." instance=ExtResource("7_njabp")]
+position = Vector2(40, 72)
+scale = Vector2(0.8, 0.8)
 
 [connection signal="timeout" from="doortimer" to="." method="_on_doortimer_timeout"]

@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var text : String
+
 var playerInside : bool = false
 var player
 var interacting = false
@@ -39,5 +41,6 @@ func _on_interactable_area_body_exited(body):
 	
 func _on_interact_pressed():
 	var instance = paper.instantiate()
+	instance.text = text
 	add_child(instance)
 	
