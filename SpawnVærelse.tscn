@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://bq2ohwoibw4cg"]
+[gd_scene load_steps=18 format=3 uid="uid://bq2ohwoibw4cg"]
 
 [ext_resource type="Script" path="res://SpawnVærelse.gd" id="1_6vksl"]
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_iacla"]
 [ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="2_kp0m5"]
 [ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="3_5huc7"]
 [ext_resource type="Texture2D" uid="uid://bwc1ldv2hhqkh" path="res://Assets/random sht/light.png" id="5_ao7yq"]
+[ext_resource type="PackedScene" uid="uid://cwr8wiae3dque" path="res://interactableArea.tscn" id="6_y8q48"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m5kvs"]
 size = Vector2(18, 14)
@@ -824,6 +825,9 @@ texture_scale = 0.05
 
 [node name="LightOccluder2D7" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_d64wm")
+
+[node name="Interactable area" parent="." instance=ExtResource("6_y8q48")]
+position = Vector2(40, 72)
 
 [connection signal="body_entered" from="door" to="." method="_on_door_body_entered"]
 [connection signal="timeout" from="doortimer" to="." method="_on_doortimer_timeout"]

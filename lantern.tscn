@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://co5agsr3o8kwd"]
 
 [ext_resource type="Texture2D" uid="uid://cq5ejgpelcl5h" path="res://Assets/map/lantern.png" id="1_68nte"]
-[ext_resource type="Texture2D" uid="uid://bwc1ldv2hhqkh" path="res://Assets/light.png" id="2_hho47"]
+[ext_resource type="Texture2D" uid="uid://bwc1ldv2hhqkh" path="res://Assets/random sht/light.png" id="2_hho47"]
 
 [node name="Lantern" type="Node2D"]
 
