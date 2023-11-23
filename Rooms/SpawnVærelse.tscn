@@ -818,11 +818,11 @@ destination = "res://Rooms/stuen.tscn"
 [node name="Interactable area" parent="." instance=ExtResource("7_njabp")]
 position = Vector2(56, 27)
 scale = Vector2(0.8, 0.8)
-text = "Test"
 
 [node name="Parchment" parent="Interactable area" instance=ExtResource("8_hqdf4")]
 position = Vector2(-1.05231, -2.13735)
 scale = Vector2(1.25, 1.25)
+text = "tqaff"
 
 [node name="værelse" parent="." instance=ExtResource("8_y1fy4")]
 

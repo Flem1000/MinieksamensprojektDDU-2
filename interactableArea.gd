@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var text : String
+
 
 var playerInside : bool = false
 var player
@@ -10,7 +10,7 @@ var interacting = false
 @onready var paper = load("res://UIParchment.tscn")
 
 func _ready():
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

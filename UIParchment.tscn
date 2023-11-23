@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://4do8ovndwhua"]
+[gd_scene load_steps=8 format=3 uid="uid://4do8ovndwhua"]
 
 [ext_resource type="Script" path="res://UIParchment.gd" id="1_fo7vj"]
 [ext_resource type="Texture2D" uid="uid://cogutouy3g0vt" path="res://Assets/UI/Parchment.png" id="1_wmrna"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b0bo5t4p15fub" path="res://Assets/UI/ParchmentCloseButton1.png" id="3_go8sc"]
 [ext_resource type="Texture2D" uid="uid://bbd4hil1kn4vo" path="res://Assets/UI/ParchmentRArrow0.png" id="4_cd8l4"]
 [ext_resource type="Texture2D" uid="uid://bdh50gsuubjye" path="res://Assets/UI/ParchmentRArrow1.png" id="5_rolxr"]
+[ext_resource type="FontFile" uid="uid://8giqdnn8lns0" path="res://Assets/Font/Cambria-Font-For-Windows.ttf" id="7_bk173"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_fo7vj")
@@ -45,6 +46,9 @@ offset_left = 619.0
 offset_top = 170.0
 offset_right = 1206.0
 offset_bottom = 754.0
+theme_override_colors/default_color = Color(0.321569, 0.160784, 0.294118, 1)
+theme_override_fonts/normal_font = ExtResource("7_bk173")
+theme_override_font_sizes/normal_font_size = 35
 text = "Hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
 
 [connection signal="pressed" from="CanvasLayer/CloseButton" to="." method="_on_close_button_pressed"]
