@@ -1,5 +1,6 @@
 class_name SaveAndLoad extends Resource
 
+#@export var playerPosition
 func save() -> void:
 	ResourceSaver.save(self, "user://savestate.tres")
 
