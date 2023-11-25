@@ -7,9 +7,9 @@ var player
 var interacting = false
 # Called when the node enters the scene tree for the first time.
 
-@export var answerNeeded : String
+
 @onready var paper = load("res://UIParchment.tscn")
-@onready var answer = get_child(1)
+
 
 func _ready():
 	pass
@@ -20,17 +20,16 @@ func _process(delta):
 			_on_interact_pressed()
 			player.interacting()
 			interacting = true
-			if answerNeeded == "yes":
-				answer.show() #Answer
+
 	elif playerInside == true and Input.is_action_just_pressed("Interact") and interacting == true:
 		not_interacting()
-		get_child(2).get_child(0).hide()
-		answer.hide() #Answer
+		get_child(1).get_child(0).hide()
+
 
 func not_interacting():
 	interacting = false
 	player.interacting()
-	answer.hide() #Answer
+
 
 func _on_interactable_area_body_entered(body):
 	if body.name == "Player":
@@ -47,6 +46,6 @@ func _on_interactable_area_body_exited(body):
 		playerInside = false
 	
 func _on_interact_pressed():
-	get_child(2).get_child(0).show()
+	get_child(1).get_child(0).show()
 	
 	

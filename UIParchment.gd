@@ -8,11 +8,15 @@ var pages: Array
 @onready var pagePrev = $CanvasLayer/PagePrev
 @onready var pageNext = $CanvasLayer/PageNext
 
+@export var answerNeeded : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pages = text.split("|", false)
 	label.text = pages[page]
+	
+	if answerNeeded == false:
+		get_child(0).get_child(5).queue_free()
 #	print(pages)
 #	for page in pages:
 #		label.append_text("[p]"+page+"[/p]")

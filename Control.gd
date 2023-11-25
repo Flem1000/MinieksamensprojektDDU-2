@@ -5,6 +5,7 @@ extends Control
 var inputField : LineEdit
 @onready var feedbackLabel = $Label
 
+
 func _ready():
 	inputField = $LineEdit
 	feedbackLabel = $Label

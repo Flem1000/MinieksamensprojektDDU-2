@@ -824,6 +824,7 @@ scale = Vector2(0.8, 0.8)
 
 [node name="Parchment" parent="Interactable area" instance=ExtResource("8_hqdf4")]
 text = "Hmmmm | Page 2 | Page 3"
+answerNeeded = true
 
 [node name="Interactable area2" parent="." instance=ExtResource("7_njabp")]
 position = Vector2(40, 73)

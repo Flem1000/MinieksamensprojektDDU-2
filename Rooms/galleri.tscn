@@ -1,9 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://08gy77djy2w8"]
+[gd_scene load_steps=15 format=3 uid="uid://08gy77djy2w8"]
 
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_tw5c6"]
 [ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="2_gp1oa"]
 [ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="3_0pr3c"]
 [ext_resource type="PackedScene" uid="uid://80ee385cat12" path="res://Door.tscn" id="4_jry3w"]
+[ext_resource type="PackedScene" uid="uid://cwr8wiae3dque" path="res://interactableArea.tscn" id="5_ycqt8"]
+[ext_resource type="Texture2D" uid="uid://b7kpv2sky20vg" path="res://Assets/Puzzles/Maleri1.png" id="6_olyyp"]
+[ext_resource type="Texture2D" uid="uid://v4dc5t3gmf1a" path="res://Assets/Puzzles/Maleri2.png" id="7_x86sg"]
+[ext_resource type="Texture2D" uid="uid://camm4bbhawiw0" path="res://Assets/Puzzles/Maleri3.png" id="8_evlit"]
+[ext_resource type="Texture2D" uid="uid://07yl64jniw1n" path="res://Assets/Puzzles/Maleri4.png" id="9_1c6vm"]
+[ext_resource type="Texture2D" uid="uid://bjdnftl64811v" path="res://Assets/Puzzles/Maleri5.png" id="10_iehqx"]
+[ext_resource type="Texture2D" uid="uid://yxp7ayec01lr" path="res://Assets/Puzzles/Maleri6.png" id="11_revig"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uk8ij"]
 texture = ExtResource("1_tw5c6")
@@ -787,3 +794,75 @@ color = Color(0.145098, 0.109804, 0.211765, 1)
 [node name="Door" parent="." instance=ExtResource("4_jry3w")]
 position = Vector2(88, 25)
 destination = "res://Rooms/gang_2.tscn"
+
+[node name="Maleri1" parent="." instance=ExtResource("5_ycqt8")]
+position = Vector2(40, 76)
+scale = Vector2(0.6, 0.6)
+
+[node name="Node" type="CanvasLayer" parent="Maleri1"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Maleri1/Node"]
+visible = false
+position = Vector2(962, 546)
+scale = Vector2(0.714815, 0.714815)
+texture = ExtResource("6_olyyp")
+
+[node name="Maleri2" parent="." instance=ExtResource("5_ycqt8")]
+position = Vector2(136, 76)
+scale = Vector2(0.6, 0.6)
+
+[node name="Node" type="CanvasLayer" parent="Maleri2"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Maleri2/Node"]
+visible = false
+position = Vector2(962, 546)
+scale = Vector2(0.714815, 0.714815)
+texture = ExtResource("7_x86sg")
+
+[node name="Maleri3" parent="." instance=ExtResource("5_ycqt8")]
+position = Vector2(40, 172)
+scale = Vector2(0.6, 0.6)
+
+[node name="Node" type="CanvasLayer" parent="Maleri3"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Maleri3/Node"]
+visible = false
+position = Vector2(962, 546)
+scale = Vector2(0.714815, 0.714815)
+texture = ExtResource("8_evlit")
+
+[node name="Maleri4" parent="." instance=ExtResource("5_ycqt8")]
+position = Vector2(136, 172)
+scale = Vector2(0.6, 0.6)
+
+[node name="Node" type="CanvasLayer" parent="Maleri4"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Maleri4/Node"]
+visible = false
+position = Vector2(962, 546)
+scale = Vector2(0.714815, 0.714815)
+texture = ExtResource("9_1c6vm")
+
+[node name="Maleri5" parent="." instance=ExtResource("5_ycqt8")]
+position = Vector2(40, 268)
+scale = Vector2(0.6, 0.6)
+
+[node name="Node" type="CanvasLayer" parent="Maleri5"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Maleri5/Node"]
+visible = false
+position = Vector2(962, 546)
+scale = Vector2(0.714815, 0.714815)
+texture = ExtResource("10_iehqx")
+
+[node name="Maleri6" parent="." instance=ExtResource("5_ycqt8")]
+position = Vector2(136, 268)
+scale = Vector2(0.6, 0.6)
+
+[node name="Node" type="CanvasLayer" parent="Maleri6"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Maleri6/Node"]
+visible = false
+position = Vector2(962, 546)
+scale = Vector2(0.714815, 0.714815)
+texture = ExtResource("11_revig")
