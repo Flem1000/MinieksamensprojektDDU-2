@@ -191,17 +191,43 @@ occluder = SubResource("OccluderPolygon2D_bcsgc")
 [node name="LightOccluder2D4" type="LightOccluder2D" parent="Menu"]
 occluder = SubResource("OccluderPolygon2D_tswnt")
 
-[node name="Button" type="Button" parent="Menu"]
+[node name="Play" type="Button" parent="Menu"]
 modulate = Color(5, 5, 5, 1)
 self_modulate = Color(100, 100, 100, 1)
 offset_left = 707.0
-offset_top = 315.0
+offset_top = 395.0
 offset_right = 1175.0
-offset_bottom = 495.0
+offset_bottom = 575.0
 theme_override_fonts/font = ExtResource("2_ltswu")
 theme_override_font_sizes/font_size = 155
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3yjn3")
 text = "Play"
+flat = true
+
+[node name="Continue" type="Button" parent="Menu"]
+modulate = Color(5, 5, 5, 1)
+self_modulate = Color(100, 100, 100, 1)
+offset_left = 707.0
+offset_top = 121.0
+offset_right = 1175.0
+offset_bottom = 301.0
+theme_override_fonts/font = ExtResource("2_ltswu")
+theme_override_font_sizes/font_size = 155
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3yjn3")
+text = "Continue"
+flat = true
+
+[node name="Load" type="Button" parent="Menu"]
+modulate = Color(5, 5, 5, 1)
+self_modulate = Color(100, 100, 100, 1)
+offset_left = 707.0
+offset_top = 272.0
+offset_right = 1175.0
+offset_bottom = 452.0
+theme_override_fonts/font = ExtResource("2_ltswu")
+theme_override_font_sizes/font_size = 155
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3yjn3")
+text = "Load"
 flat = true
 
 [node name="LightOccluder2D5" type="LightOccluder2D" parent="Menu"]
@@ -284,6 +310,8 @@ flat = true
 [node name="Ambiance" parent="." instance=ExtResource("9_owpgm")]
 volume_db = -30.0
 
-[connection signal="pressed" from="Menu/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Menu/Play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Menu/Continue" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Menu/Load" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Menu/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Menu/Button3" to="." method="_on_button_3_pressed"]

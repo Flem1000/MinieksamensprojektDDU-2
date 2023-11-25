@@ -1,6 +1,7 @@
 class_name SaveAndLoad extends Resource
 
-#@export var playerPosition
+@export var playerPosition: Vector2
+@export var level: String
 func save() -> void:
 	ResourceSaver.save(self, "user://savestate.tres")
 
