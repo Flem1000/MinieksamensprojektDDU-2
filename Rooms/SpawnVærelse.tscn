@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://d23fkglqoaivw"]
+[gd_scene load_steps=20 format=3 uid="uid://d23fkglqoaivw"]
 
 [ext_resource type="Script" path="res://SpawnVærelse.gd" id="1_6vksl"]
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_iacla"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cwr8wiae3dque" path="res://interactableArea.tscn" id="7_njabp"]
 [ext_resource type="PackedScene" uid="uid://4do8ovndwhua" path="res://UIParchment.tscn" id="8_hqdf4"]
 [ext_resource type="PackedScene" uid="uid://cmdv52kaqgdvv" path="res://værelse.tscn" id="8_y1fy4"]
+[ext_resource type="PackedScene" uid="uid://tlo38bmwl6va" path="res://UIKeypad.tscn" id="10_ur8kx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1q2ue"]
 texture = ExtResource("1_iacla")
@@ -823,5 +824,11 @@ scale = Vector2(0.8, 0.8)
 
 [node name="Parchment" parent="Interactable area" instance=ExtResource("8_hqdf4")]
 text = "Hmmmm | Page 2 | Page 3"
+
+[node name="Interactable area2" parent="." instance=ExtResource("7_njabp")]
+position = Vector2(40, 73)
+scale = Vector2(0.8, 0.8)
+
+[node name="Node2D" parent="Interactable area2" instance=ExtResource("10_ur8kx")]
 
 [connection signal="timeout" from="doortimer" to="." method="_on_doortimer_timeout"]

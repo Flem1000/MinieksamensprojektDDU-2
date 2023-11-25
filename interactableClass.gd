@@ -6,3 +6,4 @@ class_name  interactableUI
 func _on_close_button_pressed():
 	get_parent().not_interacting()
 	get_child(0).hide()
+	

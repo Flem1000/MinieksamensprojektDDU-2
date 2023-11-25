@@ -1,0 +1,177 @@
+[gd_scene load_steps=27 format=3 uid="uid://tlo38bmwl6va"]
+
+[ext_resource type="Texture2D" uid="uid://5rpm676mktxx" path="res://Assets/UI/Keypad/Keypad.png" id="1_yqmg8"]
+[ext_resource type="Texture2D" uid="uid://dkgyy7br1y1c2" path="res://Assets/UI/Keypad/7.png" id="2_7nmpu"]
+[ext_resource type="Texture2D" uid="uid://c3a2h31a6d04v" path="res://Assets/UI/Keypad/7_hover.png" id="3_3ibtk"]
+[ext_resource type="Texture2D" uid="uid://c1rqshceg5nfy" path="res://Assets/UI/Keypad/4.png" id="4_m7utv"]
+[ext_resource type="Texture2D" uid="uid://bqjlhqbe51k24" path="res://Assets/UI/Keypad/4_hover.png" id="5_lcg3t"]
+[ext_resource type="Texture2D" uid="uid://b4m7t7rvekx2n" path="res://Assets/UI/Keypad/5.png" id="6_dkfo3"]
+[ext_resource type="Texture2D" uid="uid://bx2xv4i8yg5ns" path="res://Assets/UI/Keypad/5_hover.png" id="7_q8q7a"]
+[ext_resource type="Texture2D" uid="uid://ba8037xwo0pe4" path="res://Assets/UI/Keypad/6.png" id="8_4asda"]
+[ext_resource type="Texture2D" uid="uid://bwaku2o1rdip7" path="res://Assets/UI/Keypad/6_hover.png" id="9_r4d6f"]
+[ext_resource type="Texture2D" uid="uid://cewgia2xawflg" path="res://Assets/UI/Keypad/3.png" id="10_ujskc"]
+[ext_resource type="Texture2D" uid="uid://f0tappu8xetq" path="res://Assets/UI/Keypad/3_hover.png" id="11_iejap"]
+[ext_resource type="Texture2D" uid="uid://dwjt35qfw5cf6" path="res://Assets/UI/Keypad/2.png" id="12_65v6m"]
+[ext_resource type="Texture2D" uid="uid://ck2tw7btlter5" path="res://Assets/UI/Keypad/2_hover.png" id="13_8jvkf"]
+[ext_resource type="Texture2D" uid="uid://b5tokugud7the" path="res://Assets/UI/Keypad/1.png" id="14_m4ruq"]
+[ext_resource type="Texture2D" uid="uid://ctcfodgmtg375" path="res://Assets/UI/Keypad/1_hover.png" id="15_7sqle"]
+[ext_resource type="Texture2D" uid="uid://cwd1g7qhsn6y5" path="res://Assets/UI/Keypad/8.png" id="16_grim7"]
+[ext_resource type="Texture2D" uid="uid://c0bhbj6mg5rna" path="res://Assets/UI/Keypad/8_hover.png" id="17_ww042"]
+[ext_resource type="Texture2D" uid="uid://yypeahc50gct" path="res://Assets/UI/Keypad/9.png" id="18_jdd5b"]
+[ext_resource type="Texture2D" uid="uid://bcurimxdw3kl5" path="res://Assets/UI/Keypad/9_hover.png" id="19_p5skk"]
+[ext_resource type="Texture2D" uid="uid://cn3rx1i53cjv6" path="res://Assets/UI/Keypad/Hashtag.png" id="20_yv4mi"]
+[ext_resource type="Texture2D" uid="uid://dcyj6l3x3ff81" path="res://Assets/UI/Keypad/Hashtag_hover.png" id="21_sr100"]
+[ext_resource type="Texture2D" uid="uid://by8ubgy18arsx" path="res://Assets/UI/Keypad/0.png" id="22_oaabx"]
+[ext_resource type="Texture2D" uid="uid://cgeeafndulua" path="res://Assets/UI/Keypad/0_hover.png" id="23_yjehd"]
+[ext_resource type="Texture2D" uid="uid://dakomr5o81jy3" path="res://Assets/UI/Keypad/Delete.png" id="24_47grn"]
+[ext_resource type="Texture2D" uid="uid://c1hivujwlolo6" path="res://Assets/UI/Keypad/Delete_hover.png" id="25_vfy16"]
+[ext_resource type="Texture2D" uid="uid://c1qmd7w6gccs2" path="res://Assets/UI/Keypad/Display0.png" id="26_lkl5q"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Keypad" type="Sprite2D" parent="CanvasLayer"]
+texture_filter = 1
+position = Vector2(948.25, 536)
+scale = Vector2(13.4022, 11.8261)
+texture = ExtResource("1_yqmg8")
+
+[node name="7" type="TextureButton" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 768.5
+offset_top = 616.0
+offset_right = 872.5
+offset_bottom = 720.0
+size_flags_horizontal = 0
+texture_normal = ExtResource("2_7nmpu")
+texture_hover = ExtResource("3_3ibtk")
+stretch_mode = 0
+
+[node name="4" type="TextureButton" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 768.5
+offset_top = 488.0
+offset_right = 872.5
+offset_bottom = 592.0
+size_flags_horizontal = 0
+texture_normal = ExtResource("4_m7utv")
+texture_hover = ExtResource("5_lcg3t")
+stretch_mode = 0
+
+[node name="5" type="TextureButton" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 896.5
+offset_top = 488.0
+offset_right = 1000.5
+offset_bottom = 592.0
+size_flags_horizontal = 0
+texture_normal = ExtResource("6_dkfo3")
+texture_hover = ExtResource("7_q8q7a")
+stretch_mode = 0
+
+[node name="6" type="TextureButton" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 1024.5
+offset_top = 488.0
+offset_right = 1128.5
+offset_bottom = 592.0
+size_flags_horizontal = 0
+texture_normal = ExtResource("8_4asda")
+texture_hover = ExtResource("9_r4d6f")
+stretch_mode = 0
+
+[node name="3" type="TextureButton" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 1024.5
+offset_top = 360.0
+offset_right = 1128.5
+offset_bottom = 464.0
+size_flags_horizontal = 0
+texture_normal = ExtResource("10_ujskc")
+texture_hover = ExtResource("11_iejap")
+stretch_mode = 0
+
+[node name="2" type="TextureButton" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 896.5
+offset_top = 360.0
+offset_right = 1000.5
+offset_bottom = 464.0
+size_flags_horizontal = 0
+texture_normal = ExtResource("12_65v6m")
+texture_hover = ExtResource("13_8jvkf")
+stretch_mode = 0
+
+[node name="1" type="TextureButton" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 768.5
+offset_top = 360.0
+offset_right = 872.5
+offset_bottom = 464.0
+size_flags_horizontal = 0
+texture_normal = ExtResource("14_m4ruq")
+texture_hover = ExtResource("15_7sqle")
+stretch_mode = 0
+
+[node name="8" type="TextureButton" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 896.5
+offset_top = 616.0
+offset_right = 1000.5
+offset_bottom = 720.0
+size_flags_horizontal = 0
+texture_normal = ExtResource("16_grim7")
+texture_hover = ExtResource("17_ww042")
+stretch_mode = 0
+
+[node name="9" type="TextureButton" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 1024.5
+offset_top = 616.0
+offset_right = 1128.5
+offset_bottom = 720.0
+size_flags_horizontal = 0
+texture_normal = ExtResource("18_jdd5b")
+texture_hover = ExtResource("19_p5skk")
+stretch_mode = 0
+
+[node name="#" type="TextureButton" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 768.5
+offset_top = 744.0
+offset_right = 872.5
+offset_bottom = 848.0
+size_flags_horizontal = 0
+texture_normal = ExtResource("20_yv4mi")
+texture_hover = ExtResource("21_sr100")
+stretch_mode = 0
+
+[node name="0" type="TextureButton" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 896.5
+offset_top = 744.0
+offset_right = 1000.5
+offset_bottom = 848.0
+size_flags_horizontal = 0
+texture_normal = ExtResource("22_oaabx")
+texture_hover = ExtResource("23_yjehd")
+stretch_mode = 0
+
+[node name="X" type="TextureButton" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 1024.5
+offset_top = 744.0
+offset_right = 1128.5
+offset_bottom = 848.0
+size_flags_horizontal = 0
+texture_normal = ExtResource("24_47grn")
+texture_hover = ExtResource("25_vfy16")
+stretch_mode = 0
+
+[node name="Display" type="Sprite2D" parent="CanvasLayer"]
+texture_filter = 1
+position = Vector2(948.5, 272)
+scale = Vector2(11.25, 11.5556)
+texture = ExtResource("26_lkl5q")
