@@ -748,4 +748,4 @@ destination = "res://Rooms/maze_1.tscn"
 
 [node name="galleriDoor" parent="." instance=ExtResource("4_8rlg2")]
 position = Vector2(312, 152)
-destination = "res://Rooms/galleri.tscns"
+destination = "res://Rooms/galleri.tscn"

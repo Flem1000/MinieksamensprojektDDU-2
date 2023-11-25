@@ -1,0 +1,11 @@
+extends Node2D
+
+@onready var duration_timer = $DurationTimer
+
+func start_dash(duration):
+	duration_timer.wait_time = duration
+	duration_timer.start()
+
+
+func _on_duration_timer_timeout():
+	return 
