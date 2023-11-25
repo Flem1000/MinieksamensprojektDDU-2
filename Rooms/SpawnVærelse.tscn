@@ -818,7 +818,7 @@ destination = "res://Rooms/stuen.tscn"
 [node name="værelse" parent="." instance=ExtResource("8_y1fy4")]
 
 [node name="Interactable area" parent="." instance=ExtResource("7_njabp")]
-position = Vector2(56, 26)
+position = Vector2(91, 49)
 scale = Vector2(0.8, 0.8)
 
 [node name="Parchment" parent="Interactable area" instance=ExtResource("8_hqdf4")]

@@ -49,4 +49,7 @@ func interacting():
 	elif busy == true:
 		move_speed = 75
 		busy = false
-	
+
+func getPlayerGlobalPosition():
+	return global_position
+
