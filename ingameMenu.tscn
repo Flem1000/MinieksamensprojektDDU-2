@@ -24,16 +24,6 @@ theme_override_fonts/font = ExtResource("1_fhfek")
 theme_override_font_sizes/font_size = 101
 text = "Quit"
 
-[node name="Settings" type="Button" parent="CanvasLayer"]
-offset_left = 754.0
-offset_top = 581.0
-offset_right = 1275.0
-offset_bottom = 679.0
-theme_override_fonts/font = ExtResource("1_fhfek")
-theme_override_font_sizes/font_size = 101
-text = "Settings
-"
-
 [node name="Save" type="Button" parent="CanvasLayer"]
 offset_left = 754.0
 offset_top = 414.0

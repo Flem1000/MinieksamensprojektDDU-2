@@ -1,10 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://cmdagdvmqs2ao"]
+[gd_scene load_steps=14 format=3 uid="uid://cmdagdvmqs2ao"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_kny6h"]
 [ext_resource type="Texture2D" uid="uid://c4i2a7f46tub2" path="res://Assets/Player/kitty.png" id="2_am2w6"]
 [ext_resource type="Texture2D" uid="uid://idsnmyr8imew" path="res://Assets/Player/CatsBlack16x16Tile.png" id="3_uv3x5"]
-[ext_resource type="PackedScene" path="res://dash.tscn" id="4_6mk0o"]
-[ext_resource type="Script" path="res://Button.gd" id="5_ufvhn"]
+[ext_resource type="PackedScene" uid="uid://dwyr3fmn2qver" path="res://dash.tscn" id="4_6mk0o"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ixf6e"]
 radius = 4.0
@@ -165,13 +164,3 @@ libraries = {
 }
 
 [node name="dash" parent="." instance=ExtResource("4_6mk0o")]
-
-[node name="Button" type="Button" parent="."]
-offset_left = 39.0
-offset_top = 18.0
-offset_right = 47.0
-offset_bottom = 26.0
-text = "save"
-script = ExtResource("5_ufvhn")
-
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

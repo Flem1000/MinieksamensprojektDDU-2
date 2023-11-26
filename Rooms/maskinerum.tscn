@@ -1,20 +1,21 @@
-[gd_scene load_steps=23 format=3 uid="uid://cp44oju0qga2"]
+[gd_scene load_steps=24 format=3 uid="uid://ihx0jvyr2ecx"]
 
-[ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_lta71"]
-[ext_resource type="Texture2D" uid="uid://dhqkiom0jjjhi" path="res://Assets/map/Machine.png" id="2_oo1jq"]
-[ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="3_8l35o"]
-[ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="4_n8okt"]
-[ext_resource type="Script" path="res://Mashine1.gd" id="5_njnm3"]
-[ext_resource type="PackedScene" uid="uid://cwr8wiae3dque" path="res://interactableArea.tscn" id="5_tjjty"]
-[ext_resource type="PackedScene" uid="uid://tlo38bmwl6va" path="res://UIKeypad.tscn" id="6_bi3dj"]
-[ext_resource type="Script" path="res://Mashine5.gd" id="8_a87gs"]
-[ext_resource type="Script" path="res://Mashine2.gd" id="8_gayk7"]
-[ext_resource type="Script" path="res://Mashine3.gd" id="9_nwui3"]
-[ext_resource type="Script" path="res://Mashine4.gd" id="10_he2hl"]
-[ext_resource type="PackedScene" uid="uid://4do8ovndwhua" path="res://UIParchment.tscn" id="12_jejf0"]
+[ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_m7ugg"]
+[ext_resource type="Texture2D" uid="uid://dhqkiom0jjjhi" path="res://Assets/map/Machine.png" id="2_mcsd2"]
+[ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="3_lf2qy"]
+[ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="4_23h7i"]
+[ext_resource type="Script" path="res://Mashine1.gd" id="5_pwp8b"]
+[ext_resource type="PackedScene" uid="uid://cwr8wiae3dque" path="res://interactableArea.tscn" id="6_3lud2"]
+[ext_resource type="PackedScene" uid="uid://tlo38bmwl6va" path="res://UIKeypad.tscn" id="7_s3rls"]
+[ext_resource type="Script" path="res://Mashine2.gd" id="8_d7gsl"]
+[ext_resource type="Script" path="res://Mashine3.gd" id="9_368wf"]
+[ext_resource type="Script" path="res://Mashine4.gd" id="10_mbi6a"]
+[ext_resource type="Script" path="res://Mashine5.gd" id="11_121ia"]
+[ext_resource type="PackedScene" uid="uid://4do8ovndwhua" path="res://UIParchment.tscn" id="12_kl3qu"]
+[ext_resource type="PackedScene" uid="uid://80ee385cat12" path="res://Door.tscn" id="13_qmuin"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ae1a7"]
-texture = ExtResource("1_lta71")
+texture = ExtResource("1_m7ugg")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -696,7 +697,7 @@ texture = ExtResource("1_lta71")
 4:26/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7arl1"]
-texture = ExtResource("2_oo1jq")
+texture = ExtResource("2_mcsd2")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -728,7 +729,7 @@ polygon = PackedVector2Array(737, 161, 737, 145, 785, 145, 785, 21, 671, 21, 671
 size = Vector2(32, 25)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hjicq"]
-texture = ExtResource("1_lta71")
+texture = ExtResource("1_m7ugg")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1407,7 +1408,7 @@ layer_3/tile_data = PackedInt32Array(458795, 262144, 23, 458794, 196608, 23, 131
 [node name="LightOccluder2D" type="LightOccluder2D" parent="TileMap"]
 occluder = SubResource("OccluderPolygon2D_v460q")
 
-[node name="Player" parent="." instance=ExtResource("3_8l35o")]
+[node name="Player" parent="." instance=ExtResource("3_lf2qy")]
 position = Vector2(728, 154)
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
@@ -1420,15 +1421,15 @@ position = Vector2(0, -1)
 scale = Vector2(0.085, 0.085)
 energy = 1.27
 shadow_enabled = true
-texture = ExtResource("4_n8okt")
+texture = ExtResource("4_23h7i")
 texture_scale = 2.0
 
 [node name="Mashine1" type="Sprite2D" parent="."]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(730, 80)
-texture = ExtResource("2_oo1jq")
-script = ExtResource("5_njnm3")
+texture = ExtResource("2_mcsd2")
+script = ExtResource("5_pwp8b")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Mashine1"]
 
@@ -1439,11 +1440,11 @@ shape = SubResource("RectangleShape2D_x3rhw")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mashine1/StaticBody2D"]
 polygon = PackedVector2Array(12, 2, 20, 2, 23, 4, 23, 5, 19, 7, 19, 13, 18, 14, 8, 14, 8, 9, 13, 9, 13, 7, 9, 5, 9, 4)
 
-[node name="Interactable area" parent="Mashine1" instance=ExtResource("5_tjjty")]
+[node name="Interactable area" parent="Mashine1" instance=ExtResource("6_3lud2")]
 position = Vector2(-8, 0)
 scale = Vector2(1.8, 1.8)
 
-[node name="Keypad" parent="Mashine1/Interactable area" instance=ExtResource("6_bi3dj")]
+[node name="Keypad" parent="Mashine1/Interactable area" instance=ExtResource("7_s3rls")]
 correctAnswer = "181"
 
 [node name="Label" type="Label" parent="Mashine1"]
@@ -1470,8 +1471,8 @@ occluder = SubResource("OccluderPolygon2D_w8e6q")
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(572, 80)
-texture = ExtResource("2_oo1jq")
-script = ExtResource("8_gayk7")
+texture = ExtResource("2_mcsd2")
+script = ExtResource("8_d7gsl")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Mashine2"]
 
@@ -1482,11 +1483,11 @@ shape = SubResource("RectangleShape2D_x3rhw")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mashine2/StaticBody2D"]
 polygon = PackedVector2Array(12, 2, 20, 2, 23, 4, 23, 5, 19, 7, 19, 13, 18, 14, 8, 14, 8, 9, 13, 9, 13, 7, 9, 5, 9, 4)
 
-[node name="Interactable area" parent="Mashine2" instance=ExtResource("5_tjjty")]
+[node name="Interactable area" parent="Mashine2" instance=ExtResource("6_3lud2")]
 position = Vector2(-8, 0)
 scale = Vector2(1.8, 1.8)
 
-[node name="Keypad" parent="Mashine2/Interactable area" instance=ExtResource("6_bi3dj")]
+[node name="Keypad" parent="Mashine2/Interactable area" instance=ExtResource("7_s3rls")]
 correctAnswer = "383"
 
 [node name="Label" type="Label" parent="Mashine2"]
@@ -1513,8 +1514,8 @@ occluder = SubResource("OccluderPolygon2D_2vhrv")
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(412, 80)
-texture = ExtResource("2_oo1jq")
-script = ExtResource("9_nwui3")
+texture = ExtResource("2_mcsd2")
+script = ExtResource("9_368wf")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Mashine3"]
 
@@ -1525,11 +1526,11 @@ shape = SubResource("RectangleShape2D_x3rhw")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mashine3/StaticBody2D"]
 polygon = PackedVector2Array(12, 2, 20, 2, 23, 4, 23, 5, 19, 7, 19, 13, 18, 14, 8, 14, 8, 9, 13, 9, 13, 7, 9, 5, 9, 4)
 
-[node name="Interactable area" parent="Mashine3" instance=ExtResource("5_tjjty")]
+[node name="Interactable area" parent="Mashine3" instance=ExtResource("6_3lud2")]
 position = Vector2(-8, 0)
 scale = Vector2(1.8, 1.8)
 
-[node name="Keypad" parent="Mashine3/Interactable area" instance=ExtResource("6_bi3dj")]
+[node name="Keypad" parent="Mashine3/Interactable area" instance=ExtResource("7_s3rls")]
 correctAnswer = "42"
 
 [node name="Label" type="Label" parent="Mashine3"]
@@ -1557,8 +1558,8 @@ occluder = SubResource("OccluderPolygon2D_2vhrv")
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(252, 80)
-texture = ExtResource("2_oo1jq")
-script = ExtResource("10_he2hl")
+texture = ExtResource("2_mcsd2")
+script = ExtResource("10_mbi6a")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Mashine4"]
 
@@ -1569,11 +1570,11 @@ shape = SubResource("RectangleShape2D_x3rhw")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mashine4/StaticBody2D"]
 polygon = PackedVector2Array(12, 2, 20, 2, 23, 4, 23, 5, 19, 7, 19, 13, 18, 14, 8, 14, 8, 9, 13, 9, 13, 7, 9, 5, 9, 4)
 
-[node name="Interactable area" parent="Mashine4" instance=ExtResource("5_tjjty")]
+[node name="Interactable area" parent="Mashine4" instance=ExtResource("6_3lud2")]
 position = Vector2(-8, 0)
 scale = Vector2(1.8, 1.8)
 
-[node name="Keypad" parent="Mashine4/Interactable area" instance=ExtResource("6_bi3dj")]
+[node name="Keypad" parent="Mashine4/Interactable area" instance=ExtResource("7_s3rls")]
 correctAnswer = "7"
 
 [node name="Label" type="Label" parent="Mashine4"]
@@ -1601,8 +1602,8 @@ occluder = SubResource("OccluderPolygon2D_2vhrv")
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(92, 80)
-texture = ExtResource("2_oo1jq")
-script = ExtResource("8_a87gs")
+texture = ExtResource("2_mcsd2")
+script = ExtResource("11_121ia")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Mashine5"]
 
@@ -1613,11 +1614,11 @@ shape = SubResource("RectangleShape2D_x3rhw")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mashine5/StaticBody2D"]
 polygon = PackedVector2Array(12, 2, 20, 2, 23, 4, 23, 5, 19, 7, 19, 13, 18, 14, 8, 14, 8, 9, 13, 9, 13, 7, 9, 5, 9, 4)
 
-[node name="Interactable area" parent="Mashine5" instance=ExtResource("5_tjjty")]
+[node name="Interactable area" parent="Mashine5" instance=ExtResource("6_3lud2")]
 position = Vector2(-8, 0)
 scale = Vector2(1.8, 1.8)
 
-[node name="Keypad" parent="Mashine5/Interactable area" instance=ExtResource("6_bi3dj")]
+[node name="Keypad" parent="Mashine5/Interactable area" instance=ExtResource("7_s3rls")]
 correctAnswer = "23"
 
 [node name="Label" type="Label" parent="Mashine5"]
@@ -1643,43 +1644,51 @@ occluder = SubResource("OccluderPolygon2D_72vo7")
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0.0156863, 1)
 
-[node name="Interactable area" parent="." instance=ExtResource("5_tjjty")]
+[node name="Interactable area" parent="." instance=ExtResource("6_3lud2")]
 position = Vector2(136, 41)
 scale = Vector2(0.8, 0.8)
 
-[node name="Parchment" parent="Interactable area" instance=ExtResource("12_jejf0")]
+[node name="Parchment" parent="Interactable area" instance=ExtResource("12_kl3qu")]
 position = Vector2(-170, -51.25)
 scale = Vector2(1.25, 1.25)
 text = "I dette rum skal du få tallet 45"
 
-[node name="Interactable area2" parent="." instance=ExtResource("5_tjjty")]
+[node name="Interactable area2" parent="." instance=ExtResource("6_3lud2")]
 position = Vector2(280, 121)
 scale = Vector2(0.9, 0.9)
 
-[node name="Parchment" parent="Interactable area2" instance=ExtResource("12_jejf0")]
+[node name="Parchment" parent="Interactable area2" instance=ExtResource("12_kl3qu")]
 text = "I dette rum skal du få tallet 54"
 
-[node name="Interactable area3" parent="." instance=ExtResource("5_tjjty")]
+[node name="Interactable area3" parent="." instance=ExtResource("6_3lud2")]
 position = Vector2(440, 121)
 scale = Vector2(0.8, 0.8)
 
-[node name="Parchment" parent="Interactable area3" instance=ExtResource("12_jejf0")]
+[node name="Parchment" parent="Interactable area3" instance=ExtResource("12_kl3qu")]
 text = "I dette rum skal du få tallet 90"
 
-[node name="Interactable area4" parent="." instance=ExtResource("5_tjjty")]
+[node name="Interactable area4" parent="." instance=ExtResource("6_3lud2")]
 position = Vector2(616, 121)
 scale = Vector2(0.6, 0.6)
 
-[node name="Parchment" parent="Interactable area4" instance=ExtResource("12_jejf0")]
+[node name="Parchment" parent="Interactable area4" instance=ExtResource("12_kl3qu")]
 position = Vector2(-1026.67, -201.667)
 scale = Vector2(1.66667, 1.66667)
 text = "Havde du virkelig forventet, at det ville være så nemt? Professoren har selvfølgelig mere end bare én maskine i sit maskinerum. I dette rum skal du få tallet 769"
 
-[node name="Interactable area5" parent="." instance=ExtResource("5_tjjty")]
+[node name="Interactable area5" parent="." instance=ExtResource("6_3lud2")]
 position = Vector2(680, 121)
 scale = Vector2(0.8, 0.8)
 
-[node name="Parchment" parent="Interactable area5" instance=ExtResource("12_jejf0")]
+[node name="Parchment" parent="Interactable area5" instance=ExtResource("12_kl3qu")]
 position = Vector2(-850, -151.25)
 scale = Vector2(1.25, 1.25)
 text = "Velkommen til professorens maskinerum! For at klare dette rum skal du få maskinen til at fremvise et specifikt tal ved at indtaste tal ind i maskinen. I dette tilfælde er det tallet 362. Du ved dog ikke hvilke hemmelige matematiske operationer som maskinen laver bag scenen inden den giver dig tallet tilbage, og det er derfor op til dig at prøve dig frem. Maskinen laver dog de samme operationer for hvert eneste tal, som du indtaster"
+
+[node name="Door" parent="." instance=ExtResource("13_qmuin")]
+position = Vector2(729, 166)
+destination = "res://Rooms/gang_2.tscn"
+
+[node name="Door2" parent="." instance=ExtResource("13_qmuin")]
+position = Vector2(88, 168)
+destination = "res://Rooms/gang_2.tscn"
