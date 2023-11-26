@@ -17,10 +17,16 @@ func _process(delta):
 
 
 func _on_save_pressed():
+	for i in get_parent().instantitedScenes.size():
+		var packedscene = PackedScene.new()
+		packedscene.pack(get_parent().instantitedScenes[i])
+		var scenePath = get_parent().instantitedScenePaths[i].trim_prefix("res://Rooms/")
+		ResourceSaver.save(packedscene,("user://"+scenePath))
 	var saveandload = SaveAndLoad.new()
-	#saveandload.playerPosition = player.global_position
+	saveandload.instantitedScenePaths = get_parent().instantitedScenePaths
+	saveandload.currentScenePath = get_parent().currentScenePath
 	saveandload.save()
-
+	
 
 func _on_quit_pressed():
 	get_tree().quit()

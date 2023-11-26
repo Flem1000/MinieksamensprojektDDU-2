@@ -14,7 +14,7 @@ func _process(delta):
 func _on_area_2d_2_body_entered(body):
 	if body.name == "Player":
 		player = body
-		player.position += (player.global_position-global_position).normalized()*2
-		get_tree().get_root().get_node("Load").changeScene(destination)
+		player.position += (player.global_position-global_position).normalized()*5
+		get_tree().get_root().get_node("Load").call_deferred("changeScene",destination)
 		
 		

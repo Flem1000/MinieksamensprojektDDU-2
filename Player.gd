@@ -10,9 +10,7 @@ var busy = false
 @onready var sprite = $Sprite2D2
 @onready var dash = $dash
 func _ready():
-	var save_and_load = SaveAndLoad.load_or_create()
-	if self.global_position:
-		self.global_position = save_and_load.playerPosition
+	pass
 #		
 func _process(delta):
 	if Input.is_action_just_pressed("dash"):
