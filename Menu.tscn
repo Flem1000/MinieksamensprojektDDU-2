@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://b6sk76cxfjmdl"]
+[gd_scene load_steps=36 format=3 uid="uid://b6sk76cxfjmdl"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_88kya"]
 [ext_resource type="Script" path="res://Load.gd" id="1_g3j8w"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="5_m3n5b"]
 [ext_resource type="PackedScene" uid="uid://bxu3tbk6lauow" path="res://menu_background_music.tscn" id="8_odlrp"]
 [ext_resource type="PackedScene" uid="uid://cu5irj2dabt1n" path="res://ambiance.tscn" id="9_owpgm"]
+[ext_resource type="PackedScene" uid="uid://cvbd176cer4dq" path="res://ingameMenu.tscn" id="10_lmr5q"]
 
 [sub_resource type="Environment" id="Environment_uu7xi"]
 background_mode = 3
@@ -191,43 +192,30 @@ occluder = SubResource("OccluderPolygon2D_bcsgc")
 [node name="LightOccluder2D4" type="LightOccluder2D" parent="Menu"]
 occluder = SubResource("OccluderPolygon2D_tswnt")
 
-[node name="Play" type="Button" parent="Menu"]
-modulate = Color(5, 5, 5, 1)
-self_modulate = Color(100, 100, 100, 1)
-offset_left = 707.0
-offset_top = 395.0
-offset_right = 1175.0
-offset_bottom = 575.0
-theme_override_fonts/font = ExtResource("2_ltswu")
-theme_override_font_sizes/font_size = 155
-theme_override_styles/focus = SubResource("StyleBoxEmpty_3yjn3")
-text = "Play"
-flat = true
-
 [node name="Continue" type="Button" parent="Menu"]
 modulate = Color(5, 5, 5, 1)
 self_modulate = Color(100, 100, 100, 1)
 offset_left = 707.0
-offset_top = 121.0
+offset_top = 232.0
 offset_right = 1175.0
-offset_bottom = 301.0
+offset_bottom = 412.0
 theme_override_fonts/font = ExtResource("2_ltswu")
 theme_override_font_sizes/font_size = 155
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3yjn3")
 text = "Continue"
 flat = true
 
-[node name="Load" type="Button" parent="Menu"]
+[node name="New game" type="Button" parent="Menu"]
 modulate = Color(5, 5, 5, 1)
 self_modulate = Color(100, 100, 100, 1)
 offset_left = 707.0
-offset_top = 272.0
+offset_top = 363.0
 offset_right = 1175.0
-offset_bottom = 452.0
+offset_bottom = 543.0
 theme_override_fonts/font = ExtResource("2_ltswu")
 theme_override_font_sizes/font_size = 155
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3yjn3")
-text = "Load"
+text = "New Game"
 flat = true
 
 [node name="LightOccluder2D5" type="LightOccluder2D" parent="Menu"]
@@ -310,8 +298,9 @@ flat = true
 [node name="Ambiance" parent="." instance=ExtResource("9_owpgm")]
 volume_db = -30.0
 
-[connection signal="pressed" from="Menu/Play" to="." method="_on_button_pressed"]
+[node name="ingamemenu" parent="." instance=ExtResource("10_lmr5q")]
+
 [connection signal="pressed" from="Menu/Continue" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Menu/Load" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Menu/New game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="Menu/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Menu/Button3" to="." method="_on_button_3_pressed"]

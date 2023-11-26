@@ -3,16 +3,21 @@ extends CharacterBody2D
 var move_speed = 75.0
 const dash_speed = 1000
 const dash_duration = 0.2
-
+var playerposition
 var busy = false
 
 @onready var anim = $Sprite2D2/AnimationPlayer
 @onready var sprite = $Sprite2D2
 @onready var dash = $dash
-
+func _ready():
+	var save_and_load = SaveAndLoad.load_or_create()
+	if self.global_position:
+		self.global_position = save_and_load.playerPosition
+#		
 func _process(delta):
 	if Input.is_action_just_pressed("dash"):
 		dash.start_dash(dash_duration)
+		
 
 
 func _physics_process(delta):
@@ -38,8 +43,6 @@ func _physics_process(delta):
 		anim.play("runBlack")
 	else:
 		anim.play("IdleBlack")
-	
-
 	move_and_slide()
 
 func interacting():
@@ -50,6 +53,4 @@ func interacting():
 		move_speed = 75
 		busy = false
 
-func getPlayerGlobalPosition():
-	return global_position
 
