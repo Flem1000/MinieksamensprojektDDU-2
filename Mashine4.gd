@@ -2,9 +2,10 @@ extends Sprite2D
 
 
 
+
 @onready var keypad = $"Interactable area/Keypad"
 @onready var label = $Label
-@onready var wall_1 = $"../wall1"
+@onready var wall_4 = $"../wall4"
 
 
 func _ready():
@@ -12,9 +13,9 @@ func _ready():
 
 func _process(delta):
 	var expression = Expression.new()
-	expression.parse("x * 2", ["x"])
+	expression.parse("x * x + 5", ["x"])
 	var result = expression.execute([int(keypad.display)])
 	label.text = str(result)
 	if keypad.display == keypad.correctAnswer and keypad.solved == false:
-		wall_1.queue_free()
+		wall_4.queue_free()
 		keypad.solved = true
