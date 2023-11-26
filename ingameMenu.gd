@@ -1,5 +1,4 @@
 extends Control
-var player
 var menuIsOpen = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,5 +18,14 @@ func _process(delta):
 
 func _on_save_pressed():
 	var saveandload = SaveAndLoad.new()
-	saveandload.playerPosition = $"..".global_position
+	#saveandload.playerPosition = player.global_position
 	saveandload.save()
+
+
+func _on_quit_pressed():
+	get_tree().quit()
+
+
+func _on_continue_pressed():
+	$CanvasLayer.hide()
+	menuIsOpen = false

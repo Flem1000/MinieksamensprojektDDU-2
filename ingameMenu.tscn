@@ -53,4 +53,6 @@ theme_override_font_sizes/font_size = 101
 text = "Continue
 "
 
+[connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="CanvasLayer/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="CanvasLayer/Continue" to="." method="_on_continue_pressed"]

@@ -19,6 +19,7 @@ config/icon="res://Assets/Mafcat Drawings/logo/mafcatLogo.png"
 [autoload]
 
 Sound="*res://sound.tscn"
+Global="*res://global.gd"
 
 [display]
 
