@@ -8,7 +8,6 @@ var interacting = false
 # Called when the node enters the scene tree for the first time.
 
 
-@onready var paper = load("res://UIParchment.tscn")
 
 
 func _ready():

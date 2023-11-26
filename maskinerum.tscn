@@ -1,12 +1,13 @@
-[gd_scene load_steps=18 format=3 uid="uid://cp44oju0qga2"]
+[gd_scene load_steps=19 format=3 uid="uid://cp44oju0qga2"]
 
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_lta71"]
-[ext_resource type="Texture2D" uid="uid://d13rsl7lnbd4p" path="res://Assets/map/Machine.png" id="2_oo1jq"]
+[ext_resource type="Texture2D" uid="uid://dhqkiom0jjjhi" path="res://Assets/map/Machine.png" id="2_oo1jq"]
 [ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="3_8l35o"]
 [ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="4_n8okt"]
 [ext_resource type="Script" path="res://Mashine1.gd" id="5_njnm3"]
 [ext_resource type="PackedScene" uid="uid://cwr8wiae3dque" path="res://interactableArea.tscn" id="5_tjjty"]
 [ext_resource type="PackedScene" uid="uid://tlo38bmwl6va" path="res://UIKeypad.tscn" id="6_bi3dj"]
+[ext_resource type="Script" path="res://Mashine5.gd" id="8_a87gs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ae1a7"]
 texture = ExtResource("1_lta71")
@@ -1540,6 +1541,7 @@ y_sort_enabled = true
 texture_filter = 1
 position = Vector2(92, 80)
 texture = ExtResource("2_oo1jq")
+script = ExtResource("8_a87gs")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Mashine5"]
 
@@ -1549,6 +1551,24 @@ shape = SubResource("RectangleShape2D_x3rhw")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mashine5/StaticBody2D"]
 polygon = PackedVector2Array(12, 2, 20, 2, 23, 4, 23, 5, 19, 7, 19, 13, 18, 14, 8, 14, 8, 9, 13, 9, 13, 7, 9, 5, 9, 4)
+
+[node name="Interactable area" parent="Mashine5" instance=ExtResource("5_tjjty")]
+position = Vector2(-8, 0)
+scale = Vector2(1.8, 1.8)
+
+[node name="Keypad" parent="Mashine5/Interactable area" instance=ExtResource("6_bi3dj")]
+correctAnswer = "9999"
+
+[node name="Label" type="Label" parent="Mashine5"]
+texture_filter = 1
+offset_left = 12.0
+offset_top = 1.0
+offset_right = 52.0
+offset_bottom = 27.0
+scale = Vector2(0.2, 0.2)
+text = "dddd"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="wall5" type="TileMap" parent="."]
 texture_filter = 1
@@ -1560,4 +1580,5 @@ layer_0/tile_data = PackedInt32Array(589828, 65536, 20, 589829, 65536, 20, 58983
 occluder = SubResource("OccluderPolygon2D_72vo7")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0.0156863, 1)
