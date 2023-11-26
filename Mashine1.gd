@@ -12,7 +12,7 @@ func _ready():
 
 func _process(delta):
 	var expression = Expression.new()
-	expression.parse("keypad.display*2")
+	expression.parse("2+3")
 	var result = expression.execute()
 	if result != null:
 		label.text = result
