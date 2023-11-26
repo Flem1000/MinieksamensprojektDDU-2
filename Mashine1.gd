@@ -5,9 +5,15 @@ extends Sprite2D
 @onready var keypad = $"Interactable area/Keypad"
 @onready var label = $Label
 
+@onready var display = int(keypad.display)
 
 func _ready():
 	pass
 
 func _process(delta):
-	label.text = keypad.display
+	var expression = Expression.new()
+	expression.parse("keypad.display*2")
+	var result = expression.execute()
+	if result != null:
+		label.text = result
+		print(result)
