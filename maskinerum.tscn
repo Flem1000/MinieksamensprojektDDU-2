@@ -1560,5 +1560,4 @@ layer_0/tile_data = PackedInt32Array(589828, 65536, 20, 589829, 65536, 20, 58983
 occluder = SubResource("OccluderPolygon2D_72vo7")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0.0156863, 1)
