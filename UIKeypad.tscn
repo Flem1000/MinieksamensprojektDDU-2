@@ -178,4 +178,15 @@ position = Vector2(948.5, 272)
 scale = Vector2(11.25, 11.5556)
 texture = ExtResource("26_lkl5q")
 
-[connection signal="pressed" from="CanvasLayer/7" to="." method="_on__pressed"]
+[connection signal="pressed" from="CanvasLayer/7" to="." method="_on_7_pressed"]
+[connection signal="pressed" from="CanvasLayer/4" to="." method="_on_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/5" to="." method="_on_5_pressed"]
+[connection signal="pressed" from="CanvasLayer/6" to="." method="_on_6_pressed"]
+[connection signal="pressed" from="CanvasLayer/3" to="." method="_on_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/2" to="." method="_on_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/1" to="." method="_on_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/8" to="." method="_on_8_pressed"]
+[connection signal="pressed" from="CanvasLayer/9" to="." method="_on_9_pressed"]
+[connection signal="pressed" from="CanvasLayer/#" to="." method="_on_hashtag_pressed"]
+[connection signal="pressed" from="CanvasLayer/0" to="." method="_on_0_pressed"]
+[connection signal="pressed" from="CanvasLayer/X" to="." method="_on_x_pressed"]

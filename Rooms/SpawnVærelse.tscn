@@ -831,5 +831,6 @@ position = Vector2(40, 73)
 scale = Vector2(0.8, 0.8)
 
 [node name="Node2D" parent="Interactable area2" instance=ExtResource("10_ur8kx")]
+correctAnswer = "4269"
 
 [connection signal="timeout" from="doortimer" to="." method="_on_doortimer_timeout"]
