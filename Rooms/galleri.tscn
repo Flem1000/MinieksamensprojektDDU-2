@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://08gy77djy2w8"]
+[gd_scene load_steps=17 format=3 uid="uid://08gy77djy2w8"]
 
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_tw5c6"]
 [ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="2_gp1oa"]
@@ -6,11 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://80ee385cat12" path="res://Door.tscn" id="4_jry3w"]
 [ext_resource type="PackedScene" uid="uid://cwr8wiae3dque" path="res://interactableArea.tscn" id="5_ycqt8"]
 [ext_resource type="Texture2D" uid="uid://b7kpv2sky20vg" path="res://Assets/Puzzles/Maleri1.png" id="6_olyyp"]
+[ext_resource type="PackedScene" uid="uid://ckt1dv8msowg3" path="res://Puzzle answer.tscn" id="7_cj04b"]
 [ext_resource type="Texture2D" uid="uid://v4dc5t3gmf1a" path="res://Assets/Puzzles/Maleri2.png" id="7_x86sg"]
 [ext_resource type="Texture2D" uid="uid://camm4bbhawiw0" path="res://Assets/Puzzles/Maleri3.png" id="8_evlit"]
 [ext_resource type="Texture2D" uid="uid://07yl64jniw1n" path="res://Assets/Puzzles/Maleri4.png" id="9_1c6vm"]
 [ext_resource type="Texture2D" uid="uid://bjdnftl64811v" path="res://Assets/Puzzles/Maleri5.png" id="10_iehqx"]
 [ext_resource type="Texture2D" uid="uid://yxp7ayec01lr" path="res://Assets/Puzzles/Maleri6.png" id="11_revig"]
+[ext_resource type="PackedScene" uid="uid://4do8ovndwhua" path="res://UIParchment.tscn" id="13_w53gd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uk8ij"]
 texture = ExtResource("1_tw5c6")
@@ -807,6 +809,12 @@ position = Vector2(962, 546)
 scale = Vector2(0.714815, 0.714815)
 texture = ExtResource("6_olyyp")
 
+[node name="Answer" parent="Maleri1/Node/Sprite2D" instance=ExtResource("7_cj04b")]
+offset_left = -919.0
+offset_top = 32.0
+offset_right = -879.0
+offset_bottom = 72.0
+
 [node name="Maleri2" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(136, 76)
 scale = Vector2(0.6, 0.6)
@@ -818,6 +826,12 @@ visible = false
 position = Vector2(962, 546)
 scale = Vector2(0.714815, 0.714815)
 texture = ExtResource("7_x86sg")
+
+[node name="Answer" parent="Maleri2/Node/Sprite2D" instance=ExtResource("7_cj04b")]
+offset_left = -919.0
+offset_top = 32.0
+offset_right = -879.0
+offset_bottom = 72.0
 
 [node name="Maleri3" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(40, 172)
@@ -831,6 +845,12 @@ position = Vector2(962, 546)
 scale = Vector2(0.714815, 0.714815)
 texture = ExtResource("8_evlit")
 
+[node name="Answer" parent="Maleri3/Node/Sprite2D" instance=ExtResource("7_cj04b")]
+offset_left = -919.0
+offset_top = 32.0
+offset_right = -879.0
+offset_bottom = 72.0
+
 [node name="Maleri4" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(136, 172)
 scale = Vector2(0.6, 0.6)
@@ -842,6 +862,12 @@ visible = false
 position = Vector2(962, 546)
 scale = Vector2(0.714815, 0.714815)
 texture = ExtResource("9_1c6vm")
+
+[node name="Answer" parent="Maleri4/Node/Sprite2D" instance=ExtResource("7_cj04b")]
+offset_left = -919.0
+offset_top = 32.0
+offset_right = -879.0
+offset_bottom = 72.0
 
 [node name="Maleri5" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(40, 268)
@@ -855,6 +881,12 @@ position = Vector2(962, 546)
 scale = Vector2(0.714815, 0.714815)
 texture = ExtResource("10_iehqx")
 
+[node name="Answer" parent="Maleri5/Node/Sprite2D" instance=ExtResource("7_cj04b")]
+offset_left = -919.0
+offset_top = 32.0
+offset_right = -879.0
+offset_bottom = 72.0
+
 [node name="Maleri6" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(136, 268)
 scale = Vector2(0.6, 0.6)
@@ -866,3 +898,16 @@ visible = false
 position = Vector2(962, 546)
 scale = Vector2(0.714815, 0.714815)
 texture = ExtResource("11_revig")
+
+[node name="Answer" parent="Maleri6/Node/Sprite2D" instance=ExtResource("7_cj04b")]
+offset_left = -919.119
+offset_top = 32.1761
+offset_right = -879.119
+offset_bottom = 72.1761
+
+[node name="Interactable area" parent="." instance=ExtResource("5_ycqt8")]
+position = Vector2(104, 41)
+scale = Vector2(0.5, 0.5)
+
+[node name="Parchment" parent="Interactable area" instance=ExtResource("13_w53gd")]
+text = "Hmm"

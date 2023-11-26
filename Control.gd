@@ -18,7 +18,7 @@ func _process(delta):
 
 func _on_line_edit_text_submitted(text):
 	if correctAnswer.has(text):
-		feedbackLabel.text = "Correct!"
+		feedbackLabel.text = "Korrekt!"
 	else:
-		feedbackLabel.text = "Incorrect! Try again."
+		feedbackLabel.text = "Forkert, prøv igen"
 		inputField.text = ""

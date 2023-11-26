@@ -14,7 +14,6 @@ var pages: Array
 func _ready():
 	pages = text.split("|", false)
 	label.text = pages[page]
-	
 	if answerNeeded == false:
 		get_child(0).get_child(5).queue_free()
 #	print(pages)
@@ -29,8 +28,13 @@ func _ready():
 func _process(delta):
 	if page == 0:
 		pagePrev.hide()
+		pageNext.show()
+		if pages.size() == 1:
+			pageNext.hide()
 	elif page == pages.size()-1:
 		pageNext.hide()
+		if page != 0:
+			pagePrev.show()
 	else:
 		pagePrev.show()
 		pageNext.show()
