@@ -28,7 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://c1hivujwlolo6" path="res://Assets/UI/Keypad/Delete_hover.png" id="25_vfy16"]
 [ext_resource type="Texture2D" uid="uid://c1qmd7w6gccs2" path="res://Assets/UI/Keypad/Display0.png" id="26_lkl5q"]
 
-[node name="Keypad" type="Node2D"]
+[node name="Node2D" type="Node2D"]
 script = ExtResource("1_qtqiw")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
