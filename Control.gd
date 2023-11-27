@@ -4,7 +4,7 @@ extends Control
 @export var correctAnswer: Array
 var inputField : LineEdit
 @onready var feedbackLabel = $Label
-
+var solved = false
 
 func _ready():
 	inputField = $LineEdit
@@ -17,8 +17,12 @@ func _process(delta):
 
 
 func _on_line_edit_text_submitted(text):
-	if correctAnswer.has(text):
+	if correctAnswer.has(text) and solved == false:
 		feedbackLabel.text = "Korrekt!"
-	else:
+		get_owner().puzzle_solved()
+		solved = true
+	elif solved == false:
 		feedbackLabel.text = "Forkert, prøv igen"
 		inputField.text = ""
+	else:
+		feedbackLabel.text = "Du har allerede løst denne opgave"

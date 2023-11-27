@@ -1,5 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://08gy77djy2w8"]
+[gd_scene load_steps=20 format=3 uid="uid://08gy77djy2w8"]
 
+[ext_resource type="Script" path="res://Rooms/galleri.gd" id="1_bbmx1"]
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_tw5c6"]
 [ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="2_gp1oa"]
 [ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="3_0pr3c"]
@@ -14,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://yxp7ayec01lr" path="res://Assets/Puzzles/Maleri6.png" id="11_revig"]
 [ext_resource type="PackedScene" uid="uid://4do8ovndwhua" path="res://UIParchment.tscn" id="13_w53gd"]
 [ext_resource type="Texture2D" uid="uid://dvl6ae2eckadw" path="res://Assets/UI/Paper.png" id="14_nymgo"]
+[ext_resource type="PackedScene" uid="uid://euetfcdclk87" path="res://key.tscn" id="16_0f86a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uk8ij"]
 texture = ExtResource("1_tw5c6")
@@ -700,6 +702,7 @@ polygon = PackedVector2Array(80, 21, 80, 16, 48, 16, 48, 64, 0, 64, 0, 326, 48, 
 
 [node name="galleri" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_bbmx1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -491.0
@@ -815,6 +818,7 @@ offset_left = -919.0
 offset_top = 32.0
 offset_right = -879.0
 offset_bottom = 72.0
+correctAnswer = ["4"]
 
 [node name="Maleri2" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(136, 76)
@@ -833,6 +837,7 @@ offset_left = -919.0
 offset_top = 32.0
 offset_right = -879.0
 offset_bottom = 72.0
+correctAnswer = ["5,5"]
 
 [node name="Maleri3" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(40, 172)
@@ -851,6 +856,7 @@ offset_left = -919.0
 offset_top = 32.0
 offset_right = -879.0
 offset_bottom = 72.0
+correctAnswer = ["(2,2)(-3,7)", "(-3,7)(2,2)"]
 
 [node name="Maleri4" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(136, 172)
@@ -869,6 +875,7 @@ offset_left = -919.0
 offset_top = 32.0
 offset_right = -879.0
 offset_bottom = 72.0
+correctAnswer = ["144"]
 
 [node name="Maleri5" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(40, 268)
@@ -887,6 +894,7 @@ offset_left = -919.0
 offset_top = 32.0
 offset_right = -879.0
 offset_bottom = 72.0
+correctAnswer = ["(1,5)"]
 
 [node name="Maleri6" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(136, 268)
@@ -905,6 +913,7 @@ offset_left = -919.119
 offset_top = 32.1761
 offset_right = -879.119
 offset_bottom = 72.1761
+correctAnswer = ["[0,inf["]
 
 [node name="Interactable area" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(104, 42)
@@ -918,19 +927,19 @@ position = Vector2(24, 105)
 scale = Vector2(0.8, 0.8)
 
 [node name="Parchment" parent="Opgavetekst - M1" instance=ExtResource("13_w53gd")]
-text = "Løs for f(2)"
+text = "Find værdien f(2) for funktionen"
 
 [node name="Opgavetekst - M2" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(152, 120)
 
 [node name="Parchment" parent="Opgavetekst - M2" instance=ExtResource("13_w53gd")]
-text = "Find hældningen af grafen ud fra de to punkter"
+text = "Find hældningskoefficienten af grafen ud fra de to punkter. Angiv svaret som et decimaltal"
 
 [node name="Opgavetekst - M3" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(40, 216)
 
 [node name="Parchment" parent="Opgavetekst - M3" instance=ExtResource("13_w53gd")]
-text = "Find skæringspunkterne af de to viste funktioner"
+text = "Find skæringspunkterne af de to viste funktioner. Angiv svaret som punkternes koordinatsæt lige efter hinanden uden mellemrum"
 
 [node name="Opgavetekst - M4" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(136, 216)
@@ -944,14 +953,14 @@ position = Vector2(24, 313)
 scale = Vector2(0.7, 0.7)
 
 [node name="Parchment" parent="Opgavetekst - M5" instance=ExtResource("13_w53gd")]
-text = "d"
+text = "Find koordinaterne for andengradspolynomiets toppunkt"
 
 [node name="Opgavetekst - M6" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(152, 313)
 scale = Vector2(0.8, 0.8)
 
 [node name="Parchment" parent="Opgavetekst - M6" instance=ExtResource("13_w53gd")]
-text = "d"
+text = "Find den største definitionsmængde for funktionen, når den siges at være begrænset til de reelle tal"
 
 [node name="Hint Paper" type="Sprite2D" parent="."]
 top_level = true
@@ -966,3 +975,6 @@ scale = Vector2(1.25, 1.25)
 
 [node name="Parchment" parent="Hint Paper/Interactable area2" instance=ExtResource("13_w53gd")]
 text = "[img]Assets/UI/Page1.png[/img]|[img]Assets/UI/Page2.png[/img]|[img]Assets/UI/Page3.png[/img]|[img]Assets/UI/Page4.png[/img]"
+
+[node name="Key" parent="." instance=ExtResource("16_0f86a")]
+position = Vector2(-167, 192)
