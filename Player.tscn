@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Player.gd" id="1_kny6h"]
 [ext_resource type="Texture2D" uid="uid://c4i2a7f46tub2" path="res://Assets/Player/kitty.png" id="2_am2w6"]
 [ext_resource type="Texture2D" uid="uid://idsnmyr8imew" path="res://Assets/Player/CatsBlack16x16Tile.png" id="3_uv3x5"]
-[ext_resource type="PackedScene" uid="uid://dwyr3fmn2qver" path="res://dash.tscn" id="4_6mk0o"]
+[ext_resource type="PackedScene" path="res://dash.tscn" id="4_6mk0o"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ixf6e"]
 radius = 4.0

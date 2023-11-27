@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://08gy77djy2w8"]
+[gd_scene load_steps=18 format=3 uid="uid://08gy77djy2w8"]
 
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_tw5c6"]
 [ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="2_gp1oa"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bjdnftl64811v" path="res://Assets/Puzzles/Maleri5.png" id="10_iehqx"]
 [ext_resource type="Texture2D" uid="uid://yxp7ayec01lr" path="res://Assets/Puzzles/Maleri6.png" id="11_revig"]
 [ext_resource type="PackedScene" uid="uid://4do8ovndwhua" path="res://UIParchment.tscn" id="13_w53gd"]
+[ext_resource type="Texture2D" uid="uid://dvl6ae2eckadw" path="res://Assets/UI/Paper.png" id="14_nymgo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uk8ij"]
 texture = ExtResource("1_tw5c6")
@@ -951,3 +952,17 @@ scale = Vector2(0.8, 0.8)
 
 [node name="Parchment" parent="Opgavetekst - M6" instance=ExtResource("13_w53gd")]
 text = "d"
+
+[node name="Hint Paper" type="Sprite2D" parent="."]
+top_level = true
+texture_filter = 1
+position = Vector2(88, 341)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_nymgo")
+
+[node name="Interactable area2" parent="Hint Paper" instance=ExtResource("5_ycqt8")]
+position = Vector2(-7.62939e-06, 3.74997)
+scale = Vector2(1.25, 1.25)
+
+[node name="Parchment" parent="Hint Paper/Interactable area2" instance=ExtResource("13_w53gd")]
+text = "[img]Assets/UI/Page1.png[/img]|[img]Assets/UI/Page2.png[/img]|[img]Assets/UI/Page3.png[/img]|[img]Assets/UI/Page4.png[/img]"
