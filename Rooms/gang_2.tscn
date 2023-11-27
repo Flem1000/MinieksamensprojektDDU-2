@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://qtxpq44t5i7f"]
+[gd_scene load_steps=10 format=3 uid="uid://qtxpq44t5i7f"]
 
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_855eu"]
 [ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="2_8drka"]
 [ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="3_m0eh7"]
 [ext_resource type="PackedScene" uid="uid://80ee385cat12" path="res://Door.tscn" id="4_8rlg2"]
+[ext_resource type="PackedScene" uid="uid://d1r4x28n1bvxa" path="res://blockade.tscn" id="5_21vm5"]
+[ext_resource type="PackedScene" uid="uid://cwr8wiae3dque" path="res://interactableArea.tscn" id="6_75b14"]
+[ext_resource type="PackedScene" uid="uid://4do8ovndwhua" path="res://UIParchment.tscn" id="7_272d7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n7td3"]
 texture = ExtResource("1_855eu")
@@ -753,3 +756,21 @@ destination = "res://Rooms/galleri.tscn"
 [node name="Door" parent="." instance=ExtResource("4_8rlg2")]
 position = Vector2(264, 58)
 destination = "res://Rooms/maskinerum.tscn"
+
+[node name="blockade" parent="." instance=ExtResource("5_21vm5")]
+position = Vector2(313, 128)
+keystoMove = 1
+
+[node name="Interactable area" parent="blockade" instance=ExtResource("6_75b14")]
+
+[node name="Parchment" parent="blockade/Interactable area" instance=ExtResource("7_272d7")]
+text = "Hmm, ser ud til at døren er blokeret (find 1 nøgle for at opnå adgang til dette rum!)"
+
+[node name="blockade2" parent="." instance=ExtResource("5_21vm5")]
+position = Vector2(265, 81)
+keystoMove = 2
+
+[node name="Interactable area" parent="blockade2" instance=ExtResource("6_75b14")]
+
+[node name="Parchment" parent="blockade2/Interactable area" instance=ExtResource("7_272d7")]
+text = "Hmm, ser ud til at døren er blokeret (find 2 nøgler for at opnå adgang til dette rum!)"
