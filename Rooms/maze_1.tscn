@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dt1iu2ynq7gpq"]
+[gd_scene load_steps=16 format=3 uid="uid://dt1iu2ynq7gpq"]
 
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_03veh"]
 [ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="2_5pchf"]
@@ -6,6 +6,8 @@
 [ext_resource type="FontFile" uid="uid://6voj8etdsa02" path="res://Assets/Font/Silver.ttf" id="4_s7e2j"]
 [ext_resource type="PackedScene" uid="uid://80ee385cat12" path="res://Door.tscn" id="5_ubt7b"]
 [ext_resource type="PackedScene" uid="uid://cwr8wiae3dque" path="res://interactableArea.tscn" id="6_x7ohq"]
+[ext_resource type="PackedScene" uid="uid://4do8ovndwhua" path="res://UIParchment.tscn" id="7_jxhk8"]
+[ext_resource type="PackedScene" uid="uid://tlo38bmwl6va" path="res://UIKeypad.tscn" id="8_u0ngw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_amll3"]
 texture = ExtResource("1_03veh")
@@ -765,6 +767,7 @@ texture = ExtResource("3_q63bw")
 texture_scale = 2.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 rotation = 3.14159
 scale = Vector2(3.545, 3.545)
 color = Color(0, 0, 0.0509804, 1)
@@ -829,14 +832,33 @@ text = "4
 position = Vector2(456, 615)
 destination = "res://Rooms/gang_2.tscn"
 
-[node name="Interactable area" parent="." instance=ExtResource("6_x7ohq")]
+[node name="Ciffer 3" parent="." instance=ExtResource("6_x7ohq")]
 position = Vector2(881, 927)
 
-[node name="Interactable area2" parent="." instance=ExtResource("6_x7ohq")]
+[node name="Parchment" parent="Ciffer 3" instance=ExtResource("7_jxhk8")]
+text = "[img]Assets/Puzzles/Maze3.png[/img]"
+
+[node name="Ciffer 1" parent="." instance=ExtResource("6_x7ohq")]
 position = Vector2(128, 431)
 
-[node name="Interactable area3" parent="." instance=ExtResource("6_x7ohq")]
+[node name="Parchment" parent="Ciffer 1" instance=ExtResource("7_jxhk8")]
+text = "[img]Assets/Puzzles/Maze1.png[/img]"
+
+[node name="Ciffer 4" parent="." instance=ExtResource("6_x7ohq")]
 position = Vector2(176, 315)
 
-[node name="Interactable area4" parent="." instance=ExtResource("6_x7ohq")]
+[node name="Parchment" parent="Ciffer 4" instance=ExtResource("7_jxhk8")]
+text = "[img]Assets/Puzzles/Maze4.png[/img]"
+
+[node name="Ciffer 2" parent="." instance=ExtResource("6_x7ohq")]
 position = Vector2(563, 227)
+
+[node name="Parchment" parent="Ciffer 2" instance=ExtResource("7_jxhk8")]
+text = "[img]Assets/Puzzles/Maze2.png[/img]"
+
+[node name="Interactable area" parent="." instance=ExtResource("6_x7ohq")]
+position = Vector2(360, 8)
+scale = Vector2(0.8, 0.8)
+
+[node name="Node2D" parent="Interactable area" instance=ExtResource("8_u0ngw")]
+correctAnswer = "3053"
