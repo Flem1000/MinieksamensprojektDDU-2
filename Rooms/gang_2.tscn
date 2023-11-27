@@ -576,10 +576,6 @@ texture = ExtResource("1_855eu")
 3:23/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:23/0/physics_layer_0/angular_velocity = 0.0
 3:23/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:23/0 = 0
-4:23/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-4:23/0/physics_layer_0/angular_velocity = 0.0
-4:23/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:23/0 = 0
 5:23/0/y_sort_origin = 1
 5:23/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -681,6 +677,10 @@ texture = ExtResource("1_855eu")
 4:26/0 = 0
 4:26/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:26/0/physics_layer_0/angular_velocity = 0.0
+4:23/0 = 0
+4:23/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:23/0/physics_layer_0/angular_velocity = 0.0
+4:23/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_la322"]
 physics_layer_0/collision_layer = 1
