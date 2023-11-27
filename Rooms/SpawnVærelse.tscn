@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d23fkglqoaivw"]
+[gd_scene load_steps=22 format=3 uid="uid://d23fkglqoaivw"]
 
 [ext_resource type="Script" path="res://SpawnVærelse.gd" id="1_6vksl"]
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_iacla"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://cmdv52kaqgdvv" path="res://værelse.tscn" id="8_y1fy4"]
 [ext_resource type="PackedScene" uid="uid://tlo38bmwl6va" path="res://UIKeypad.tscn" id="10_ur8kx"]
 [ext_resource type="PackedScene" uid="uid://euetfcdclk87" path="res://key.tscn" id="11_awg24"]
-[ext_resource type="FontFile" uid="uid://d0061w3gvdtgp" path="res://Assets/Font/Cambria-Font-For-Windows2.ttf" id="13_5oybm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1q2ue"]
 texture = ExtResource("1_iacla")
@@ -841,14 +840,16 @@ position = Vector2(76, 82)
 [node name="Tutorial" type="Node2D" parent="."]
 script = ExtResource("5_t7h6p")
 
-[node name="tutorialText" type="Label" parent="Tutorial"]
-offset_left = 49.0
-offset_top = 31.0
-offset_right = 95.0
-offset_bottom = 45.0
-theme_override_fonts/font = ExtResource("13_5oybm")
-theme_override_font_sizes/font_size = 10
-
 [node name="tutorialTimer" type="Timer" parent="Tutorial"]
+
+[node name="tutorialText" type="Label" parent="Tutorial"]
+anchors_preset = -1
+anchor_right = 2.091
+anchor_bottom = 0.909
+offset_left = 37.0
+offset_top = 29.0
+offset_right = 54.0
+offset_bottom = 52.0
+text = "hi"
 
 [connection signal="timeout" from="doortimer" to="." method="_on_doortimer_timeout"]

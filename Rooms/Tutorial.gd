@@ -10,7 +10,7 @@ func _process(delta):
 	pass
 
 func starttutorial():
-	label.text = "Velkommen til MathCat!"
+#	label.text = "Velkommen til MathCat!"
 	add_child(timer)
 	timer.wait_time = 5
 	
