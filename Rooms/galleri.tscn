@@ -906,8 +906,48 @@ offset_right = -879.119
 offset_bottom = 72.1761
 
 [node name="Interactable area" parent="." instance=ExtResource("5_ycqt8")]
-position = Vector2(104, 41)
-scale = Vector2(0.5, 0.5)
+position = Vector2(104, 42)
+scale = Vector2(0.6, 0.6)
 
 [node name="Parchment" parent="Interactable area" instance=ExtResource("13_w53gd")]
 text = "Hmm"
+
+[node name="Opgavetekst - M1" parent="." instance=ExtResource("5_ycqt8")]
+position = Vector2(24, 105)
+scale = Vector2(0.8, 0.8)
+
+[node name="Parchment" parent="Opgavetekst - M1" instance=ExtResource("13_w53gd")]
+text = "Løs for f(2)"
+
+[node name="Opgavetekst - M2" parent="." instance=ExtResource("5_ycqt8")]
+position = Vector2(152, 120)
+
+[node name="Parchment" parent="Opgavetekst - M2" instance=ExtResource("13_w53gd")]
+text = "Find hældningen af grafen ud fra de to punkter"
+
+[node name="Opgavetekst - M3" parent="." instance=ExtResource("5_ycqt8")]
+position = Vector2(40, 216)
+
+[node name="Parchment" parent="Opgavetekst - M3" instance=ExtResource("13_w53gd")]
+text = "Find skæringspunkterne af de to viste funktioner"
+
+[node name="Opgavetekst - M4" parent="." instance=ExtResource("5_ycqt8")]
+position = Vector2(136, 216)
+scale = Vector2(0.9, 0.9)
+
+[node name="Parchment" parent="Opgavetekst - M4" instance=ExtResource("13_w53gd")]
+text = "Hvad er koordinatets x-værdi, når y-værdien er 13?"
+
+[node name="Opgavetekst - M5" parent="." instance=ExtResource("5_ycqt8")]
+position = Vector2(24, 313)
+scale = Vector2(0.7, 0.7)
+
+[node name="Parchment" parent="Opgavetekst - M5" instance=ExtResource("13_w53gd")]
+text = "d"
+
+[node name="Opgavetekst - M6" parent="." instance=ExtResource("5_ycqt8")]
+position = Vector2(152, 313)
+scale = Vector2(0.8, 0.8)
+
+[node name="Parchment" parent="Opgavetekst - M6" instance=ExtResource("13_w53gd")]
+text = "d"

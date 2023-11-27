@@ -6,6 +6,8 @@ extends Sprite2D
 @onready var keypad = $"Interactable area/Keypad"
 @onready var label = $Label
 @onready var wall_5 = $"../wall5"
+@onready var key = $"../Key"
+
 
 func _ready():
 	pass
@@ -20,5 +22,6 @@ func _process(delta):
 		label.text = ""
 	if keypad.display == keypad.correctAnswer and keypad.solved == false:
 		wall_5.queue_free()
+		key.show()
 		keypad.solved = true
 

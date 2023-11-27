@@ -25,6 +25,7 @@ func _on_save_pressed():
 	var saveandload = SaveAndLoad.new()
 	saveandload.instantitedScenePaths = get_parent().instantitedScenePaths
 	saveandload.currentScenePath = get_parent().currentScenePath
+	saveandload.keys = Global.keys
 	saveandload.save()
 	
 

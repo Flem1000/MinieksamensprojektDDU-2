@@ -1,4 +1,5 @@
 class_name SaveAndLoad extends Resource
+@export var keys: int
 @export var instantitedScenePaths: Array
 @export var currentScenePath: String
 func save() -> void:

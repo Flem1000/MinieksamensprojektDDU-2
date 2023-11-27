@@ -9,9 +9,12 @@ var busy = false
 @onready var anim = $Sprite2D2/AnimationPlayer
 @onready var sprite = $Sprite2D2
 @onready var dash = $dash
+
+
+
 func _ready():
 	pass
-#		
+
 func _process(delta):
 	if Input.is_action_just_pressed("dash"):
 		dash.start_dash(dash_duration)
@@ -50,5 +53,4 @@ func interacting():
 	elif busy == true:
 		move_speed = 75
 		busy = false
-
 

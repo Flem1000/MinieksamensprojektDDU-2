@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://ihx0jvyr2ecx"]
+[gd_scene load_steps=25 format=3 uid="uid://ihx0jvyr2ecx"]
 
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_m7ugg"]
 [ext_resource type="Texture2D" uid="uid://dhqkiom0jjjhi" path="res://Assets/map/Machine.png" id="2_mcsd2"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://Mashine5.gd" id="11_121ia"]
 [ext_resource type="PackedScene" uid="uid://4do8ovndwhua" path="res://UIParchment.tscn" id="12_kl3qu"]
 [ext_resource type="PackedScene" uid="uid://80ee385cat12" path="res://Door.tscn" id="13_qmuin"]
+[ext_resource type="PackedScene" uid="uid://euetfcdclk87" path="res://key.tscn" id="14_cdk7o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ae1a7"]
 texture = ExtResource("1_m7ugg")
@@ -1454,7 +1455,6 @@ offset_top = 1.0
 offset_right = 52.0
 offset_bottom = 27.0
 scale = Vector2(0.2, 0.2)
-text = "dddd"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1497,7 +1497,6 @@ offset_top = 1.0
 offset_right = 52.0
 offset_bottom = 27.0
 scale = Vector2(0.2, 0.2)
-text = "dddd"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1540,7 +1539,6 @@ offset_top = 1.0
 offset_right = 52.0
 offset_bottom = 27.0
 scale = Vector2(0.2, 0.2)
-text = "dddd"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1584,7 +1582,6 @@ offset_top = 1.0
 offset_right = 52.0
 offset_bottom = 27.0
 scale = Vector2(0.2, 0.2)
-text = "dddd"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1628,7 +1625,6 @@ offset_top = 1.0
 offset_right = 52.0
 offset_bottom = 27.0
 scale = Vector2(0.2, 0.2)
-text = "dddd"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1692,3 +1688,7 @@ destination = "res://Rooms/gang_2.tscn"
 [node name="Door2" parent="." instance=ExtResource("13_qmuin")]
 position = Vector2(88, 168)
 destination = "res://Rooms/gang_2.tscn"
+
+[node name="Key" parent="." instance=ExtResource("14_cdk7o")]
+visible = false
+position = Vector2(88, 152)

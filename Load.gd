@@ -14,6 +14,33 @@ func _ready():
 	if !save_and_load.currentScenePath:
 		$Menu/Continue.disabled = true
 	
+
+#
+#Keys
+#
+
+@onready var key_hud = $CanvasLayer/KeyHUD
+var key_hud_1 = preload("res://Assets/Key/KeyHUD/KeyHUD1.png") 
+var key_hud_2 = preload("res://Assets/Key/KeyHUD/KeyHUD2.png") 
+var key_hud_3 = preload("res://Assets/Key/KeyHUD/KeyHUD3.png") 
+
+
+func key_got():
+	print("key got")
+	key_hud.show()
+	if Global.keys == 1:
+		key_hud.set_texture(key_hud_1)
+	elif Global.keys == 2:
+		key_hud.set_texture(key_hud_2)
+	else:
+		key_hud.set_texture(key_hud_3)
+
+#
+#Keys
+#
+
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
@@ -28,7 +55,9 @@ func _on_button_pressed():
 		var instantiatedpackedscene = packedscene.instantiate()
 		instantitedScenes.append(instantiatedpackedscene)
 		instantitedScenePaths.append("res://Rooms/"+scenePath)
-	
+	Global.keys = save_and_load.keys
+	if Global.keys >= 1:
+		key_got()
 	changeScene(save_and_load.currentScenePath)
 	remove_child($Menu)
 
@@ -67,3 +96,5 @@ func _on_new_game_pressed():
 	saveandload.save()
 	remove_child($Menu)
 	changeScene("res://Rooms/SpawnVærelse.tscn")
+
+

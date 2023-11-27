@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://b6sk76cxfjmdl"]
+[gd_scene load_steps=37 format=3 uid="uid://b6sk76cxfjmdl"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_88kya"]
 [ext_resource type="Script" path="res://Load.gd" id="1_g3j8w"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bxu3tbk6lauow" path="res://menu_background_music.tscn" id="8_odlrp"]
 [ext_resource type="PackedScene" uid="uid://cu5irj2dabt1n" path="res://ambiance.tscn" id="9_owpgm"]
 [ext_resource type="PackedScene" uid="uid://cvbd176cer4dq" path="res://ingameMenu.tscn" id="10_lmr5q"]
+[ext_resource type="Texture2D" uid="uid://djij8e41asrik" path="res://Assets/Key/KeyHUD/KeyHUD1.png" id="11_866eg"]
 
 [sub_resource type="Environment" id="Environment_uu7xi"]
 background_mode = 3
@@ -299,6 +300,15 @@ flat = true
 volume_db = -30.0
 
 [node name="ingamemenu" parent="." instance=ExtResource("10_lmr5q")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="KeyHUD" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+texture_filter = 1
+position = Vector2(301, 956)
+scale = Vector2(10.7187, 10.7187)
+texture = ExtResource("11_866eg")
 
 [connection signal="pressed" from="Menu/Continue" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Menu/New game" to="." method="_on_new_game_pressed"]
