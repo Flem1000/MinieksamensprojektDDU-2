@@ -721,7 +721,7 @@ polygon = PackedVector2Array(145, 49, 159, 49, 159, 81, 191, 81, 191, 85, 159, 8
 polygon = PackedVector2Array(257, 49, 271, 49, 271, 85, 239, 85, 239, 129, 303, 129, 303, 193, 351, 193, 351, 293, 337, 293, 337, 197, 289, 197, 289, 133, 193, 133, 193, 129, 225, 129, 225, 81, 257, 81)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xk0ds"]
-size = Vector2(18, 18)
+size = Vector2(18, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x70gt"]
 size = Vector2(16, 16)
@@ -777,7 +777,6 @@ texture = ExtResource("3_q63bw")
 texture_scale = 2.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 rotation = 3.14159
 scale = Vector2(3.545, 3.545)
 color = Color(0, 0, 0.0509804, 1)
@@ -884,8 +883,7 @@ position = Vector2(0, -47)
 destination = "res://Rooms/maze_victory_room.tscn"
 
 [node name="Interactable area3" parent="Keypad_door" instance=ExtResource("6_x7ohq")]
-position = Vector2(0, 1)
-scale = Vector2(0.9, 0.9)
+position = Vector2(0, 2)
 
 [node name="Node2D" parent="Keypad_door/Interactable area3" instance=ExtResource("8_u0ngw")]
 correctAnswer = "3053"
@@ -893,7 +891,7 @@ correctAnswer = "3053"
 [node name="Area2D" type="Area2D" parent="Keypad_door"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Keypad_door/Area2D"]
-position = Vector2(0, 1)
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_xk0ds")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Keypad_door"]
@@ -903,6 +901,24 @@ shape = SubResource("RectangleShape2D_x70gt")
 
 [node name="stuebackgroundtrack" parent="." instance=ExtResource("11_eaqvf")]
 stream = ExtResource("12_f5iim")
+
+[node name="Hint4" parent="." instance=ExtResource("6_x7ohq")]
+position = Vector2(264, 268)
+
+[node name="Parchment" parent="Hint4" instance=ExtResource("7_jxhk8")]
+text = "[img]Assets/UI/Maze_hint3.png[/img]"
+
+[node name="Hint3" parent="." instance=ExtResource("6_x7ohq")]
+position = Vector2(626, 847)
+
+[node name="Parchment" parent="Hint3" instance=ExtResource("7_jxhk8")]
+text = "[img]Assets/UI/Maze_hint1.png[/img]"
+
+[node name="Hint2" parent="." instance=ExtResource("6_x7ohq")]
+position = Vector2(560, 336)
+
+[node name="Parchment" parent="Hint2" instance=ExtResource("7_jxhk8")]
+text = "[img]Assets/UI/Maze_hint2.png[/img]"
 
 [connection signal="body_entered" from="Keypad_door/Area2D" to="Keypad_door" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Keypad_door/Area2D" to="Keypad_door" method="_on_area_2d_body_exited"]
