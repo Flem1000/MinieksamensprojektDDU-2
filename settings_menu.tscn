@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://1n4cd2kgnu0v"]
 
-[ext_resource type="Texture2D" uid="uid://f0od1xya6n2a" path="res://Assets/random sht/baccc.png" id="1_7qxm5"]
+[ext_resource type="Texture2D" uid="uid://f0od1xya6n2a" path="res://Assets/baccc.png" id="1_7qxm5"]
 [ext_resource type="Script" path="res://settings_menu.gd" id="1_d85vv"]
 [ext_resource type="FontFile" uid="uid://6voj8etdsa02" path="res://Assets/Font/Silver.ttf" id="3_u3wsm"]
 [ext_resource type="PackedScene" uid="uid://bxu3tbk6lauow" path="res://menu_background_music.tscn" id="4_8ekxw"]
@@ -69,47 +69,30 @@ visible = false
 modulate = Color(5, 5, 5, 1)
 self_modulate = Color(100, 100, 100, 1)
 position = Vector2(540, 200)
-scale = Vector2(5, 5)
+scale = Vector2(1.5, 1.5)
 
 [node name="Fullscreen" type="CheckButton" parent="Videos"]
 modulate = Color(5, 5, 5, 1)
 self_modulate = Color(100, 100, 100, 1)
-offset_right = 44.0
-offset_bottom = 24.0
+offset_left = 100.0
+offset_top = 140.0
+offset_right = 446.0
+offset_bottom = 260.0
 theme_override_fonts/font = ExtResource("3_u3wsm")
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 100
 theme_override_styles/focus = SubResource("StyleBoxEmpty_de77j")
 text = "Fullscreen"
 flat = true
 
-[node name="BrightnessSlider" type="HSlider" parent="Videos"]
-modulate = Color(5, 5, 5, 1)
-self_modulate = Color(100, 100, 100, 1)
-offset_left = 14.0
-offset_top = 76.0
-offset_right = 134.0
-offset_bottom = 92.0
-
-[node name="BrightnessLabel" type="Label" parent="Videos"]
-modulate = Color(5, 5, 5, 1)
-self_modulate = Color(100, 100, 100, 1)
-offset_left = 24.0
-offset_top = 49.0
-offset_right = 130.0
-offset_bottom = 92.0
-theme_override_fonts/font = ExtResource("3_u3wsm")
-theme_override_font_sizes/font_size = 35
-text = "Brightness"
-
 [node name="Backtomain" type="Button" parent="Videos"]
 modulate = Color(5, 5, 5, 1)
 self_modulate = Color(100, 100, 100, 1)
-offset_left = 55.4
-offset_top = 140.0
-offset_right = 95.4
-offset_bottom = 176.0
+offset_left = 212.0
+offset_top = 458.667
+offset_right = 320.0
+offset_bottom = 555.667
 theme_override_fonts/font = ExtResource("3_u3wsm")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 80
 theme_override_styles/focus = SubResource("StyleBoxEmpty_onheq")
 text = "Back"
 flat = true
@@ -117,17 +100,18 @@ flat = true
 [node name="Audios" type="Node2D" parent="."]
 visible = false
 position = Vector2(540, 200)
-scale = Vector2(5, 5)
+scale = Vector2(1.5, 1.5)
 
 [node name="Backtomain2" type="Button" parent="Audios"]
 modulate = Color(5, 5, 5, 1)
 self_modulate = Color(100, 100, 100, 1)
-offset_left = 55.4
-offset_top = 140.0
-offset_right = 95.4
-offset_bottom = 176.0
+texture_filter = 1
+offset_left = 210.667
+offset_top = 458.667
+offset_right = 318.667
+offset_bottom = 555.667
 theme_override_fonts/font = ExtResource("3_u3wsm")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 80
 theme_override_styles/focus = SubResource("StyleBoxEmpty_7in5g")
 text = "Back"
 flat = true
@@ -135,20 +119,22 @@ flat = true
 [node name="Audioslider" type="HSlider" parent="Audios"]
 modulate = Color(5, 5, 5, 1)
 self_modulate = Color(100, 100, 100, 1)
-offset_left = 13.6
-offset_top = 44.2
-offset_right = 133.6
-offset_bottom = 60.2
+texture_filter = 1
+offset_left = 198.0
+offset_top = 108.0
+offset_right = 318.0
+offset_bottom = 124.0
 
 [node name="Audiolabel" type="Label" parent="Audios"]
 modulate = Color(5, 5, 5, 1)
 self_modulate = Color(100, 100, 100, 1)
-offset_left = 43.2
-offset_top = 20.0
-offset_right = 105.2
-offset_bottom = 63.0
+texture_filter = 1
+offset_left = 168.667
+offset_top = -9.33334
+offset_right = 349.667
+offset_bottom = 105.667
 theme_override_fonts/font = ExtResource("3_u3wsm")
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 100
 text = "Volume"
 
 [node name="MenuBackgroundMusic" parent="." instance=ExtResource("4_8ekxw")]
