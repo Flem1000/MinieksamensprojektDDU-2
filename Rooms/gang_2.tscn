@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://qtxpq44t5i7f"]
+[gd_scene load_steps=14 format=3 uid="uid://qtxpq44t5i7f"]
 
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_855eu"]
 [ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="2_8drka"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://4do8ovndwhua" path="res://UIParchment.tscn" id="7_272d7"]
 [ext_resource type="PackedScene" uid="uid://dr8oky6afo352" path="res://stuebackgroundtrack.tscn" id="8_pyrmn"]
 [ext_resource type="AudioStream" uid="uid://2qfy0hrhudw3" path="res://Audio/Music/Tigris.mp3" id="9_12fmv"]
+[ext_resource type="Script" path="res://Rooms/Keyremover.gd" id="10_wd4d2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n7td3"]
 texture = ExtResource("1_855eu")
@@ -691,6 +692,9 @@ texture = ExtResource("1_855eu")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_n7td3")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_486r0"]
+size = Vector2(18, 15.75)
+
 [node name="gang2" type="Node2D"]
 y_sort_enabled = true
 
@@ -792,3 +796,43 @@ destination = "res://ending.tscn"
 
 [node name="stuebackgroundtrack" parent="." instance=ExtResource("8_pyrmn")]
 stream = ExtResource("9_12fmv")
+
+[node name="Interactable area" parent="." instance=ExtResource("6_75b14")]
+position = Vector2(248, 153)
+
+[node name="Parchment" parent="Interactable area" instance=ExtResource("7_272d7")]
+position = Vector2(-248, -153)
+text = "Kommer snart!"
+
+[node name="Interactable area2" parent="." instance=ExtResource("6_75b14")]
+position = Vector2(184, 153)
+
+[node name="Parchment" parent="Interactable area2" instance=ExtResource("7_272d7")]
+text = "Kommer snart!"
+
+[node name="Interactable area3" parent="." instance=ExtResource("6_75b14")]
+position = Vector2(104, 153)
+
+[node name="Parchment" parent="Interactable area3" instance=ExtResource("7_272d7")]
+text = "Kommer snart!"
+
+[node name="Interactable area4" parent="." instance=ExtResource("6_75b14")]
+position = Vector2(136, 57)
+
+[node name="Parchment" parent="Interactable area4" instance=ExtResource("7_272d7")]
+text = "Kommer snart!"
+
+[node name="Interactable area5" parent="." instance=ExtResource("6_75b14")]
+position = Vector2(200, 57)
+
+[node name="Parchment" parent="Interactable area5" instance=ExtResource("7_272d7")]
+text = "Kommer snart!"
+
+[node name="Keyremover" type="Area2D" parent="."]
+script = ExtResource("10_wd4d2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Keyremover"]
+position = Vector2(24, 137)
+shape = SubResource("RectangleShape2D_486r0")
+
+[connection signal="body_entered" from="Keyremover" to="Keyremover" method="_on_body_entered"]

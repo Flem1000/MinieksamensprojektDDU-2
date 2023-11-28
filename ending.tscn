@@ -16,7 +16,7 @@ script = ExtResource("1_os6pp")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
-z_index = 1
+z_index = 3
 texture_filter = 1
 offset_left = 602.0
 offset_top = 893.0
@@ -29,17 +29,20 @@ text = "Du slap ud af bagdøren med en fisk fra andedammen som gevinst"
 metadata/_edit_use_anchors_ = true
 
 [node name="ending" type="Sprite2D" parent="CanvasLayer"]
+z_index = 2
 position = Vector2(963.555, 542)
 scale = Vector2(0.501852, 0.501852)
 texture = ExtResource("2_smpna")
 
 [node name="ending_textbox" type="Sprite2D" parent="CanvasLayer"]
+z_index = 2
 texture_filter = 1
 position = Vector2(1003, 964)
 scale = Vector2(2.6875, 2.6875)
 texture = ExtResource("3_ndny2")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+z_index = 2
 texture_filter = 1
 position = Vector2(1652, 972)
 scale = Vector2(6, 6)
@@ -49,6 +52,7 @@ texture = ExtResource("4_f8no2")
 scale = Vector2(1.5, 1.5)
 
 [node name="Button" type="Button" parent="CanvasLayer/Node2D"]
+z_index = 2
 offset_left = 1038.67
 offset_top = 602.667
 offset_right = 1174.67

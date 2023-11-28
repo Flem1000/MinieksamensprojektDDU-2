@@ -1532,7 +1532,7 @@ position = Vector2(-8, 0)
 scale = Vector2(1.8, 1.8)
 
 [node name="Keypad" parent="Mashine3/Interactable area" instance=ExtResource("7_s3rls")]
-correctAnswer = "42"
+correctAnswer = "715"
 
 [node name="Label" type="Label" parent="Mashine3"]
 texture_filter = 1
@@ -1663,7 +1663,7 @@ position = Vector2(440, 121)
 scale = Vector2(0.8, 0.8)
 
 [node name="Parchment" parent="Interactable area3" instance=ExtResource("12_kl3qu")]
-text = "I dette rum skal du få tallet 90"
+text = "I dette rum skal du få tallet 370"
 
 [node name="Interactable area4" parent="." instance=ExtResource("6_3lud2")]
 position = Vector2(616, 121)
@@ -1697,3 +1697,12 @@ position = Vector2(88, 152)
 
 [node name="stuebackgroundtrack" parent="." instance=ExtResource("15_bw2ou")]
 stream = ExtResource("16_tujyo")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(88, 178)
+scale = Vector2(0.0101852, 0.037963)
+energy = 1.27
+shadow_enabled = true
+texture = ExtResource("4_23h7i")
+texture_scale = 2.0

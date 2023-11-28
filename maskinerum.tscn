@@ -1637,6 +1637,7 @@ layer_0/tile_data = PackedInt32Array(589828, 65536, 20, 589829, 65536, 20, 58983
 occluder = SubResource("OccluderPolygon2D_72vo7")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0.0156863, 1)
 
 [node name="Interactable area" parent="." instance=ExtResource("5_tjjty")]
@@ -1678,7 +1679,7 @@ scale = Vector2(0.8, 0.8)
 [node name="Parchment" parent="Interactable area5" instance=ExtResource("12_jejf0")]
 position = Vector2(-850, -151.25)
 scale = Vector2(1.25, 1.25)
-text = "Velkommen til professorens maskinerum! For at klare dette rum skal du få maskinen til at fremvise et specifikt tal ved at indtaste tal ind i maskinen. I dette tilfælde er det tallet 362. Du ved dog ikke hvilke hemmelige matematiske operationer som maskinen laver bag scenen inden den giver dig tallet tilbage, og det er derfor op til dig at prøve dig frem. Maskinen laver dog de samme operationer for hvert eneste tal, som du indtaster. Selvom maskinen kan tage op til 4 cifre, behøves de ikke alle være fyldt ud"
+text = "Velkommen til professorens maskinerum! For at klare dette rum skal du få maskinen til at fremvise et specifikt tal ved at indtaste tal ind i maskinen. I dette tilfælde er det tallet 362. Du ved dog ikke hvilke hemmelige matematiske operationer som maskinen laver bag scenen inden den giver dig tallet tilbage, og det er derfor op til dig at prøve dig frem. Maskinen laver dog de samme operationer for hvert eneste tal, som du indtaster. |Selvom maskinen kan tage op til 4 cifre, behøves de ikke alle være fyldt ud"
 
 [node name="Key" parent="." instance=ExtResource("13_bpsys")]
 visible = false

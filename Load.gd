@@ -32,8 +32,10 @@ func key_got():
 		key_hud.set_texture(key_hud_1)
 	elif Global.keys == 2:
 		key_hud.set_texture(key_hud_2)
-	else:
+	elif Global.keys == 3:
 		key_hud.set_texture(key_hud_3)
+	else:
+		key_hud.hide()
 
 #
 #Keys

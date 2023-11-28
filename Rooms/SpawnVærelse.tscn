@@ -827,7 +827,7 @@ position = Vector2(72, 25)
 scale = Vector2(0.8, 0.8)
 
 [node name="Parchment" parent="Interactable area" instance=ExtResource("8_hqdf4")]
-text = "Tutorial info"
+text = "Velkommen til MafCat! Din ejer, professoren, har efterladt dig alene hjemme igen! Måske er det tid til at lave lidt sjov med ham og se om du kan slippe ud af hans lidt komplicerede hus, bare for at vise, at du kan.|I [Esc] har du altid adgang til at se hvordan svar på diverse opgaver skal angives. Det er meget vigtigt at huske, da professoren er meget nøje i hans opgaver og godtager kun svar, der er skrevet i det format. Lad os se om du kan slippe ud! "
 
 [node name="Tutorial" type="Node2D" parent="."]
 modulate = Color(5, 5, 5, 1)
