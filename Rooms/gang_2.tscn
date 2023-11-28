@@ -722,7 +722,6 @@ layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array(196616, 262144, 22, 196620, 262144, 22, 196624, 262144, 22, 196626, 262144, 22, 524289, 131072, 22, 589830, 262144, 22, 589835, 262144, 22, 589839, 262144, 22, 589843, 262144, 22, 131096, 131072, 22)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 rotation = 3.14159
 scale = Vector2(3.545, 3.545)
 color = Color(0.156863, 0.121569, 0.309804, 1)
