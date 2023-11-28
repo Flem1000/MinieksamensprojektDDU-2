@@ -1,6 +1,9 @@
 extends Control
 var menuIsOpen = false
 
+@onready var load = $".."
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -8,12 +11,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("open_menu") and menuIsOpen == false:
+	if Input.is_action_just_pressed("open_menu") and menuIsOpen == false and load.interacting == false:
 		$CanvasLayer.show()
 		menuIsOpen = true
-	elif Input.is_action_just_pressed("open_menu") and menuIsOpen == true:
+		Global.escaping = true
+	elif Input.is_action_just_pressed("open_menu") and menuIsOpen == true and load.interacting == false:
 		$CanvasLayer.hide()
 		menuIsOpen = false
+		Global.escaping = false
 	
 
 

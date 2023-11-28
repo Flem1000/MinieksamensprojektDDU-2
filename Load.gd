@@ -15,6 +15,8 @@ func _ready():
 		$Menu/Continue.disabled = true
 	
 
+var interacting = false
+
 #
 #Keys
 #
@@ -41,6 +43,11 @@ func key_got():
 #Keys
 #
 
+func interact():
+	if interacting == false:
+		interacting = true
+	else:
+		interacting = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

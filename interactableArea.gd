@@ -15,13 +15,15 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if playerInside == true and Input.is_action_just_pressed("Interact") and interacting == false:
+	if playerInside == true and Input.is_action_just_pressed("Interact") and interacting == false and Global.escaping == false:
 			_on_interact_pressed()
 			player.interacting()
+			get_owner().get_parent().interact()
 			interacting = true
 
-	elif playerInside == true and Input.is_action_just_pressed("Interact") and interacting == true:
+	elif playerInside == true and Input.is_action_just_pressed("Interact") and interacting == true and Global.escaping == false:
 		not_interacting()
+		get_owner().get_parent().interact()
 		get_child(1).get_child(0).hide()
 
 
