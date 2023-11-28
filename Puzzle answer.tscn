@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckt1dv8msowg3"]
+[gd_scene load_steps=6 format=3 uid="uid://ckt1dv8msowg3"]
 
 [ext_resource type="Script" path="res://Control.gd" id="1_tbehr"]
+[ext_resource type="FontFile" uid="uid://8giqdnn8lns0" path="res://Assets/Font/Cambria-Font-For-Windows.ttf" id="2_k5j44"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_odma8"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_fupl4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l88se"]
+texture = SubResource("CanvasTexture_fupl4")
+modulate_color = Color(0.992157, 0.968627, 0.964706, 1)
 
 [node name="Answer" type="Control"]
 layout_mode = 3
@@ -12,12 +21,24 @@ offset_bottom = 49.0
 script = ExtResource("1_tbehr")
 
 [node name="LineEdit" type="LineEdit" parent="."]
+material = SubResource("ShaderMaterial_odma8")
 layout_mode = 0
 offset_left = 839.0
 offset_top = 619.0
 offset_right = 955.0
 offset_bottom = 650.0
 scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/clear_button_color = Color(0, 0, 0, 1)
+theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_k5j44")
+theme_override_styles/normal = SubResource("StyleBoxTexture_l88se")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
