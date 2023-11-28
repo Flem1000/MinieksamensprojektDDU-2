@@ -1,6 +1,7 @@
 extends Node
 
 var keys = 0
+var escaping = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
