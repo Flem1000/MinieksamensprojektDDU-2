@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://f2a3isqqw5im"]
+[gd_scene load_steps=24 format=3 uid="uid://f2a3isqqw5im"]
 
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_lta71"]
 [ext_resource type="Texture2D" uid="uid://dhqkiom0jjjhi" path="res://Assets/map/Machine.png" id="2_oo1jq"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://Mashine3.gd" id="9_nwui3"]
 [ext_resource type="Script" path="res://Mashine4.gd" id="10_he2hl"]
 [ext_resource type="PackedScene" uid="uid://4do8ovndwhua" path="res://UIParchment.tscn" id="12_jejf0"]
+[ext_resource type="PackedScene" uid="uid://euetfcdclk87" path="res://key.tscn" id="13_bpsys"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ae1a7"]
 texture = ExtResource("1_lta71")
@@ -1395,7 +1396,7 @@ layer_2/modulate = Color(1, 1, 1, 1)
 layer_2/y_sort_enabled = true
 layer_2/y_sort_origin = 0
 layer_2/z_index = 0
-layer_2/tile_data = PackedInt32Array(655405, 262144, 22, 655365, 262144, 22)
+layer_2/tile_data = PackedInt32Array(655405, 262144, 22, 655365, 131072, 22)
 layer_3/name = "decor"
 layer_3/enabled = true
 layer_3/modulate = Color(1, 1, 1, 1)
@@ -1528,7 +1529,7 @@ position = Vector2(-8, 0)
 scale = Vector2(1.8, 1.8)
 
 [node name="Keypad" parent="Mashine3/Interactable area" instance=ExtResource("6_bi3dj")]
-correctAnswer = "42"
+correctAnswer = "715"
 
 [node name="Label" type="Label" parent="Mashine3"]
 texture_filter = 1
@@ -1659,7 +1660,7 @@ position = Vector2(440, 121)
 scale = Vector2(0.8, 0.8)
 
 [node name="Parchment" parent="Interactable area3" instance=ExtResource("12_jejf0")]
-text = "I dette rum skal du få tallet 90"
+text = "I dette rum skal du få tallet 370"
 
 [node name="Interactable area4" parent="." instance=ExtResource("5_tjjty")]
 position = Vector2(616, 121)
@@ -1677,4 +1678,17 @@ scale = Vector2(0.8, 0.8)
 [node name="Parchment" parent="Interactable area5" instance=ExtResource("12_jejf0")]
 position = Vector2(-850, -151.25)
 scale = Vector2(1.25, 1.25)
-text = "Velkommen til professorens maskinerum! For at klare dette rum skal du få maskinen til at fremvise et specifikt tal ved at indtaste tal ind i maskinen. I dette tilfælde er det tallet 362. Du ved dog ikke hvilke hemmelige matematiske operationer som maskinen laver bag scenen inden den giver dig tallet tilbage, og det er derfor op til dig at prøve dig frem. Maskinen laver dog de samme operationer for hvert eneste tal, som du indtaster"
+text = "Velkommen til professorens maskinerum! For at klare dette rum skal du få maskinen til at fremvise et specifikt tal ved at indtaste tal ind i maskinen. I dette tilfælde er det tallet 362. Du ved dog ikke hvilke hemmelige matematiske operationer som maskinen laver bag scenen inden den giver dig tallet tilbage, og det er derfor op til dig at prøve dig frem. Maskinen laver dog de samme operationer for hvert eneste tal, som du indtaster. Selvom maskinen kan tage op til 4 cifre, behøves de ikke alle være fyldt ud"
+
+[node name="Key" parent="." instance=ExtResource("13_bpsys")]
+visible = false
+position = Vector2(88, 153)
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(88, 178)
+scale = Vector2(0.0101852, 0.037963)
+energy = 1.27
+shadow_enabled = true
+texture = ExtResource("4_n8okt")
+texture_scale = 2.0

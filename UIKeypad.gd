@@ -74,10 +74,8 @@ func _on_0_pressed():
 	key_press(0)
 
 func _on_hashtag_pressed():
-	if solved == false:
-		display += "#"
-		print(display)
-		update_texture()
+	get_parent().not_interacting()
+	get_child(0).hide()
 
 func _on_x_pressed():
 	if solved == false:

@@ -777,7 +777,6 @@ texture = ExtResource("3_q63bw")
 texture_scale = 2.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 rotation = 3.14159
 scale = Vector2(3.545, 3.545)
 color = Color(0, 0, 0.0509804, 1)

@@ -7,6 +7,7 @@ extends Sprite2D
 @onready var label = $Label
 @onready var wall_5 = $"../wall5"
 @onready var key = $"../Key"
+@onready var light = $"../PointLight2D2"
 
 
 func _ready():
@@ -23,5 +24,6 @@ func _process(delta):
 	if keypad.display == keypad.correctAnswer and keypad.solved == false:
 		wall_5.queue_free()
 		key.show()
+		light.show()
 		keypad.solved = true
 
