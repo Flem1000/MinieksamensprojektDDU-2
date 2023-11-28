@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://ingameMenu.gd" id="1_dbhk5"]
 [ext_resource type="FontFile" uid="uid://6voj8etdsa02" path="res://Assets/Font/Silver.ttf" id="1_fhfek"]
-[ext_resource type="Texture2D" uid="uid://by1cmim0mnr2" path="res://angivelseafsvarark.png" id="3_uu2pi"]
+[ext_resource type="Texture2D" uid="uid://dtso7pw77auk6" path="res://Assets/UI/svar angivelse page 2023-11-28 192633.png" id="3_0dsui"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -57,7 +57,7 @@ text = "Continue
 visible = false
 position = Vector2(1034.01, 482.026)
 scale = Vector2(1.17138, 1.17138)
-texture = ExtResource("3_uu2pi")
+texture = ExtResource("3_0dsui")
 
 [node name="Back" type="Button" parent="CanvasLayer"]
 visible = false
