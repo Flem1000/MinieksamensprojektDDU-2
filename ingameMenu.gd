@@ -1,5 +1,6 @@
 extends Control
 var menuIsOpen = false
+var parchment = "res://UIParchment.tscn"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -36,3 +37,9 @@ func _on_quit_pressed():
 func _on_continue_pressed():
 	$CanvasLayer.hide()
 	menuIsOpen = false
+
+
+
+
+func _on_svarangivelse_pressed():
+	pass
