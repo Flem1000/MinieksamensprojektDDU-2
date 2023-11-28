@@ -1,10 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://ci638jdfdqj12"]
+[gd_scene load_steps=9 format=3 uid="uid://ci638jdfdqj12"]
 
 [ext_resource type="FontFile" uid="uid://6voj8etdsa02" path="res://Assets/Font/Silver.ttf" id="1_eiyba"]
+[ext_resource type="Script" path="res://ending.gd" id="1_os6pp"]
 [ext_resource type="Texture2D" uid="uid://curinlctf8rod" path="res://Assets/Mafcat Drawings/endings/ending 1 (fish pond).png" id="2_smpna"]
 [ext_resource type="Texture2D" uid="uid://b0ilv4riwyl6" path="res://Assets/UI/Dialogue_box.png" id="3_ndny2"]
+[ext_resource type="PackedScene" uid="uid://dr8oky6afo352" path="res://stuebackgroundtrack.tscn" id="4_2yyge"]
+[ext_resource type="Texture2D" uid="uid://das58y4ogi2m3" path="res://Back_to_menu.png" id="4_f8no2"]
+[ext_resource type="AudioStream" uid="uid://cvrqj45h4rcfx" path="res://Audio/Music/Flip.mp3" id="5_nafm1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7owdr"]
 
 [node name="Ending" type="Node2D"]
+script = ExtResource("1_os6pp")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -31,3 +38,29 @@ texture_filter = 1
 position = Vector2(1003, 964)
 scale = Vector2(2.6875, 2.6875)
 texture = ExtResource("3_ndny2")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+texture_filter = 1
+position = Vector2(1652, 972)
+scale = Vector2(6, 6)
+texture = ExtResource("4_f8no2")
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer"]
+scale = Vector2(1.5, 1.5)
+
+[node name="Button" type="Button" parent="CanvasLayer/Node2D"]
+offset_left = 1038.67
+offset_top = 602.667
+offset_right = 1174.67
+offset_bottom = 722.667
+theme_override_fonts/font = ExtResource("1_eiyba")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7owdr")
+text = "Quit"
+flat = true
+
+[node name="stuebackgroundtrack" parent="." instance=ExtResource("4_2yyge")]
+position = Vector2(1736, 972)
+stream = ExtResource("5_nafm1")
+
+[connection signal="pressed" from="CanvasLayer/Node2D/Button" to="." method="_on_button_pressed"]

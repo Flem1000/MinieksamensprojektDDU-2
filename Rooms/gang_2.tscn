@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://qtxpq44t5i7f"]
+[gd_scene load_steps=12 format=3 uid="uid://qtxpq44t5i7f"]
 
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_855eu"]
 [ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="2_8drka"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://d1r4x28n1bvxa" path="res://blockade.tscn" id="5_21vm5"]
 [ext_resource type="PackedScene" uid="uid://cwr8wiae3dque" path="res://interactableArea.tscn" id="6_75b14"]
 [ext_resource type="PackedScene" uid="uid://4do8ovndwhua" path="res://UIParchment.tscn" id="7_272d7"]
+[ext_resource type="PackedScene" uid="uid://dr8oky6afo352" path="res://stuebackgroundtrack.tscn" id="8_pyrmn"]
+[ext_resource type="AudioStream" uid="uid://2qfy0hrhudw3" path="res://Audio/Music/Tigris.mp3" id="9_12fmv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n7td3"]
 texture = ExtResource("1_855eu")
@@ -722,7 +724,6 @@ layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array(196616, 262144, 22, 196620, 262144, 22, 196624, 262144, 22, 196626, 262144, 22, 524289, 131072, 22, 589830, 262144, 22, 589835, 262144, 22, 589839, 262144, 22, 589843, 262144, 22, 131096, 131072, 22)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 rotation = 3.14159
 scale = Vector2(3.545, 3.545)
 color = Color(0.156863, 0.121569, 0.309804, 1)
@@ -784,3 +785,10 @@ keystoMove = 3
 
 [node name="Parchment" parent="blockade3/Interactable area" instance=ExtResource("7_272d7")]
 text = "Der her er udgangen! Find alle 3 nøgler for at opnå adgang!"
+
+[node name="Door2" parent="." instance=ExtResource("4_8rlg2")]
+position = Vector2(24, 137)
+destination = "res://ending.tscn"
+
+[node name="stuebackgroundtrack" parent="." instance=ExtResource("8_pyrmn")]
+stream = ExtResource("9_12fmv")

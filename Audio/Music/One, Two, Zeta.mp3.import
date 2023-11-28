@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0gw45p7hgeoi"
+path="res://.godot/imported/One, Two, Zeta.mp3-5d15cea15a7295ba44dade316201eaaa.mp3str"
+
+[deps]
+
+source_file="res://Audio/Music/One, Two, Zeta.mp3"
+dest_files=["res://.godot/imported/One, Two, Zeta.mp3-5d15cea15a7295ba44dade316201eaaa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

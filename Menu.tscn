@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://idsnmyr8imew" path="res://Assets/Player/CatsBlack16x16Tile.png" id="5_1oljj"]
 [ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/light2.png" id="5_m3n5b"]
 [ext_resource type="PackedScene" uid="uid://bxu3tbk6lauow" path="res://menu_background_music.tscn" id="8_odlrp"]
-[ext_resource type="PackedScene" uid="uid://cu5irj2dabt1n" path="res://ambiance.tscn" id="9_owpgm"]
+[ext_resource type="AudioStream" uid="uid://cq8f6njtq4u83" path="res://Audio/Music/Zeta.mp3" id="9_b3pxl"]
 [ext_resource type="PackedScene" uid="uid://cvbd176cer4dq" path="res://ingameMenu.tscn" id="10_lmr5q"]
 [ext_resource type="Texture2D" uid="uid://djij8e41asrik" path="res://Assets/Key/KeyHUD/KeyHUD1.png" id="11_866eg"]
 
@@ -295,9 +295,7 @@ text = "Settings"
 flat = true
 
 [node name="MenuBackgroundMusic" parent="Menu" instance=ExtResource("8_odlrp")]
-
-[node name="Ambiance" parent="." instance=ExtResource("9_owpgm")]
-volume_db = -30.0
+stream = ExtResource("9_b3pxl")
 
 [node name="ingamemenu" parent="." instance=ExtResource("10_lmr5q")]
 

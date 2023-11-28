@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://ihx0jvyr2ecx"]
+[gd_scene load_steps=27 format=3 uid="uid://ihx0jvyr2ecx"]
 
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_m7ugg"]
 [ext_resource type="Texture2D" uid="uid://dhqkiom0jjjhi" path="res://Assets/map/Machine.png" id="2_mcsd2"]
@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://4do8ovndwhua" path="res://UIParchment.tscn" id="12_kl3qu"]
 [ext_resource type="PackedScene" uid="uid://80ee385cat12" path="res://Door.tscn" id="13_qmuin"]
 [ext_resource type="PackedScene" uid="uid://euetfcdclk87" path="res://key.tscn" id="14_cdk7o"]
+[ext_resource type="PackedScene" uid="uid://dr8oky6afo352" path="res://stuebackgroundtrack.tscn" id="15_bw2ou"]
+[ext_resource type="AudioStream" uid="uid://d0gw45p7hgeoi" path="res://Audio/Music/One, Two, Zeta.mp3" id="16_tujyo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ae1a7"]
 texture = ExtResource("1_m7ugg")
@@ -1692,3 +1694,6 @@ destination = "res://Rooms/gang_2.tscn"
 [node name="Key" parent="." instance=ExtResource("14_cdk7o")]
 visible = false
 position = Vector2(88, 152)
+
+[node name="stuebackgroundtrack" parent="." instance=ExtResource("15_bw2ou")]
+stream = ExtResource("16_tujyo")

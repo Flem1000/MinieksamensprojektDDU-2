@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://d23fkglqoaivw"]
+[gd_scene load_steps=24 format=3 uid="uid://d23fkglqoaivw"]
 
 [ext_resource type="Script" path="res://SpawnVærelse.gd" id="1_6vksl"]
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_iacla"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://cmdv52kaqgdvv" path="res://værelse.tscn" id="8_y1fy4"]
 [ext_resource type="FontFile" uid="uid://6voj8etdsa02" path="res://Assets/Font/Silver.ttf" id="11_cl01b"]
 [ext_resource type="PackedScene" uid="uid://d1r4x28n1bvxa" path="res://blockade.tscn" id="12_5vlys"]
+[ext_resource type="PackedScene" uid="uid://bxu3tbk6lauow" path="res://menu_background_music.tscn" id="13_va0ep"]
+[ext_resource type="AudioStream" uid="uid://dcdj7uoliekx7" path="res://Audio/Music/Euler's Clock.mp3" id="14_gjl4u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1q2ue"]
 texture = ExtResource("1_iacla")
@@ -860,6 +862,9 @@ keystoMove = 2000
 
 [node name="Parchment" parent="blockade/Interactable area" instance=ExtResource("8_hqdf4")]
 text = "Hov hov, færdiggør tutorialen først!"
+
+[node name="MenuBackgroundMusic" parent="." instance=ExtResource("13_va0ep")]
+stream = ExtResource("14_gjl4u")
 
 [connection signal="timeout" from="doortimer" to="." method="_on_doortimer_timeout"]
 [connection signal="timeout" from="Tutorial/tutorialTimer" to="Tutorial" method="_on_tutorial_timer_timeout"]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://1n4cd2kgnu0v"]
+[gd_scene load_steps=10 format=3 uid="uid://1n4cd2kgnu0v"]
 
 [ext_resource type="Texture2D" uid="uid://f0od1xya6n2a" path="res://Assets/baccc.png" id="1_7qxm5"]
 [ext_resource type="Script" path="res://settings_menu.gd" id="1_d85vv"]
 [ext_resource type="FontFile" uid="uid://6voj8etdsa02" path="res://Assets/Font/Silver.ttf" id="3_u3wsm"]
 [ext_resource type="PackedScene" uid="uid://bxu3tbk6lauow" path="res://menu_background_music.tscn" id="4_8ekxw"]
+[ext_resource type="Script" path="res://Audioslider.gd" id="4_behta"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w0o51"]
 
@@ -124,6 +125,10 @@ offset_left = 198.0
 offset_top = 108.0
 offset_right = 318.0
 offset_bottom = 124.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("4_behta")
 
 [node name="Audiolabel" type="Label" parent="Audios"]
 modulate = Color(5, 5, 5, 1)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dt1iu2ynq7gpq"]
+[gd_scene load_steps=22 format=3 uid="uid://dt1iu2ynq7gpq"]
 
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_03veh"]
 [ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="2_5pchf"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://tlo38bmwl6va" path="res://UIKeypad.tscn" id="8_u0ngw"]
 [ext_resource type="Texture2D" uid="uid://c8cj3mugv3128" path="res://Assets/Keypad_door.png" id="9_gtrbc"]
 [ext_resource type="Script" path="res://Rooms/Keypad_door.gd" id="9_qkkxn"]
+[ext_resource type="PackedScene" uid="uid://dr8oky6afo352" path="res://stuebackgroundtrack.tscn" id="11_eaqvf"]
+[ext_resource type="AudioStream" uid="uid://cofior35fwq6a" path="res://Audio/onlymp3.to - Song of Horror OST Puzzle-5I0fUq0NHfg-192k-1701172619.mp3" id="12_f5iim"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_amll3"]
 texture = ExtResource("1_03veh")
@@ -897,6 +899,9 @@ shape = SubResource("RectangleShape2D_xk0ds")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Keypad_door/StaticBody2D"]
 shape = SubResource("RectangleShape2D_x70gt")
+
+[node name="stuebackgroundtrack" parent="." instance=ExtResource("11_eaqvf")]
+stream = ExtResource("12_f5iim")
 
 [connection signal="body_entered" from="Keypad_door/Area2D" to="Keypad_door" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Keypad_door/Area2D" to="Keypad_door" method="_on_area_2d_body_exited"]

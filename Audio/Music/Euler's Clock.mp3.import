@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dcdj7uoliekx7"
+path="res://.godot/imported/Euler's Clock.mp3-eda702a45fdf4c0dcd3e61bed210a46f.mp3str"
+
+[deps]
+
+source_file="res://Audio/Music/Euler's Clock.mp3"
+dest_files=["res://.godot/imported/Euler's Clock.mp3-eda702a45fdf4c0dcd3e61bed210a46f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
