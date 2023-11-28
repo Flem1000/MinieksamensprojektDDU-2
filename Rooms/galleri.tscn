@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Rooms/galleri.gd" id="1_bbmx1"]
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_tw5c6"]
-[ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="2_gp1oa"]
+[ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/light2.png" id="2_gp1oa"]
 [ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="3_0pr3c"]
 [ext_resource type="PackedScene" uid="uid://80ee385cat12" path="res://Door.tscn" id="4_jry3w"]
 [ext_resource type="PackedScene" uid="uid://cwr8wiae3dque" path="res://interactableArea.tscn" id="5_ycqt8"]
@@ -920,7 +920,7 @@ position = Vector2(104, 42)
 scale = Vector2(0.6, 0.6)
 
 [node name="Parchment" parent="Interactable area" instance=ExtResource("13_w53gd")]
-text = "Hmm"
+text = "Foran dig ses professorens galleri fyldt med matematik fra hans storhedstid. For at komme videre skal du hjælpe med at minde ham om de gode gamle dage ved at løse opgaverne på malerierne. Opgavebeskrivelserne kan findes rundt omkring tæt ved de respektive malerier. Hvis du sidder fast, så har professoren efterladt sine gamle matematiknoter, som eventuelt kunne hjælpe dig på vej"
 
 [node name="Opgavetekst - M1" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(24, 105)

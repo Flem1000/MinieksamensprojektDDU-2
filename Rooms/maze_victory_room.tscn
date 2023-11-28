@@ -1,11 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://byo8cr5n8dnlb"]
+[gd_scene load_steps=10 format=3 uid="uid://byo8cr5n8dnlb"]
 
-[ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_hgith"]
-[ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="2_mnh3g"]
-[ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="3_exogr"]
+[ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_52myk"]
+[ext_resource type="Script" path="res://Rooms/maze_victory_room.gd" id="1_an86f"]
+[ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="2_i1x0t"]
+[ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/light2.png" id="3_vm43l"]
+[ext_resource type="PackedScene" uid="uid://euetfcdclk87" path="res://key.tscn" id="4_oc75b"]
+[ext_resource type="PackedScene" uid="uid://80ee385cat12" path="res://Door.tscn" id="5_702y5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cae88"]
-texture = ExtResource("1_hgith")
+texture = ExtResource("1_52myk")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -682,8 +685,11 @@ texture = ExtResource("1_hgith")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_cae88")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_40rfp"]
+
 [node name="mazeVictoryRoom" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_an86f")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -241.0
@@ -699,31 +705,35 @@ position = Vector2(0, 16)
 tile_set = SubResource("TileSet_13obm")
 format = 2
 layer_0/name = "ground"
-layer_0/tile_data = PackedInt32Array(524294, 65536, 14, 458758, 65536, 13, 458757, 131072, 15, 458756, 65536, 14, 458759, 0, 15, 458760, 65536, 14, 458761, 131072, 14, 458755, 0, 14, 196611, 131072, 17, 262147, 65536, 13, 327683, 131072, 15, 393219, 0, 13, 196617, 0, 17, 262153, 65536, 13, 327689, 0, 15, 393225, 131072, 13, 196612, 65536, 13, 262148, 65536, 13, 327684, 65536, 13, 393220, 65536, 13, 196613, 65536, 13, 262149, 65536, 13, 327685, 65536, 13, 393221, 65536, 13, 196614, 65536, 13, 262150, 65536, 13, 327686, 65536, 13, 393222, 65536, 13, 196615, 65536, 13, 262151, 65536, 13, 327687, 65536, 13, 393223, 65536, 13, 196616, 65536, 13, 262152, 65536, 13, 327688, 65536, 13, 393224, 65536, 13, 262146, 0, 13, 196610, 0, 12, 327682, 0, 14, 65539, 0, 12, 65540, 65536, 12, 65541, 131072, 17, 65542, 65536, 13, 65543, 0, 17, 65544, 65536, 12, 65545, 131072, 12, 131075, 0, 13, 131081, 131072, 13, 131076, 65536, 13, 131077, 65536, 13, 131078, 65536, 13, 131079, 65536, 13, 131080, 65536, 13, 196618, 131072, 12, 262154, 131072, 13, 327690, 131072, 14, 5, 0, 12, 6, 65536, 12, 7, 131072, 12, 524293, 0, 14, 524295, 131072, 14)
+layer_0/tile_data = PackedInt32Array(262146, 0, 12, 327682, 0, 13, 131075, 0, 12, 196611, 0, 13, 262147, 131072, 17, 327683, 65536, 13, 393219, 131072, 15, 458755, 0, 13, 131076, 65536, 12, 196612, 65536, 13, 262148, 65536, 13, 327684, 65536, 13, 393220, 65536, 13, 458756, 65536, 13, 65541, 0, 12, 131077, 131072, 17, 196613, 65536, 13, 262149, 65536, 13, 327685, 65536, 13, 393221, 65536, 13, 458757, 65536, 13, 524293, 131072, 15, 65542, 65536, 12, 131078, 65536, 13, 196614, 65536, 13, 262150, 65536, 13, 327686, 65536, 13, 393222, 65536, 13, 458758, 65536, 13, 524294, 65536, 13, 65543, 131072, 12, 131079, 0, 17, 196615, 65536, 13, 262151, 65536, 13, 327687, 65536, 13, 393223, 65536, 13, 458759, 65536, 13, 524295, 0, 15, 131080, 65536, 12, 196616, 65536, 13, 262152, 65536, 13, 327688, 65536, 13, 393224, 65536, 13, 458760, 65536, 13, 131081, 131072, 12, 196617, 131072, 13, 262153, 0, 17, 327689, 65536, 13, 393225, 0, 15, 458761, 131072, 13, 262154, 131072, 12, 327690, 131072, 13, 393218, 0, 14, 524291, 0, 14, 524292, 65536, 14, 589829, 0, 14, 589831, 131072, 14, 524296, 65536, 14, 524297, 131072, 14, 393226, 131072, 14, 589830, 65536, 15)
 layer_1/name = "walls"
 layer_1/enabled = true
 layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array(-65531, 65536, 18, -65530, 65536, 18, -65529, 65536, 18, -65528, 131072, 18, 10, 131072, 18, 131083, 131072, 18, -65532, 0, 18, 2, 0, 18, 131073, 0, 18, 131074, 131072, 20, 4, 131072, 20, 8, 0, 20, 131082, 0, 20, 3, 65536, 20, 9, 65536, 20, 524297, 65536, 20, 524291, 65536, 20, 524290, 0, 20, 327681, 0, 19, 393217, 0, 20, 262145, 0, 19, 196609, 0, 19, 65538, 0, 19, 65546, 0, 19, 196619, 0, 19, 262155, 0, 19, 327691, 0, 19, 458762, 0, 19, 393227, 131072, 20, 393226, 0, 18, 524296, 0, 18, 393218, 131072, 18, 524292, 131072, 18, 458754, 0, 19, 589828, 0, 20, 589829, 65536, 20, 589831, 65536, 20, 589832, 131072, 20)
+layer_1/tile_data = PackedInt32Array(196609, 0, 18, 262145, 0, 19, 327681, 0, 19, 393217, 0, 19, 65538, 0, 18, 131074, 0, 19, 458754, 131072, 18, 524290, 0, 19, 4, 0, 18, 589828, 131072, 18, 8, 131072, 18, 589832, 0, 18, 65546, 131072, 18, 131082, 0, 19, 458762, 0, 18, 524298, 0, 19, 196619, 131072, 18, 262155, 0, 19, 327691, 0, 19, 393227, 0, 19, 458753, 0, 20, 196610, 131072, 20, 589826, 0, 20, 65539, 65536, 20, 589827, 65536, 20, 65540, 131072, 20, 655364, 0, 20, 5, 65536, 18, 655365, 65536, 20, 6, 65536, 18, 7, 65536, 18, 655367, 65536, 20, 65544, 0, 20, 655368, 131072, 20, 65545, 65536, 20, 589833, 65536, 20, 196618, 0, 20, 589834, 131072, 20, 458763, 131072, 20)
 layer_2/name = "decor"
 layer_2/enabled = true
 layer_2/modulate = Color(1, 1, 1, 1)
 layer_2/y_sort_enabled = true
 layer_2/y_sort_origin = 0
 layer_2/z_index = 0
-layer_2/tile_data = PackedInt32Array(-65529, 393216, 21, -65531, 393216, 21, 196614, 458752, 24, 196616, 458752, 24, 196612, 458752, 24, 65545, 458752, 23, 65544, 327680, 23, 65541, 327680, 23, 65540, 393216, 23, 65539, 393216, 24, 458756, 393216, 24, 327689, 262144, 24, 262146, 196608, 24, 196610, 196608, 23, 196618, 262144, 23, 393219, 327680, 25, 458760, 458752, 25, 131075, 0, 26, 262154, 0, 26)
+layer_2/tile_data = PackedInt32Array(262146, 196608, 23, 131075, 393216, 24, 262154, 262144, 23, 327682, 196608, 24, 196611, 0, 26, 458755, 327680, 25, 131076, 393216, 23, 524292, 393216, 24, 5, 393216, 21, 131077, 327680, 23, 7, 393216, 21, 131080, 327680, 23, 524296, 458752, 25, 131081, 458752, 23, 393225, 262144, 24, 327690, 0, 26, 655366, 131072, 22, 6, 131072, 22)
 layer_3/name = "door"
 layer_3/enabled = true
 layer_3/modulate = Color(1, 1, 1, 1)
 layer_3/y_sort_enabled = true
 layer_3/y_sort_origin = 0
 layer_3/z_index = 0
-layer_3/tile_data = PackedInt32Array(589830, 131072, 22)
+layer_3/tile_data = PackedInt32Array()
 
-[node name="Player" parent="." instance=ExtResource("2_mnh3g")]
-position = Vector2(104, 138)
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color(0.146212, 0.111446, 0.21128, 1)
+
+[node name="Player" parent="." instance=ExtResource("2_i1x0t")]
+position = Vector2(105, 170)
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 zoom = Vector2(10, 10)
@@ -735,8 +745,24 @@ position = Vector2(0, -1)
 scale = Vector2(0.085, 0.085)
 energy = 1.27
 shadow_enabled = true
-texture = ExtResource("3_exogr")
+texture = ExtResource("3_vm43l")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
-color = Color(0.146212, 0.111446, 0.21128, 1)
+[node name="Key" parent="." instance=ExtResource("4_oc75b")]
+position = Vector2(104, 103)
+
+[node name="Door" parent="." instance=ExtResource("5_702y5")]
+position = Vector2(104, -50)
+
+[node name="Door2" parent="." instance=ExtResource("5_702y5")]
+position = Vector2(104, 183)
+destination = "res://Rooms/maze_1.tscn"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+z_index = 1
+position = Vector2(104, 103)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("CircleShape2D_40rfp")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
