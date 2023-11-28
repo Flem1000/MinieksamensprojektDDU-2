@@ -10,6 +10,7 @@ size = Vector2(16, 11.25)
 script = ExtResource("1_62qru")
 
 [node name="shelf" type="Sprite2D" parent="."]
+texture_filter = 1
 texture = ExtResource("2_32oeq")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

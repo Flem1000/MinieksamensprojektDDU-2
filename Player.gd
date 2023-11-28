@@ -10,7 +10,7 @@ var busy = false
 @onready var sprite = $Sprite2D2
 @onready var dash = $dash
 
-
+signal isInteracting
 
 func _ready():
 	pass
@@ -47,6 +47,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func interacting():
+	emit_signal("isInteracting")
 	if busy == false:
 		move_speed = 0
 		busy = true

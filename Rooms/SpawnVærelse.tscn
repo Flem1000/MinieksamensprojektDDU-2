@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://cwr8wiae3dque" path="res://interactableArea.tscn" id="7_njabp"]
 [ext_resource type="PackedScene" uid="uid://4do8ovndwhua" path="res://UIParchment.tscn" id="8_hqdf4"]
 [ext_resource type="PackedScene" uid="uid://cmdv52kaqgdvv" path="res://værelse.tscn" id="8_y1fy4"]
-[ext_resource type="PackedScene" uid="uid://tlo38bmwl6va" path="res://UIKeypad.tscn" id="10_ur8kx"]
-[ext_resource type="PackedScene" uid="uid://euetfcdclk87" path="res://key.tscn" id="11_awg24"]
+[ext_resource type="PackedScene" uid="uid://d1r4x28n1bvxa" path="res://blockade.tscn" id="12_i2iqc"]
+[ext_resource type="FontFile" uid="uid://6voj8etdsa02" path="res://Assets/Font/Silver.ttf" id="13_fhqr0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1q2ue"]
 texture = ExtResource("1_iacla")
@@ -821,35 +821,47 @@ destination = "res://Rooms/stuen.tscn"
 [node name="værelse" parent="." instance=ExtResource("8_y1fy4")]
 
 [node name="Interactable area" parent="." instance=ExtResource("7_njabp")]
-position = Vector2(91, 49)
+position = Vector2(56, 26)
 scale = Vector2(0.8, 0.8)
 
 [node name="Parchment" parent="Interactable area" instance=ExtResource("8_hqdf4")]
 text = "Hmmmm | Page 2 | Page 3"
 
-[node name="Interactable area2" parent="." instance=ExtResource("7_njabp")]
-position = Vector2(40, 73)
-scale = Vector2(0.8, 0.8)
-
-[node name="Node2D" parent="Interactable area2" instance=ExtResource("10_ur8kx")]
-correctAnswer = "4269"
-
-[node name="Key" parent="." instance=ExtResource("11_awg24")]
-position = Vector2(76, 82)
-
 [node name="Tutorial" type="Node2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(49, 30)
+scale = Vector2(0.08, 0.08)
 script = ExtResource("5_t7h6p")
 
 [node name="tutorialTimer" type="Timer" parent="Tutorial"]
 
 [node name="tutorialText" type="Label" parent="Tutorial"]
+modulate = Color(5, 5, 5, 1)
+self_modulate = Color(100, 100, 100, 1)
+z_index = 1
+y_sort_enabled = true
 anchors_preset = -1
 anchor_right = 2.091
 anchor_bottom = 0.909
-offset_left = 37.0
-offset_top = 29.0
-offset_right = 54.0
-offset_bottom = 52.0
-text = "hi"
+offset_left = -112.5
+offset_top = 112.5
+offset_right = 684.5
+offset_bottom = 540.5
+theme_override_fonts/font = ExtResource("13_fhqr0")
+theme_override_font_sizes/font_size = 100
+autowrap_mode = 2
+
+[node name="blockade" parent="." instance=ExtResource("12_i2iqc")]
+texture_filter = 1
+position = Vector2(72, 162)
+keystoMove = 200
+
+[node name="Interactable area" parent="blockade" instance=ExtResource("7_njabp")]
+position = Vector2(0, 1)
+
+[node name="Parchment" parent="blockade/Interactable area" instance=ExtResource("8_hqdf4")]
+text = "Hov hov, færdigør tutorialen først!"
 
 [connection signal="timeout" from="doortimer" to="." method="_on_doortimer_timeout"]
+[connection signal="timeout" from="Tutorial/tutorialTimer" to="Tutorial" method="_on_tutorial_timer_timeout"]
