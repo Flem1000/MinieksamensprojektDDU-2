@@ -729,7 +729,6 @@ layer_3/z_index = 0
 layer_3/tile_data = PackedInt32Array()
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.146212, 0.111446, 0.21128, 1)
 
 [node name="Player" parent="." instance=ExtResource("2_i1x0t")]
@@ -752,6 +751,7 @@ position = Vector2(104, 103)
 
 [node name="Door" parent="." instance=ExtResource("5_702y5")]
 position = Vector2(104, -50)
+destination = "res://Rooms/gang_2.tscn"
 
 [node name="Door2" parent="." instance=ExtResource("5_702y5")]
 position = Vector2(104, 183)
