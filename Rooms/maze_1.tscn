@@ -777,6 +777,7 @@ texture = ExtResource("3_q63bw")
 texture_scale = 2.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 rotation = 3.14159
 scale = Vector2(3.545, 3.545)
 color = Color(0, 0, 0.0509804, 1)
@@ -870,7 +871,7 @@ position = Vector2(456, 529)
 
 [node name="Parchment" parent="Interactable area2" instance=ExtResource("7_jxhk8")]
 position = Vector2(-456, -529)
-text = "Hvem havde troet, at professoren ville have så stor en labyrint i sit hus! For at komme ud skal du finde en dør, som kræver en firecifret kode. Cifrene i koden kan findes rundt omkring i labyrinten, men dog i form af opgaver. Det skulle jo nødig være for nemt"
+text = "Hvem havde troet, at professoren ville have så stor en labyrint i sit hus! For at komme ud skal du finde en dør, som kræver en firecifret kode. Cifrene i koden kan findes rundt omkring i labyrinten, men dog i form af opgaver. Det skulle jo nødig være for nemt. Med det sagt er der dog tips til opgaverne rundt omkring, som man kan finde, hvis der er nogen af opgaverne, du sidder fast ved"
 
 [node name="Keypad_door" type="Sprite2D" parent="."]
 texture_filter = 1

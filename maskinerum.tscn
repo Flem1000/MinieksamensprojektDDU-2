@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_lta71"]
 [ext_resource type="Texture2D" uid="uid://dhqkiom0jjjhi" path="res://Assets/map/Machine.png" id="2_oo1jq"]
 [ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="3_8l35o"]
-[ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="4_n8okt"]
+[ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/light2.png" id="4_n8okt"]
 [ext_resource type="Script" path="res://Mashine1.gd" id="5_njnm3"]
 [ext_resource type="PackedScene" uid="uid://cwr8wiae3dque" path="res://interactableArea.tscn" id="5_tjjty"]
 [ext_resource type="PackedScene" uid="uid://tlo38bmwl6va" path="res://UIKeypad.tscn" id="6_bi3dj"]
