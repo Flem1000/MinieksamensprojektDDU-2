@@ -11,7 +11,6 @@ func _ready():
 func _process(delta):
 	if player.velocity.x != 0 and continueTut == true or player.velocity.y != 0 and continueTut == true:
 		label.text = "Tryk Q for at interagere! Prøv at interagere med reolen over dig"
-	print(player.global_position.y)
 
 func starttutorial():
 	label.text = "Velkommen til MafCat!"
@@ -28,7 +27,8 @@ func _on_tutorial_timer_timeout():
 func isInteractingOnRightValue():
 	if player.global_position.y < ($"../Interactable area".global_position.y+20) and continueTut == true:
 		continuetutorial()
+		
 func continuetutorial():
-		label.text = ""
-		continueTut = false
-		$"../blockade".queue_free()
+	label.text = ""
+	continueTut = false
+	$"../blockade".queue_free()

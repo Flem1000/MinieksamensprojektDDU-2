@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://SpawnVærelse.gd" id="1_6vksl"]
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_iacla"]
 [ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="2_kp0m5"]
-[ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/random sht/light2.png" id="3_5huc7"]
-[ext_resource type="Texture2D" uid="uid://bwc1ldv2hhqkh" path="res://Assets/random sht/light.png" id="5_ao7yq"]
+[ext_resource type="Texture2D" uid="uid://c5cic53cako0j" path="res://Assets/light2.png" id="3_5huc7"]
+[ext_resource type="Texture2D" uid="uid://bwc1ldv2hhqkh" path="res://Assets/light.png" id="5_ao7yq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m5kvs"]
 size = Vector2(18, 14)
