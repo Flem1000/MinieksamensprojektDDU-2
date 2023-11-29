@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dwyr3fmn2qver" path="res://dash.tscn" id="4_6mk0o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5sxqc"]
-size = Vector2(9, 8.57143)
+size = Vector2(9, 8.571)
 
 [sub_resource type="Animation" id="Animation_udonr"]
 length = 0.001
