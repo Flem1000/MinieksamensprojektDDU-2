@@ -841,7 +841,6 @@ shadow_enabled = true
 texture = ExtResource("3_wonch")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.146212, 0.111446, 0.21128, 1)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
