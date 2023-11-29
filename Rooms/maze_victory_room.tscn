@@ -721,7 +721,7 @@ layer_2/modulate = Color(1, 1, 1, 1)
 layer_2/y_sort_enabled = true
 layer_2/y_sort_origin = 0
 layer_2/z_index = 0
-layer_2/tile_data = PackedInt32Array(262146, 196608, 23, 131075, 393216, 24, 262154, 262144, 23, 327682, 196608, 24, 196611, 0, 26, 458755, 327680, 25, 131076, 393216, 23, 524292, 393216, 24, 5, 393216, 21, 131077, 327680, 23, 7, 393216, 21, 131080, 327680, 23, 524296, 458752, 25, 131081, 458752, 23, 393225, 262144, 24, 327690, 0, 26, 655366, 131072, 22)
+layer_2/tile_data = PackedInt32Array(262146, 196608, 23, 131075, 393216, 24, 262154, 262144, 23, 327682, 196608, 24, 196611, 0, 26, 458755, 327680, 25, 131076, 393216, 23, 524292, 393216, 24, 5, 393216, 21, 131077, 327680, 23, 7, 393216, 21, 131080, 327680, 23, 524296, 458752, 25, 131081, 458752, 23, 393225, 262144, 24, 327690, 0, 26, 6, 131072, 22)
 layer_3/name = "door"
 layer_3/enabled = true
 layer_3/modulate = Color(1, 1, 1, 1)
@@ -752,7 +752,7 @@ texture = ExtResource("3_vm43l")
 position = Vector2(104, 103)
 
 [node name="Door" parent="." instance=ExtResource("5_702y5")]
-position = Vector2(104, 250)
+position = Vector2(104, -50)
 destination = "res://Rooms/gang_2.tscn"
 
 [node name="Area2D" type="Area2D" parent="."]

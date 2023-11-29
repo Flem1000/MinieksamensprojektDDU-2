@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://desfldy32yj7l"]
+[gd_scene load_steps=33 format=3 uid="uid://desfldy32yj7l"]
 
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_bqw1f"]
 [ext_resource type="Script" path="res://stuen.gd" id="1_yikym"]
@@ -11,8 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://dv6x4o7h5r1lw" path="res://Assets/map/Footprint left.png" id="6_7xepg"]
 [ext_resource type="PackedScene" uid="uid://dr8oky6afo352" path="res://stuebackgroundtrack.tscn" id="6_a2so8"]
 [ext_resource type="AudioStream" uid="uid://db5vld3nwqkdl" path="res://Audio/Music/Sixes.mp3" id="11_3mlfy"]
-[ext_resource type="PackedScene" uid="uid://cwr8wiae3dque" path="res://interactableArea.tscn" id="12_mliw3"]
-[ext_resource type="PackedScene" uid="uid://4do8ovndwhua" path="res://UIParchment.tscn" id="13_fsymf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i76h4"]
 texture = ExtResource("1_bqw1f")
@@ -898,34 +896,16 @@ wait_time = 0.5
 position = Vector2(57, 26)
 destination = "res://Rooms/SpawnVærelse.tscn"
 
+[node name="Door2" parent="." instance=ExtResource("5_100o4")]
+position = Vector2(278, 169)
+destination = "res://Rooms/gangen.tscn"
+
 [node name="Door3" parent="." instance=ExtResource("5_100o4")]
 position = Vector2(-72, 249)
 destination = "res://Rooms/gang_2.tscn"
 
 [node name="stuebackgroundtrack" parent="." instance=ExtResource("6_a2so8")]
 stream = ExtResource("11_3mlfy")
-
-[node name="Interactable area" parent="." instance=ExtResource("12_mliw3")]
-z_index = 1
-position = Vector2(8, 294)
-
-[node name="Parchment" parent="Interactable area" instance=ExtResource("13_fsymf")]
-text = "Kommer snart! Bare følg fodsporene :)"
-
-[node name="Interactable area2" parent="." instance=ExtResource("12_mliw3")]
-z_index = 1
-position = Vector2(144, 219)
-scale = Vector2(1.7, 1.7)
-
-[node name="Parchment" parent="Interactable area2" instance=ExtResource("13_fsymf")]
-text = "Kommer snart! Bare følg fodsporene :)"
-
-[node name="Interactable area3" parent="." instance=ExtResource("12_mliw3")]
-z_index = 1
-position = Vector2(278, 168)
-
-[node name="Parchment" parent="Interactable area3" instance=ExtResource("13_fsymf")]
-text = "Kommer snart! Bare følg fodsporene :)"
 
 [connection signal="timeout" from="doortimer" to="." method="_on_doortimer_timeout"]
 [connection signal="timeout" from="doortimer2" to="." method="_on_doortimer_2_timeout"]
