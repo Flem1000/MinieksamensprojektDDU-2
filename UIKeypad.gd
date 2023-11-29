@@ -76,6 +76,7 @@ func _on_0_pressed():
 func _on_hashtag_pressed():
 	get_parent().not_interacting()
 	get_child(0).hide()
+	get_owner().get_parent().interact()
 
 func _on_x_pressed():
 	if solved == false:

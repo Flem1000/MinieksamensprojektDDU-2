@@ -918,7 +918,7 @@ text = "[img]Assets/UI/Maze_hint1.png[/img]"
 position = Vector2(560, 336)
 
 [node name="Parchment" parent="Hint2" instance=ExtResource("7_jxhk8")]
-text = "[img]Assets/UI/Maze_hint2.png[/img]"
+text = "[img]Assets/UI/Maze_hint2.2.png[/img]"
 
 [connection signal="body_entered" from="Keypad_door/Area2D" to="Keypad_door" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Keypad_door/Area2D" to="Keypad_door" method="_on_area_2d_body_exited"]
