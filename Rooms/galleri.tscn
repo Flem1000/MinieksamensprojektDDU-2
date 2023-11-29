@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://08gy77djy2w8"]
+[gd_scene load_steps=25 format=3 uid="uid://08gy77djy2w8"]
 
 [ext_resource type="Script" path="res://Rooms/galleri.gd" id="1_bbmx1"]
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_tw5c6"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://v4dc5t3gmf1a" path="res://Assets/Puzzles/Maleri2.png" id="7_x86sg"]
 [ext_resource type="Texture2D" uid="uid://camm4bbhawiw0" path="res://Assets/Puzzles/Maleri3.png" id="8_evlit"]
 [ext_resource type="Texture2D" uid="uid://07yl64jniw1n" path="res://Assets/Puzzles/Maleri4.png" id="9_1c6vm"]
+[ext_resource type="Texture2D" uid="uid://dakomr5o81jy3" path="res://Assets/UI/Keypad/Delete.png" id="9_rmymk"]
+[ext_resource type="Texture2D" uid="uid://c1hivujwlolo6" path="res://Assets/UI/Keypad/Delete_hover.png" id="10_c6k0a"]
 [ext_resource type="Texture2D" uid="uid://bjdnftl64811v" path="res://Assets/Puzzles/Maleri5.png" id="10_iehqx"]
 [ext_resource type="Texture2D" uid="uid://yxp7ayec01lr" path="res://Assets/Puzzles/Maleri6.png" id="11_revig"]
 [ext_resource type="PackedScene" uid="uid://4do8ovndwhua" path="res://UIParchment.tscn" id="13_w53gd"]
@@ -702,6 +704,8 @@ sources/0 = SubResource("TileSetAtlasSource_uk8ij")
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_1jana"]
 polygon = PackedVector2Array(80, 21, 80, 16, 48, 16, 48, 64, 0, 64, 0, 326, 48, 326, 48, 358, 128, 358, 128, 326, 176, 326, 176, 64, 128, 64, 128, 16, 96, 16, 96, 21, 113, 21, 113, 69, 161, 69, 161, 129, 113, 129, 113, 165, 161, 165, 161, 225, 113, 225, 113, 261, 161, 261, 161, 321, 113, 321, 113, 353, 63, 353, 63, 321, 15, 321, 15, 261, 63, 261, 63, 225, 15, 225, 15, 165, 63, 165, 63, 129, 15, 129, 15, 69, 63, 69, 63, 21)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5dade"]
+
 [node name="galleri" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_bbmx1")
@@ -797,6 +801,7 @@ shadow_enabled = true
 texture = ExtResource("2_gp1oa")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.145098, 0.109804, 0.211765, 1)
 
 [node name="Door" parent="." instance=ExtResource("4_jry3w")]
@@ -805,7 +810,7 @@ destination = "res://Rooms/gang_2.tscn"
 
 [node name="Maleri1" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(40, 76)
-scale = Vector2(0.6, 0.6)
+scale = Vector2(0.8, 0.8)
 
 [node name="Node" type="CanvasLayer" parent="Maleri1"]
 
@@ -822,9 +827,25 @@ offset_right = -879.0
 offset_bottom = 72.0
 correctAnswer = ["4"]
 
+[node name="TextureButton" type="TextureButton" parent="Maleri1/Node/Sprite2D"]
+z_index = 1
+texture_filter = 1
+offset_left = 844.974
+offset_top = -514.818
+offset_right = 899.974
+offset_bottom = -459.818
+texture_normal = ExtResource("9_rmymk")
+texture_hover = ExtResource("10_c6k0a")
+stretch_mode = 4
+
+[node name="Area2D" type="Area2D" parent="Maleri1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maleri1/Area2D"]
+shape = SubResource("RectangleShape2D_5dade")
+
 [node name="Maleri2" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(136, 76)
-scale = Vector2(0.6, 0.6)
+scale = Vector2(0.8, 0.8)
 
 [node name="Node" type="CanvasLayer" parent="Maleri2"]
 
@@ -841,9 +862,25 @@ offset_right = -879.0
 offset_bottom = 72.0
 correctAnswer = ["5,5"]
 
+[node name="TextureButton" type="TextureButton" parent="Maleri2/Node/Sprite2D"]
+z_index = 1
+texture_filter = 1
+offset_left = 844.974
+offset_top = -514.818
+offset_right = 899.974
+offset_bottom = -459.818
+texture_normal = ExtResource("9_rmymk")
+texture_hover = ExtResource("10_c6k0a")
+stretch_mode = 4
+
+[node name="Area2D" type="Area2D" parent="Maleri2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maleri2/Area2D"]
+shape = SubResource("RectangleShape2D_5dade")
+
 [node name="Maleri3" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(40, 172)
-scale = Vector2(0.6, 0.6)
+scale = Vector2(0.8, 0.8)
 
 [node name="Node" type="CanvasLayer" parent="Maleri3"]
 
@@ -860,9 +897,25 @@ offset_right = -879.0
 offset_bottom = 72.0
 correctAnswer = ["(2,2)(-3,7)", "(-3,7)(2,2)"]
 
+[node name="TextureButton" type="TextureButton" parent="Maleri3/Node/Sprite2D"]
+z_index = 1
+texture_filter = 1
+offset_left = 844.974
+offset_top = -514.818
+offset_right = 899.974
+offset_bottom = -459.818
+texture_normal = ExtResource("9_rmymk")
+texture_hover = ExtResource("10_c6k0a")
+stretch_mode = 4
+
+[node name="Area2D" type="Area2D" parent="Maleri3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maleri3/Area2D"]
+shape = SubResource("RectangleShape2D_5dade")
+
 [node name="Maleri4" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(136, 172)
-scale = Vector2(0.6, 0.6)
+scale = Vector2(0.8, 0.8)
 
 [node name="Node" type="CanvasLayer" parent="Maleri4"]
 
@@ -879,9 +932,25 @@ offset_right = -879.0
 offset_bottom = 72.0
 correctAnswer = ["144"]
 
+[node name="TextureButton" type="TextureButton" parent="Maleri4/Node/Sprite2D"]
+z_index = 1
+texture_filter = 1
+offset_left = 844.974
+offset_top = -514.818
+offset_right = 899.974
+offset_bottom = -459.818
+texture_normal = ExtResource("9_rmymk")
+texture_hover = ExtResource("10_c6k0a")
+stretch_mode = 4
+
+[node name="Area2D" type="Area2D" parent="Maleri4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maleri4/Area2D"]
+shape = SubResource("RectangleShape2D_5dade")
+
 [node name="Maleri5" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(40, 268)
-scale = Vector2(0.6, 0.6)
+scale = Vector2(0.8, 0.8)
 
 [node name="Node" type="CanvasLayer" parent="Maleri5"]
 
@@ -898,9 +967,25 @@ offset_right = -879.0
 offset_bottom = 72.0
 correctAnswer = ["(1,5)"]
 
+[node name="TextureButton" type="TextureButton" parent="Maleri5/Node/Sprite2D"]
+z_index = 1
+texture_filter = 1
+offset_left = 844.974
+offset_top = -514.818
+offset_right = 899.974
+offset_bottom = -459.818
+texture_normal = ExtResource("9_rmymk")
+texture_hover = ExtResource("10_c6k0a")
+stretch_mode = 4
+
+[node name="Area2D" type="Area2D" parent="Maleri5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maleri5/Area2D"]
+shape = SubResource("RectangleShape2D_5dade")
+
 [node name="Maleri6" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(136, 268)
-scale = Vector2(0.6, 0.6)
+scale = Vector2(0.8, 0.8)
 
 [node name="Node" type="CanvasLayer" parent="Maleri6"]
 
@@ -916,6 +1001,22 @@ offset_top = 32.1761
 offset_right = -879.119
 offset_bottom = 72.1761
 correctAnswer = ["[0,inf["]
+
+[node name="TextureButton" type="TextureButton" parent="Maleri6/Node/Sprite2D"]
+z_index = 1
+texture_filter = 1
+offset_left = 844.974
+offset_top = -514.818
+offset_right = 899.974
+offset_bottom = -459.818
+texture_normal = ExtResource("9_rmymk")
+texture_hover = ExtResource("10_c6k0a")
+stretch_mode = 4
+
+[node name="Area2D" type="Area2D" parent="Maleri6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maleri6/Area2D"]
+shape = SubResource("RectangleShape2D_5dade")
 
 [node name="Interactable area" parent="." instance=ExtResource("5_ycqt8")]
 position = Vector2(88, 61)
@@ -983,3 +1084,22 @@ position = Vector2(-167, 192)
 
 [node name="stuebackgroundtrack" parent="." instance=ExtResource("17_xukye")]
 stream = ExtResource("18_vksrx")
+
+[connection signal="pressed" from="Maleri1/Node/Sprite2D/TextureButton" to="Maleri1" method="_on_texture_button_pressed"]
+[connection signal="body_entered" from="Maleri1/Area2D" to="Maleri1" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Maleri1/Area2D" to="Maleri1" method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="Maleri2/Node/Sprite2D/TextureButton" to="Maleri2" method="_on_texture_button_pressed"]
+[connection signal="body_entered" from="Maleri2/Area2D" to="Maleri2" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Maleri2/Area2D" to="Maleri2" method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="Maleri3/Node/Sprite2D/TextureButton" to="Maleri3" method="_on_texture_button_pressed"]
+[connection signal="body_entered" from="Maleri3/Area2D" to="Maleri3" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Maleri3/Area2D" to="Maleri3" method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="Maleri4/Node/Sprite2D/TextureButton" to="Maleri4" method="_on_texture_button_pressed"]
+[connection signal="body_entered" from="Maleri4/Area2D" to="Maleri4" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Maleri4/Area2D" to="Maleri4" method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="Maleri5/Node/Sprite2D/TextureButton" to="Maleri5" method="_on_texture_button_pressed"]
+[connection signal="body_entered" from="Maleri5/Area2D" to="Maleri5" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Maleri5/Area2D" to="Maleri5" method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="Maleri6/Node/Sprite2D/TextureButton" to="Maleri6" method="_on_texture_button_pressed"]
+[connection signal="body_entered" from="Maleri6/Area2D" to="Maleri6" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Maleri6/Area2D" to="Maleri6" method="_on_area_2d_body_exited"]

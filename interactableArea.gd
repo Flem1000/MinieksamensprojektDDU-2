@@ -54,3 +54,22 @@ func _on_interact_pressed():
 	get_child(1).get_child(0).show()
 	
 	
+
+
+func _on_texture_button_pressed():
+	not_interacting()
+	get_owner().get_parent().interact()
+	get_child(1).get_child(0).hide()
+
+
+func _on_area_2d_body_entered(body):
+	if body.name == "Player":
+		playerInside = true
+		print("entered")
+		player = body
+	return player
+
+
+func _on_area_2d_body_exited(body):
+	if body.name == "Player":
+		playerInside = false
