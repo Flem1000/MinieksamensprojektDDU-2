@@ -17,9 +17,9 @@ func _ready():
 func _process(delta):
 	if solved == false:
 		if keypad.solved == true and playerInside == true:
-			player.interacting()
 			door.position = Vector2(0, 1)
 			keypad.solved = false
+			interactable_area.force_close()
 			interactable_area.queue_free()
 			solved = true
 		

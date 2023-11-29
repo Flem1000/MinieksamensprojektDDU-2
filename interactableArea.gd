@@ -26,6 +26,10 @@ func _process(delta):
 		get_owner().get_parent().interact()
 		get_child(1).get_child(0).hide()
 
+func force_close():
+	not_interacting()
+	get_owner().get_parent().interact()
+	get_child(1).get_child(0).hide()
 
 func not_interacting():
 	interacting = false

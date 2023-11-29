@@ -5,6 +5,7 @@ const dash_speed = 1000
 const dash_duration = 0.2
 var playerposition
 var busy = false
+var escaping = false
 
 @onready var anim = $Sprite2D2/AnimationPlayer
 @onready var sprite = $Sprite2D2
@@ -18,8 +19,16 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("dash"):
 		dash.start_dash(dash_duration)
-		
-
+	if busy == true:
+		move_speed = 0
+	else:
+		move_speed = 75.0
+	if Global.escaping == true and escaping == false:
+		busy = true
+		escaping = true
+	if Global.escaping == false and escaping == true:
+		busy = false
+		escaping = false
 
 func _physics_process(delta):
 	var direction_x = Input.get_axis("Left", "Right")
@@ -49,9 +58,7 @@ func _physics_process(delta):
 func interacting():
 	emit_signal("isInteracting")
 	if busy == false:
-		move_speed = 0
 		busy = true
 	elif busy == true:
-		move_speed = 75
 		busy = false
 
