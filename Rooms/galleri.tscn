@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://08gy77djy2w8"]
+[gd_scene load_steps=26 format=3 uid="uid://08gy77djy2w8"]
 
 [ext_resource type="Script" path="res://Rooms/galleri.gd" id="1_bbmx1"]
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_tw5c6"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://euetfcdclk87" path="res://key.tscn" id="16_0f86a"]
 [ext_resource type="PackedScene" uid="uid://dr8oky6afo352" path="res://stuebackgroundtrack.tscn" id="17_xukye"]
 [ext_resource type="AudioStream" uid="uid://cbinyxxi456oa" path="res://Audio/Music/Heartbeat.mp3" id="18_vksrx"]
+[ext_resource type="Texture2D" uid="uid://csxgyvorakppx" path="res://Assets/Sign.png" id="21_vjykb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uk8ij"]
 texture = ExtResource("1_tw5c6")
@@ -704,6 +705,9 @@ sources/0 = SubResource("TileSetAtlasSource_uk8ij")
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_1jana"]
 polygon = PackedVector2Array(80, 21, 80, 16, 48, 16, 48, 64, 0, 64, 0, 326, 48, 326, 48, 358, 128, 358, 128, 326, 176, 326, 176, 64, 128, 64, 128, 16, 96, 16, 96, 21, 113, 21, 113, 69, 161, 69, 161, 129, 113, 129, 113, 165, 161, 165, 161, 225, 113, 225, 113, 261, 161, 261, 161, 321, 113, 321, 113, 353, 63, 353, 63, 321, 15, 321, 15, 261, 63, 261, 63, 225, 15, 225, 15, 165, 63, 165, 63, 129, 15, 129, 15, 69, 63, 69, 63, 21)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uw7kn"]
+size = Vector2(10, 9)
+
 [node name="galleri" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_bbmx1")
@@ -986,6 +990,7 @@ texture_hover = ExtResource("10_c6k0a")
 stretch_mode = 4
 
 [node name="Interactable area" parent="." instance=ExtResource("5_ycqt8")]
+z_index = 1
 position = Vector2(88, 61)
 scale = Vector2(0.8, 0.8)
 
@@ -1051,6 +1056,17 @@ position = Vector2(-167, 192)
 
 [node name="stuebackgroundtrack" parent="." instance=ExtResource("17_xukye")]
 stream = ExtResource("18_vksrx")
+
+[node name="Sign" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(88, 61)
+texture = ExtResource("21_vjykb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sign"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sign/StaticBody2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_uw7kn")
 
 [connection signal="pressed" from="Maleri1/Node/Sprite2D/TextureButton" to="Maleri1" method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Maleri2/Node/Sprite2D/TextureButton" to="Maleri2" method="_on_texture_button_pressed"]

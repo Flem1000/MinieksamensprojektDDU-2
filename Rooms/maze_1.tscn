@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dt1iu2ynq7gpq"]
+[gd_scene load_steps=24 format=3 uid="uid://dt1iu2ynq7gpq"]
 
 [ext_resource type="Texture2D" uid="uid://da3l73hkivowy" path="res://Assets/map/4 BigSet.png" id="1_03veh"]
 [ext_resource type="PackedScene" uid="uid://cmdagdvmqs2ao" path="res://Player.tscn" id="2_5pchf"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://Rooms/Keypad_door.gd" id="9_qkkxn"]
 [ext_resource type="PackedScene" uid="uid://dr8oky6afo352" path="res://stuebackgroundtrack.tscn" id="11_eaqvf"]
 [ext_resource type="AudioStream" uid="uid://cofior35fwq6a" path="res://Audio/onlymp3.to - Song of Horror OST Puzzle-5I0fUq0NHfg-192k-1701172619.mp3" id="12_f5iim"]
+[ext_resource type="Texture2D" uid="uid://csxgyvorakppx" path="res://Assets/Sign.png" id="13_1sj8s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_amll3"]
 texture = ExtResource("1_03veh")
@@ -726,6 +727,9 @@ size = Vector2(18, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x70gt"]
 size = Vector2(16, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_56yky"]
+size = Vector2(10, 9)
+
 [node name="Maze1" type="Node2D"]
 y_sort_enabled = true
 texture_filter = 1
@@ -866,6 +870,7 @@ position = Vector2(563, 227)
 text = "[img]Assets/Puzzles/Maze2.png[/img]"
 
 [node name="Interactable area2" parent="." instance=ExtResource("6_x7ohq")]
+z_index = 1
 position = Vector2(456, 529)
 
 [node name="Parchment" parent="Interactable area2" instance=ExtResource("7_jxhk8")]
@@ -919,6 +924,17 @@ position = Vector2(560, 336)
 
 [node name="Parchment" parent="Hint2" instance=ExtResource("7_jxhk8")]
 text = "[img]Assets/UI/Maze_hint2.2.png[/img]"
+
+[node name="Sign" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(456, 529)
+texture = ExtResource("13_1sj8s")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sign"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sign/StaticBody2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_56yky")
 
 [connection signal="body_entered" from="Keypad_door/Area2D" to="Keypad_door" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Keypad_door/Area2D" to="Keypad_door" method="_on_area_2d_body_exited"]
