@@ -13,4 +13,4 @@ func _process(delta):
 
 
 func _on_area_2d_body_entered(body):
-	door.position = Vector2(104, 26)
+	door.position = Vector2(104, 182)
